@@ -1,0 +1,4 @@
+import {DatabaseSync,backup} from "node:sqlite";import {mkdirSync} from "node:fs";import {resolve,dirname,sep} from "node:path";import {randomUUID} from "node:crypto";
+import {createSqliteSnapshot} from '../lib/database/snapshot.mjs';
+const source=resolve(process.env.RESULTS_DB_PATH||"private/results.sqlite"),directory=resolve(process.env.BACKUP_DIR||resolve(dirname(source),"backups"));if(directory===resolve("public")||directory.startsWith(resolve("public")+sep))throw new Error("Backups must be outside the public directory.");mkdirSync(directory,{recursive:true,mode:0o700});
+const file=resolve(directory,`results-${new Date().toISOString().replace(/[:.]/g,"-")}-${randomUUID()}.sqlite`);if(process.env.DB_BACKEND==='mysql'){await createSqliteSnapshot('results',file);console.log('Backup saved:',file);}else{const database=new DatabaseSync(source,{readOnly:true});try{await backup(database,file);console.log("Backup saved:",file);}finally{database.close();}}

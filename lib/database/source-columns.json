@@ -1,0 +1,295 @@
+{
+  "results": {
+    "answer_keys": [
+      "test_id",
+      "skill",
+      "config"
+    ],
+    "attempt_progress": [
+      "attempt_id",
+      "stage",
+      "deadline",
+      "audio_duration",
+      "audio_position",
+      "audio_observed_at",
+      "lease_owner",
+      "lease_until",
+      "pending_section",
+      "instructions_confirmed",
+      "completion_acknowledged"
+    ],
+    "attempts": [
+      "id",
+      "student_id",
+      "test_id",
+      "started_at",
+      "submitted_at",
+      "data",
+      "released",
+      "assignment_id",
+      "mode",
+      "purpose"
+    ],
+    "audit": [
+      "id",
+      "actor_id",
+      "event",
+      "target_id",
+      "created_at"
+    ],
+    "login_limits": [
+      "account",
+      "failures",
+      "reset_at"
+    ],
+    "module_exposures": [
+      "attempt_id",
+      "candidate_id",
+      "test_id",
+      "skill",
+      "first_seen_at",
+      "certainty",
+      "source"
+    ],
+    "notification_outbox": [
+      "id",
+      "submission_id",
+      "event",
+      "created_at",
+      "delivered_at"
+    ],
+    "results_migrations": [
+      "name",
+      "applied_at"
+    ],
+    "sessions": [
+      "token_hash",
+      "user_id",
+      "expires_at"
+    ],
+    "test_assignments": [
+      "id",
+      "candidate_id",
+      "test_id",
+      "assigned_at",
+      "expires_at",
+      "status",
+      "attempt_limit",
+      "attempts_used",
+      "mode",
+      "purpose"
+    ],
+    "users": [
+      "id",
+      "registration_id",
+      "name",
+      "contact",
+      "role",
+      "password_hash"
+    ]
+  },
+  "students": {
+    "categories": [
+      "id",
+      "name",
+      "description",
+      "icon",
+      "position",
+      "active",
+      "parent_id"
+    ],
+    "learning_audit": [
+      "id",
+      "actor_id",
+      "event",
+      "target_id",
+      "details",
+      "created_at"
+    ],
+    "learning_content": [
+      "id",
+      "kind",
+      "parent_id",
+      "title",
+      "slug",
+      "category_id",
+      "topic_id",
+      "difficulty",
+      "status",
+      "data",
+      "version",
+      "created_at",
+      "updated_at"
+    ],
+    "learning_enrolments": [
+      "student_id",
+      "course_id",
+      "created_at"
+    ],
+    "learning_media": [
+      "id",
+      "name",
+      "disk_name",
+      "mime",
+      "bytes",
+      "sha256",
+      "created_at",
+      "created_by"
+    ],
+    "learning_settings": [
+      "key",
+      "value"
+    ],
+    "lesson_completions": [
+      "student_id",
+      "lesson_id",
+      "completed_at"
+    ],
+    "lessons": [
+      "id",
+      "topic_id",
+      "title",
+      "instructions",
+      "published",
+      "version",
+      "kind",
+      "course_id",
+      "module_id",
+      "difficulty",
+      "position",
+      "metadata",
+      "archived",
+      "created_at",
+      "updated_at"
+    ],
+    "mock_links": [
+      "student_id",
+      "candidate_id",
+      "linked_at",
+      "linked_by"
+    ],
+    "partial_bookings": [
+      "id",
+      "student_id",
+      "slot_id",
+      "module",
+      "test_id",
+      "test_date",
+      "created_at"
+    ],
+    "partial_candidates": [
+      "student_id",
+      "candidate_id"
+    ],
+    "partial_slots": [
+      "id",
+      "module",
+      "test_id",
+      "test_date",
+      "open",
+      "created_by",
+      "created_at"
+    ],
+    "password_resets": [
+      "token_hash",
+      "student_id",
+      "expires_at"
+    ],
+    "practice_answers": [
+      "attempt_id",
+      "question_id",
+      "answer_json",
+      "status"
+    ],
+    "practice_attempts": [
+      "id",
+      "student_id",
+      "lesson_id",
+      "lesson_version",
+      "started_at",
+      "submitted_at",
+      "status",
+      "question_count",
+      "correct_count",
+      "elapsed_seconds",
+      "result_json",
+      "question_snapshot",
+      "policy_json",
+      "draft_answers"
+    ],
+    "practice_set_questions": [
+      "set_id",
+      "question_id",
+      "position",
+      "marks"
+    ],
+    "profiles": [
+      "student_id",
+      "mobile",
+      "dob",
+      "country",
+      "level",
+      "goal"
+    ],
+    "questions": [
+      "id",
+      "lesson_id",
+      "position",
+      "content",
+      "key_json"
+    ],
+    "rate_limits": [
+      "scope",
+      "count",
+      "reset_at"
+    ],
+    "scheduled_mock_bookings": [
+      "id",
+      "student_id",
+      "slot_id",
+      "module",
+      "test_id",
+      "test_date",
+      "created_at"
+    ],
+    "scheduled_mock_candidates": [
+      "student_id",
+      "candidate_id"
+    ],
+    "scheduled_mock_slots": [
+      "id",
+      "module",
+      "test_id",
+      "test_date",
+      "open",
+      "created_by",
+      "created_at"
+    ],
+    "sessions": [
+      "token_hash",
+      "student_id",
+      "expires_at"
+    ],
+    "student_migrations": [
+      "version",
+      "applied_at"
+    ],
+    "students": [
+      "id",
+      "name",
+      "email",
+      "password_hash",
+      "joined_at",
+      "active"
+    ],
+    "topics": [
+      "id",
+      "category_id",
+      "slug",
+      "title",
+      "parent_id",
+      "position",
+      "active"
+    ]
+  }
+}

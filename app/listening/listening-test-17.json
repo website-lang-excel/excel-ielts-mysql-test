@@ -1,0 +1,292 @@
+{
+  "number": 17,
+  "parts": [
+    [
+      {
+        "title": "Questions 1-4",
+        "type": "fill",
+        "instruction": "Complete the notes below.",
+        "limit": "NO MORE THAN TWO WORDS AND/OR A NUMBER",
+        "heading": "NOTES ON ISLAND HOTEL",
+        "paragraphs": [
+          "Time",
+          "• The length of stay: approx 2 weeks",
+          "• Starting date: 25th April",
+          "Temperature",
+          "• Daytime: up to {{1}} °C",
+          "• Erratic weather",
+          "Transport",
+          "• Pick-up service is provided.",
+          "• Normally transferring to the airport takes about {{2}}",
+          "Facilities",
+          "• en-suite facilities and a {{3}}",
+          "• gym and spa facilities",
+          "• a large outdoor swimming pool",
+          "• three standard {{4}}"
+        ]
+      },
+      {
+        "title": "Questions 5-10",
+        "type": "table",
+        "instruction": "Complete the table below.",
+        "limit": "NO MORE THAN TWO WORDS",
+        "columns": [
+          "Day",
+          "Entertainment activities",
+          "Transportation"
+        ],
+        "rows": [
+          [
+            "Tuesdays",
+            "• learning to make {{5}}\n• having a {{6}} in-house concert",
+            "• mini bus"
+          ],
+          [
+            "Wednesdays",
+            "• enjoying mountain view\n• exploring a tropical {{7}}",
+            "• {{8}}\n• shuttle bus"
+          ],
+          [
+            "Thursdays",
+            "• having a fancy dinner\n• watching a spectacular display of {{9}}",
+            "{{10}}"
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 11-14",
+        "type": "choice",
+        "instruction": "Choose the correct letter, A, B or C.",
+        "heading": "Online Exchange Business",
+        "questions": [
+          {
+            "number": 11,
+            "prompt": "The website is organised by",
+            "options": [
+              "family members.",
+              "friends",
+              "businessmen"
+            ]
+          },
+          {
+            "number": 12,
+            "prompt": "How long has the website been operated?",
+            "options": [
+              "about 3 weeks",
+              "about 3 months",
+              "about 6 months"
+            ]
+          },
+          {
+            "number": 13,
+            "prompt": "How many registered users are there in the website?",
+            "options": [
+              "1,000",
+              "1,500",
+              "2,000"
+            ]
+          },
+          {
+            "number": 14,
+            "prompt": "Which country has the most users in the website?",
+            "options": [
+              "Ireland",
+              "UK",
+              "Canada"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Questions 15-16",
+        "type": "multiple",
+        "instruction": "Choose TWO letters, A-E.",
+        "numbers": [
+          15,
+          16
+        ],
+        "prompt": "Which TWO things are most popular among users?",
+        "options": [
+          "children’s books",
+          "textbooks",
+          "computer games",
+          "toys",
+          "tools"
+        ]
+      },
+      {
+        "title": "Questions 17-20",
+        "type": "fill",
+        "instruction": "Complete the sentences below.",
+        "limit": "ONE WORD ONLY",
+        "paragraphs": [
+          "The website will sort out {{17}} items to help those who can’t decide what to exchange.",
+          "Do not bother because people's {{18}} are different.",
+          "Users will give {{19}} on the completion of exchanges.",
+          "Criteria",
+          "• the quality of the item",
+          "• the ease of communication",
+          "• the {{20}} of delivering"
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 21-26",
+        "type": "choice",
+        "instruction": "Choose the correct letter, A, B or C.",
+        "heading": "Reflective Journal Assignment",
+        "questions": [
+          {
+            "number": 21,
+            "prompt": "What should be firstly included in the reflective journal?",
+            "options": [
+              "topics he is going to talk about",
+              "study aims for the module",
+              "suggestions from others"
+            ]
+          },
+          {
+            "number": 22,
+            "prompt": "The woman has got",
+            "options": [
+              "a lot of friends to help her.",
+              "several books that may be useful.",
+              "sufficient resources showing that she is a good technology user."
+            ]
+          },
+          {
+            "number": 23,
+            "prompt": "What was the man’s biggest achievement in the past?",
+            "options": [
+              "He worked as a waiter in a restaurant.",
+              "He got an offer to lead a team.",
+              "He became the chairman of the Student Union."
+            ]
+          },
+          {
+            "number": 24,
+            "prompt": "The man decides to",
+            "options": [
+              "do it by himself.",
+              "find a tutor.",
+              "listen to others."
+            ]
+          },
+          {
+            "number": 25,
+            "prompt": "What is the man’s attitude after the discussion?",
+            "options": [
+              "He thinks it is useless.",
+              "He is looking forward to doing the assignment",
+              "He feels uncertain about it."
+            ]
+          },
+          {
+            "number": 26,
+            "prompt": "What should be shown in the man’s reflective journal?",
+            "options": [
+              "self-awareness",
+              "mistakes",
+              "achievements"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Questions 27-30",
+        "type": "match",
+        "instruction": "What is the woman’s attitude toward each of the following activities of study?\nChoose FOUR answers from the box and write the correct letter, A-E, next to questions 27-30.",
+        "heading": "Attitude",
+        "options": [
+          {
+            "label": "A",
+            "text": "define a problem"
+          },
+          {
+            "label": "B",
+            "text": "independent learning"
+          },
+          {
+            "label": "C",
+            "text": "develop study skills"
+          },
+          {
+            "label": "D",
+            "text": "gain confidence"
+          },
+          {
+            "label": "E",
+            "text": "find it difficult"
+          }
+        ],
+        "questions": [
+          {
+            "number": 27,
+            "prompt": "writing an essay"
+          },
+          {
+            "number": 28,
+            "prompt": "taking exams"
+          },
+          {
+            "number": 29,
+            "prompt": "making class notes"
+          },
+          {
+            "number": 30,
+            "prompt": "taking presentation notes"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 31-38",
+        "type": "fill",
+        "instruction": "Complete the notes below.",
+        "limit": "ONE WORD ONLY",
+        "heading": "Chimpanzee behaviours",
+        "box": true,
+        "paragraphs": [
+          "Species",
+          "• We can find Pan or Pan Troglodytes in West and Central Africa.",
+          "• The Bonobo or Pan Paniscus are found in Democratic Republic of Congo.",
+          "Current research",
+          "• rule out {{31}} and biological factors",
+          "• learn through {{32}} of other chimps’ behaviour",
+          "Discoveries",
+          "• The book The Third Chimpanzee by James Diamond discusses some physical features of chimpanzees.",
+          "• The discovery reported by Jane Goodall suggests that chimpanzees know how to use {{33}}",
+          "Chimpanzees in Senegal",
+          "• use spears sharpened with their teeth",
+          "• can {{34}} the shell of a coconut",
+          "• use a {{35}} hammer to crash nuts",
+          "• are capable of learning {{36}} and understanding human language",
+          "Sub-species",
+          "• Bonobos live on the other side of a {{37}}",
+          "• Both of them are reducing alarmingly in population {{38}}"
+        ]
+      },
+      {
+        "title": "Questions 39-40",
+        "type": "multiple",
+        "instruction": "Choose TWO letters, A-E.",
+        "numbers": [
+          39,
+          40
+        ],
+        "prompt": "Which TWO topics about chimpanzees will the students discuss next week?",
+        "options": [
+          "They are slower than human in different ways.",
+          "They learn things by copying humans’ behaviour.",
+          "They develop behaviours generation by generation.",
+          "They have very strong ability of logical thinking.",
+          "They could be modified to adapt to the environment."
+        ]
+      }
+    ]
+  ]
+}

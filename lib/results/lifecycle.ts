@@ -1,0 +1,150 @@
+import "server-only";
+import { db } from "./db";
+import { reject, text } from "./http";
+import { recordingDuration } from "./audio-duration";
+import { firstModule, includesModule, modeOf, modePath } from "./modes";
+import { recordModuleOpen } from "./exposure";
+import { audioProgressLimit, type ListeningTimeline } from "./listening-progress";
+
+export type Stage="NOT_STARTED"|"LISTENING_ACTIVE"|"LISTENING_COMPLETED"|"READING_ACTIVE"|"READING_COMPLETED"|"WRITING_ACTIVE"|"COMPLETED";
+export type Progress={attempt_id:string;stage:Stage;deadline:number|null;audio_duration:number|null;audio_position:number;audio_observed_at:number|null;lease_owner:string|null;lease_until:number;pending_section:"reading"|"writing"|null;instructions_confirmed:number;completion_acknowledged:number};
+export async function progress(row:Record<string,unknown>):Promise<Progress> {
+ let state=(await db().prepare("SELECT * FROM attempt_progress WHERE attempt_id=?").get(String(row.id)));
+ if(!state){
+  const draft=row.data?JSON.parse(String(row.data)):{};
+  // Existing attempts keep their section and original deadline; no answers are rewritten.
+  const stage:Stage=row.submitted_at?"COMPLETED":draft.sectionClocks?.writing||draft.writingDraft?"WRITING_ACTIVE":draft.sectionClocks?.reading||draft.reading?"READING_ACTIVE":"NOT_STARTED";
+  const deadline=stage==="WRITING_ACTIVE"?draft.sectionClocks?.writing:stage==="READING_ACTIVE"?draft.sectionClocks?.reading:null;
+  (await db().prepare("INSERT OR IGNORE INTO attempt_progress(attempt_id,stage,deadline) VALUES(?,?,?)").run(String(row.id),stage,deadline??null));
+  state=(await db().prepare("SELECT * FROM attempt_progress WHERE attempt_id=?").get(String(row.id)));
+ }
+ const result=state as unknown as Progress;
+ if(result.stage==="READING_ACTIVE"&&result.deadline&&result.deadline<=Date.now()){
+  (await db().prepare("UPDATE attempt_progress SET stage='READING_COMPLETED' WHERE attempt_id=? AND stage='READING_ACTIVE'").run(String(row.id)));result.stage="READING_COMPLETED";
+ }
+ return result;
+}
+// Revisions order snapshots; only server time determines answer eligibility.
+export function acceptDraftRevision(draft: { answerRevisions?: Record<string, number> }, skill: string, revision: unknown) {
+ const previous=draft.answerRevisions?.[skill];
+ if(revision===undefined)return previous===undefined;
+ if(typeof revision!=="number"||!Number.isSafeInteger(revision)||revision<0)reject(400,"Invalid draft revision.");
+ if(previous!==undefined&&revision<=previous)return false;
+ draft.answerRevisions??={};draft.answerRevisions[skill]=revision;return true;
+}
+export function answerWindowOpen(state: Pick<Progress, "deadline">, now=Date.now()) {
+ return state.deadline===null||now<=state.deadline+5000;
+}
+export function sectionFor(stage:Stage):"listening"|"reading"|"writing"|null {
+ if(stage.startsWith("LISTENING"))return "listening";
+ if(stage.startsWith("READING"))return "reading";
+ return stage==="WRITING_ACTIVE"?"writing":null;
+}
+export function progressPath(state:Progress,test:number,mode=modeOf({})) {
+ const target=(path:string)=>modePath(path,mode);
+ if(state.stage==="COMPLETED")return `/test/writing/result?id=${encodeURIComponent(state.attempt_id)}&signout=1`;
+ if(state.pending_section)return target(`/listening/instructions?test=${test}`);
+ const section=sectionFor(state.stage);
+ return target(section==="writing"?`/test/writing?test=${test}`:section==="reading"?`/test?test=${test}`:section==="listening"?`/listening?test=${test}&autoplay=true`:`/listening/instructions?test=${test}`);
+}
+export async function requireSection(row:Record<string,unknown>,skill:string) {
+ if(!["listening","reading","writing"].includes(skill)||!includesModule(modeOf(row),skill as "listening"|"reading"|"writing"))reject(403,"This module is not included in your assignment.");
+ const state=(await progress(row));
+ if(row.submitted_at||state.stage==="COMPLETED")reject(409,"This test has already been submitted.","TEST_COMPLETED");
+ if(state.pending_section)reject(409,"This section is locked. Confirm the next section instructions before starting.","SECTION_CHANGED");
+ if(sectionFor(state.stage)!==skill)reject(409,"This section is locked. Return to your current test section.","SECTION_CHANGED");
+ return state;
+}
+export async function claimLease(row:Record<string,unknown>,ownerValue:unknown) {
+ const owner=text(ownerValue,80,true),state=(await progress(row)),now=Date.now();
+ if(state.stage!=="NOT_STARTED"&&state.lease_owner!==owner)reject(403,"Unfinished tests cannot be resumed. Ask your administrator to reassign this test for a fresh attempt.","TAB_OWNERSHIP_CONFLICT");
+ if(state.lease_owner&&state.lease_owner!==owner&&state.lease_until>now)reject(409,"This test is active in another tab. Close that tab, then retry here.","TAB_OWNERSHIP_CONFLICT");
+ (await db().prepare("UPDATE attempt_progress SET lease_owner=?,lease_until=? WHERE attempt_id=?").run(owner,now+20000,String(row.id)));
+ return (await progress(row));
+}
+export async function requireLease(row:Record<string,unknown>,owner:unknown) {
+ const state=(await progress(row));
+ if(typeof owner!=="string"||!owner||state.lease_owner!==owner)reject(409,"Your test tab is not active. Return to the active tab or retry recovery.","TAB_OWNERSHIP_CONFLICT");
+ if(state.lease_until<=Date.now())reject(409,"Your test tab needs to reconnect. Your local answers are kept.","LEASE_EXPIRED");
+ return state;
+}
+export async function activateListening(row:Record<string,unknown>) {
+ if(!includesModule(modeOf(row),"listening"))reject(403,"Listening is not included in your assignment.");
+ const state=(await progress(row));
+ if(state.stage!=="NOT_STARTED")return state;
+ if(!state.instructions_confirmed)reject(409,"Please confirm the Listening instructions before starting.","TRANSITION_INVALID");
+ const duration=recordingDuration(Number(row.test_id));
+ (await recordModuleOpen(row,"listening"));
+ const now=Date.now(),draft=row.data?JSON.parse(String(row.data)):{};
+ draft.listeningTimeline={version:1,anchorAt:now,anchorPosition:0} satisfies ListeningTimeline;
+ row.data=JSON.stringify(draft);
+ (await db().prepare("UPDATE attempts SET data=? WHERE id=?").run(String(row.data),String(row.id)));
+ (await db().prepare("UPDATE attempt_progress SET stage='LISTENING_ACTIVE',audio_duration=?,audio_observed_at=? WHERE attempt_id=?").run(duration,now,String(row.id)));
+ return (await progress(row));
+}
+export async function observeAudio(row:Record<string,unknown>,position:unknown,ended:unknown,playbackRate:unknown=1) {
+ const state=(await requireSection(row,"listening"));if(state.stage==="LISTENING_COMPLETED")return state;
+ if(typeof position!=="number"||!Number.isFinite(position)||position<0)reject(400,"Invalid audio progress.","AUDIO_POSITION_INVALID");
+ if(playbackRate!==1)reject(409,"The recording must play at its normal speed.","AUDIO_RATE_INVALID");
+ // Duplicate/older packets cannot rewind progress or move its timing baseline.
+ // A backward report is indistinguishable from a delayed packet; ignore it,
+ // while the media seeking guard rejects unauthorized replay in the browser.
+ if(!ended&&position<=state.audio_position)return state;
+ const now=Date.now(),draft=row.data?JSON.parse(String(row.data)):{};
+ let timeline=draft.listeningTimeline as ListeningTimeline|undefined;
+ if(!timeline){
+  // Compatibility for an older attempt: anchor once to its last trusted
+  // checkpoint, never to a timestamp supplied in this or a later request.
+  timeline={version:1,anchorAt:state.audio_observed_at??now,anchorPosition:state.audio_position};
+  draft.listeningTimeline=timeline;row.data=JSON.stringify(draft);
+  (await db().prepare("UPDATE attempts SET data=? WHERE id=?").run(String(row.data),String(row.id)));
+ }
+ if(timeline.version!==1||!Number.isFinite(timeline.anchorAt)||!Number.isFinite(timeline.anchorPosition)||timeline.anchorPosition<0||timeline.anchorPosition>state.audio_position)reject(409,"The saved Listening timing state is invalid. Please contact your administrator.","AUDIO_TIMELINE_INVALID");
+ const duration=state.audio_duration!;
+ const limit=audioProgressLimit(timeline,now,duration);
+ // Keep the existing two-second reporting tolerance. Completion receives no
+ // extra time credit: verified progress is capped by actual server elapsed time.
+ if(position>limit+2)reject(409,"The recording must play without skipping. Your saved playback position is safe.","AUDIO_PROGRESS_AHEAD");
+ const verified=Math.max(state.audio_position,Math.min(position,limit,duration));
+ const completed=ended===true&&position>=duration-1&&verified>=duration-1;
+ if(ended===true&&!completed)reject(409,"Listening is not yet complete. Return to the saved audio position and finish the recording.","AUDIO_COMPLETION_INCOMPLETE");
+ (await db().prepare("UPDATE attempt_progress SET audio_position=?,audio_observed_at=?,stage=? WHERE attempt_id=?").run(verified,now,completed?"LISTENING_COMPLETED":"LISTENING_ACTIVE",String(row.id)));
+ return (await progress(row));
+}
+export async function transition(row:Record<string,unknown>,skill:"listening"|"reading") {
+ if(modeOf(row)!=="full")reject(409,"Single-module tests finish after their assigned module.","TRANSITION_INVALID");
+ const state=(await requireSection(row,skill)),now=Date.now();
+ // Development previews may advance early; production keeps exam timing enforced.
+ if(process.env.NODE_ENV!=="development"&&skill==="listening"&&state.stage!=="LISTENING_COMPLETED")reject(409,"Please finish the listening recording before continuing to Reading.","TRANSITION_INVALID");
+ if(process.env.NODE_ENV!=="development"&&skill==="reading"&&(!state.deadline||state.deadline>now))reject(409,"Writing unlocks when the Reading time has finished.","TRANSITION_INVALID");
+ (await db().prepare("UPDATE attempt_progress SET stage=?,pending_section=?,deadline=NULL,instructions_confirmed=0,completion_acknowledged=0 WHERE attempt_id=?").run(skill==="listening"?"LISTENING_COMPLETED":"READING_COMPLETED",skill==="listening"?"reading":"writing",String(row.id)));
+ return (await progress(row));
+}
+export async function acknowledgeCompletion(row:Record<string,unknown>) {
+ const state=(await progress(row));if(!state.pending_section)reject(409,"No completed section is awaiting confirmation.","TRANSITION_INVALID");
+ (await db().prepare("UPDATE attempt_progress SET completion_acknowledged=1 WHERE attempt_id=?").run(String(row.id)));
+}
+export async function confirmInstructions(row:Record<string,unknown>,skill:unknown) {
+ const state=(await progress(row)),expected=state.stage==="NOT_STARTED"?firstModule(modeOf(row)):state.pending_section;
+ if(!expected||skill!==expected)reject(409,"These instructions are not available yet.","TRANSITION_INVALID");
+ if(state.pending_section&&!state.completion_acknowledged)reject(409,"Continue from the section completion screen first.","TRANSITION_INVALID");
+ (await db().prepare("UPDATE attempt_progress SET instructions_confirmed=1 WHERE attempt_id=?").run(String(row.id)));
+}
+export async function startSection(row:Record<string,unknown>,skill:unknown) {
+ const state=(await progress(row));
+ // A retried Start request cannot restart its clock.
+ if(!state.pending_section&&sectionFor(state.stage)===skill)return state;
+ const expected=state.stage==="NOT_STARTED"?firstModule(modeOf(row)):state.pending_section;
+ if(!expected||skill!==expected)reject(409,"This section is not available yet.","TRANSITION_INVALID");
+ if(!state.instructions_confirmed)reject(409,"Please confirm the section instructions before starting.","TRANSITION_INVALID");
+ if(skill==="listening")return (await activateListening(row));
+ (await recordModuleOpen(row,skill as "reading"|"writing"));
+ const deadline=Date.now()+3600000;
+ (await db().prepare("UPDATE attempt_progress SET stage=?,deadline=?,pending_section=NULL WHERE attempt_id=?").run(skill==="reading"?"READING_ACTIVE":"WRITING_ACTIVE",deadline,String(row.id)));
+ const draft=row.data?JSON.parse(String(row.data)):{};draft.sectionClocks??={};draft.sectionClocks[String(skill)]=deadline;
+ (await db().prepare("UPDATE attempts SET data=? WHERE id=?").run(JSON.stringify(draft),String(row.id)));
+ return (await progress(row));
+}
+export async function publicProgress(row:Record<string,unknown>) {
+ const state=(await progress(row)),mode=modeOf(row);return {id:String(row.id),testId:Number(row.test_id),mode,firstSection:firstModule(mode),stage:state.stage,pendingSection:state.pending_section,instructionsConfirmed:!!state.instructions_confirmed,completionAcknowledged:!!state.completion_acknowledged,section:state.pending_section?null:sectionFor(state.stage),deadline:state.deadline,audioPosition:state.audio_position,audioDuration:state.audio_duration,leaseExpiresAt:state.lease_until,serverNow:Date.now(),path:progressPath(state,Number(row.test_id),mode)};
+}
