@@ -26,6 +26,8 @@ Old commit-author names can exist in copied Git history. They do not establish r
 
 - Owner instruction, 8 November 2026: when the owner explicitly requests sending/updating changes to GitHub, publish the reviewed changes to `main` in `website-lang-excel/excel-ielts-mysql-test`, the branch linked to the new Railway service. That explicit GitHub request includes its normal automatic Railway deployment. Do not substitute a review branch, pull request or another publication route unless the owner asks. Local development alone still does not authorize publishing. Verify the exact new account/repository and Railway project boundaries, exclude private artifacts, and verify/report the actual resulting deployment status. This instruction supersedes earlier separate publication/deployment approval wording for the normal linked-main workflow; exceptional infrastructure or database operations still require their own scope.
 
+- The new web service's GitHub source connection was explicitly refreshed on 8 November 2026 to the approved repository and `main`, after a push had not created a deployment. Verify the actual deployment commit/status after publishing rather than assuming a configured repository alone proves the push triggered a build.
+
 - Work only on the owner's specific current command. A discussion, status question, plan or successful verification does not authorize unrelated changes.
 - An audit/report request is read-only. Report defects and propose the smallest fix; obtain authorization before implementation.
 - Before edits, inspect `git status --short`, relevant files and `git remote -v`. Preserve unrelated work.

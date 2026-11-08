@@ -42,6 +42,6 @@ These are finite local checks, not full-duration browser/audio or Railway capaci
 
 Work only in `C:/Users/Asus/Documents/Codex/website-lang-excel-mysql`, the [website-lang-excel/excel-ielts-mysql-test](https://github.com/website-lang-excel/excel-ielts-mysql-test) repository and the new Railway project identified in [MYSQL_AGENT.md](MYSQL_AGENT.md). No other accounts or projects are authorized.
 
-See [MYSQL_OPERATIONS.md](MYSQL_OPERATIONS.md) for verified configuration, backup coverage, recovery restrictions, local test commands and manual acceptance. Local work and passing checks do not authorize commits, pushes or deployments. Obtain the owner's manual-testing confirmation and explicit approval for publication/deployment.
+See [MYSQL_OPERATIONS.md](MYSQL_OPERATIONS.md) for verified configuration, backup coverage, recovery restrictions, local test commands and manual acceptance. Local work and passing checks do not authorize publishing. Under the owner's current instruction, an explicit request to send changes to GitHub means updating this repository's `main` branch and its linked automatic Railway deployment, without substituting another branch or asking for a separate normal-deployment approval.
 
-No deployment, production migration, existing-repository update or Railway change is authorized by publication of this test repository.
+That linked-main workflow does not authorize database migrations, data replacement or unrelated infrastructure/account changes.
