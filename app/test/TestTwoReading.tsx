@@ -6,10 +6,9 @@ import { HeadingBank, HeadingDrop } from "./HeadingDragAndDrop";
 import ParagraphInformationTable from "./ParagraphInformationTable";
 import { SummaryGap } from "./SummaryWithoutClues";
 
-import { saveSection, useAnswerDraft, useCountdown } from "@/lib/results/client";
+import { useAnswerDraft, useCountdown } from "@/lib/results/client";
 
 import { useMemo, useState, type PointerEvent as ReactPointerEvent, type ReactNode } from "react";
-import { useRouter } from "next/navigation";
 import { Bell, Menu, NotebookPen, Wifi } from "lucide-react";
 import { testTwoReadingSource } from "./test2-reading-data";
 
@@ -64,7 +63,7 @@ const paragraphHeadingGroup = {
 };
 
 export default function TestTwoReading() {
-  const router = useRouter();
+
   const [passage, setPassage] = useState(1);
   const timeLeft = useCountdown(2, "reading");
   const [answers, setAnswers] = useState<Answers>({});
@@ -87,7 +86,7 @@ const setAnswer = (number: number, value: string) => setAnswers((current) => ({ 
 
   const radio = (number: number, prompt: string, options: string[], values = options) => <div id={`question-${number}`} key={number} className="scroll-m-6 space-y-3 py-4"><div className="flex items-start gap-3 leading-7"><NumberBadge number={number} /><p className="min-w-0 pt-0.5">{prompt}</p></div><div className="space-y-3 pl-11">{options.map((label, index) => <label key={index} className="flex cursor-pointer items-start gap-3 py-1 leading-6"><input className="mt-1.5" type="radio" name={`question-${number}`} value={values[index]} checked={answers[number] === values[index]} onChange={() => setAnswer(number, values[index])} /><span>{label}</span></label>)}</div></div>;
   const bank = (title: string, items: readonly Pair[]) => <div className="mx-auto w-fit min-w-48 max-w-full space-y-2 border border-[#aaa] bg-white px-8 py-4"><h3 className="text-center font-bold">{title}</h3>{items.map(([key, label]) => <p key={key} className="py-1"><b className="mr-2">{key}</b>{label}</p>)}</div>;
-  const submitToWriting = async () => { sessionStorage.setItem("ieltsAnswersTest2Reading", JSON.stringify(answers)); try { await saveSection("reading",2,answers,true); router.replace("/listening/instructions?test=2"); } catch(error){window.alert((error as Error).message);} };
+
   const minutes = Math.floor(timeLeft / 60);
   const seconds = String(timeLeft % 60).padStart(2, "0");
 

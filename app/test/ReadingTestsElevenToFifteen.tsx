@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-img-element -- Keep the existing native logo/diagram dimensions, CSS and direct media URLs; image optimization is outside this lint-only repair. */
 
 import PartNavigation from "./PartNavigation";
 import { readingOptionValue, normalizeReadingOption } from "./reading-option-values";
@@ -6,10 +7,9 @@ import { HeadingBank, HeadingDrop, headingQuestion } from "./HeadingDragAndDrop"
 import ParagraphInformationTable from "./ParagraphInformationTable";
 import SummaryWithoutClues from "./SummaryWithoutClues";
 import SummaryWithClues from "./SummaryWithClues";
-import { saveSection, useAnswerDraft, useCountdown } from "@/lib/results/client";
+import { useAnswerDraft, useCountdown } from "@/lib/results/client";
 
 import { Fragment, useEffect, useState, type PointerEvent as ReactPointerEvent } from "react";
-import { useRouter } from "next/navigation";
 import { Bell, Menu, NotebookPen, Wifi } from "lucide-react";
 import type { ImportedReadingTest, ReadingQuestionGroup } from "./reading11-15-types";
 import test11 from "./test11-import.json";
@@ -27,7 +27,7 @@ const tests: Record<number, ImportedReadingTest> = {
 };
 
 export default function ReadingTestsElevenToFifteen({ testNumber }: { testNumber: number }) {
-  const router = useRouter();
+
   const test = tests[testNumber];
   const [passageIndex, setPassageIndex] = useState(0);
   const timeLeft = useCountdown(testNumber, "reading");
@@ -36,6 +36,7 @@ export default function ReadingTestsElevenToFifteen({ testNumber }: { testNumber
   const draftReady=useAnswerDraft("reading",testNumber,answers,setAnswers);
   useEffect(() => {
     if (!draftReady) return;
+ // eslint-disable-next-line react-hooks/set-state-in-effect -- Normalize restored legacy option values once after external draft hydration; preserve the approved saved-letter contract.
     setAnswers(current => {
       const next = { ...current };
       for (const passage of test.passages) for (const group of passage.groups) {
@@ -58,10 +59,7 @@ const movePaneDivider = (event: ReactPointerEvent<HTMLDivElement>) => {
     if (!bounds || bounds.width === 0) return;
     setPaneSplit(Math.min(75, Math.max(25, ((event.clientX - bounds.left) / bounds.width) * 100)));
   };
-  const handleContinue = async () => {
-    sessionStorage.setItem(`ieltsAnswersTest${testNumber}Reading`, JSON.stringify(answers));
-    try { await saveSection("reading",testNumber,answers,true); router.replace(`/listening/instructions?test=${testNumber}`); } catch(error){window.alert((error as Error).message);}
-  };
+
   const selectMultiple = (numbers: number[], value: string) => {
     setAnswers((current) => {
       const chosen = numbers.map((number) => current[number]).filter(Boolean);

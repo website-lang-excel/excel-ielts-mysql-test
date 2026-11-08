@@ -36,6 +36,7 @@ export default function TestSafety({children}:{children:React.ReactNode}){
 
  useEffect(()=>{
 
+ // eslint-disable-next-line react-hooks/set-state-in-effect -- Restore this attempt's zoom from browser storage after hydration; preserve SSR and existing zoom timing.
   try{const saved=Number(sessionStorage.getItem(zoomKey));setZoom([90,100,125].includes(saved)?saved:100);}catch{setZoom(100);}
 
  },[zoomKey]);
@@ -60,6 +61,7 @@ export default function TestSafety({children}:{children:React.ReactNode}){
 
 
  useEffect(()=>{
+ // eslint-disable-next-line react-hooks/set-state-in-effect -- Clear recovery UI only when leaving protected routes; keep recovery cleanup and the recovery-loop lifecycle together.
   if(!testRoute){recoveryConditions.current.clear();recoveryCondition.current=null;setError('');setErrorStatus(null);setNotice('');return;}
   const selected=query.get('test')||sessionStorage.getItem('ieltsActiveTest');const actual=path==='/listening'||path==='/test'||path==='/test/writing';if(!selected||(!actual&&!sessionStorage.getItem(attemptKey(selected))))return;
   let live=true,failed=false,riskTimer:ReturnType<typeof setTimeout>|undefined;

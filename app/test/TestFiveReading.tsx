@@ -4,10 +4,9 @@ import PartNavigation from "./PartNavigation";
 import { HeadingBank, HeadingDrop } from "./HeadingDragAndDrop";
 
 import ParagraphInformationTable from "./ParagraphInformationTable";
-import { saveSection, useAnswerDraft, useCountdown } from "@/lib/results/client";
+import { useAnswerDraft, useCountdown } from "@/lib/results/client";
 
 import { useState, type PointerEvent as ReactPointerEvent } from "react";
-import { useRouter } from "next/navigation";
 import { Bell, Menu, NotebookPen, Wifi } from "lucide-react";
 import { testFivePassages } from "./test5-reading-data";
 
@@ -15,7 +14,7 @@ function splitParagraphs(text: string) { return text.split(/\n\s*\n/).map((p) =>
 const headings = ["Remembering the past more clearly", "Bringing back painful memories", "Originally an alarm signal", "The physical effects of scent versus image", "Checking unreliable evidence", "Reinforcing one sense with another", "Protection against reliving the past", "The overriding power of sight and sound", "Conflicting views"];
 const roman = ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix"];
 const researchers = ["Rachel Herz", "Eric Vermetten", "Gil Morrot", "Jay Gottfried and Ray Dolan"];
-const endings = ["was one result of relocation.", "had also recently moved house.", "was unlikely to be caused by moving.", "than having a baby.", "their family is also split up at the same time.", "disagreed about the stress caused by moving.", "than getting married.", "were no higher than other categories.", "they go to new schools."];
+
 const smellMC = [
   ["Aromatherapy is the use of essential oils extracted from plants.", "Evidence has proved that aromatherapy is effective in treating dementia.", "People who feel aromatherapy is effective believe it is useful.", "Aromatherapy is especially helpful for elderly patients."],
   ["The area of the brain which activates emotion has the same physiological structure as the part controlling olfaction.", "We cannot depend on smell, and people have more confidence in sight and spoken or written words.", "Odours can recall real memories even after the perfume-bottle experiment.", "Smell has proved its therapeutic effect over a long time span."],
@@ -31,7 +30,7 @@ const paragraphHeadingGroup = {
 };
 
 export default function TestFiveReading() {
-  const router = useRouter();
+
   const [passageIndex, setPassageIndex] = useState(0);
   const timeLeft = useCountdown(5, "reading");
   const [paneSplit, setPaneSplit] = useState(50);
@@ -50,7 +49,7 @@ export default function TestFiveReading() {
     if (!bounds || bounds.width === 0) return;
     setPaneSplit(Math.min(75, Math.max(25, ((event.clientX - bounds.left) / bounds.width) * 100)));
   };
-const handleContinue = async () => { sessionStorage.setItem("ieltsAnswersTest5Reading", JSON.stringify(answers)); try { await saveSection("reading",5,answers,true); router.replace("/listening/instructions?test=5"); } catch(error){window.alert((error as Error).message);} };
+
   const minutes = Math.floor(timeLeft / 60);
   const seconds = String(timeLeft % 60).padStart(2, "0");
 

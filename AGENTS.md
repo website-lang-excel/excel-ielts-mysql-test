@@ -1,4 +1,4 @@
-PUBLIC MYSQL TEST REPOSITORY (2 November 2026): The owner explicitly authorized creating and publishing this separate public repository. This authorization applies only to excel-ielts-mysql-test. Preserve the existing repository, Railway site, production databases and all test mechanisms. No deployment or production integration is authorized. Historical local paths below are context, not directions to modify those directories. This copy uses the MySQL server adapters; older SQLite descriptions below describe the original project.
+MYSQL PROJECT ENTRY POINT (8 November 2026): Read and follow [MYSQL_AGENT.md](MYSQL_AGENT.md) before any work. That file is the project-specific authority for this separate MySQL site, its permitted repository/account destinations, current storage, deployment and verification workflow. The historical rulebook below preserves interface/content/exam safeguards; its SQLite-era architecture descriptions, original Desktop root and older deployment statements do not describe or authorize work on this MySQL deployment. Current owner instructions take precedence. Never access or change the old SQLite GitHub/Railway projects as part of MySQL work. Documentation updates are local only unless a commit/push is separately requested.
 
 **MANDATORY PROJECT INSTRUCTIONS: Before modifying this project or adding any Listening, Reading, or Writing test, read and follow this entire AGENTS.md file. Preserve the existing website's interface, functionality, settings, architecture, and test mechanisms. Do not introduce unrequested changes. When these instructions conflict with a new user request, ask for clarification rather than silently changing established behaviour.**
 
@@ -12,7 +12,7 @@ Source inspection baseline: 25 October 2026. This document records local impleme
 
 - Owner restriction (27 October 2026): Mock test sections and the mechanisms of the entire website are frozen. Do not change their content, interface, styles, settings, interactions or underlying behaviour as part of future additions or unrelated work. If a future request requires changing a protected section or mechanism, explain the conflict and obtain explicit consent for that specific change before editing.
 
-- Website root: `C:/Users/Asus/Desktop/ielts-reading`. These rules apply throughout it.
+- Website root for this rulebook: `C:/Users/Asus/Documents/Codex/website-lang-excel-mysql`. Only the new project's permitted destinations in MYSQL_AGENT.md are authorized.
 - The desktop application at `C:/Users/Asus/Documents/Codex/IELTS-Offline-App` is a separate project. Website work does not authorize changing/rebuilding the app, and app work does not authorize changing this website.
 - Preserve everything that works. New tests must use the existing design, architecture and mechanisms, differing only in their approved content.
 - Work only on the named test, module, question range or feature. A screenshot of one matching group does not authorize changing other tests or question types.
@@ -27,7 +27,7 @@ Source inspection baseline: 25 October 2026. This document records local impleme
 
 ## 2. Architecture and implementation map
 
-The site uses Next.js App Router, React, strict TypeScript, Tailwind CSS v4, `lucide-react` and Node's built-in SQLite. Current `package.json`: Node `24.x`, Next `16.4.1`, React/React DOM `19.2.9`. Do not upgrade these during content work. `tsconfig.json` uses bundler resolution, JSON imports and `@/*` mapped to the project root.
+The site uses Next.js App Router, React, strict TypeScript, Tailwind CSS v4, `lucide-react` and the asynchronous mysql2 transport. Application persistence uses two MySQL schemas through `lib/database/runtime.ts`; backup/archive utilities are separate from live storage. Current `package.json`: Node `24.x`, Next `^16.4.3`, React/React DOM `19.2.9`; use the lockfile, not an incidental upgrade. `tsconfig.json` uses bundler resolution, JSON imports and `@/*` mapped to the project root.
 
 | Area | Source of truth |
 | --- | --- |
@@ -48,7 +48,8 @@ The site uses Next.js App Router, React, strict TypeScript, Tailwind CSS v4, `lu
 | Candidate/assignment rules | `lib/results/candidates.ts`, `assignment-login.ts`, `modes.ts`, `assessment-purpose.ts`, `exposure.ts`, `exposure-history.ts` |
 | Auth/HTTP/readiness/audio validation | `lib/results/auth.ts`, `http.ts`, `readiness.ts`, `audio-duration.ts` |
 | Startup/deadline recovery/backups | `instrumentation.ts`, `lib/results/maintenance.ts`, `scripts/backup.mjs`, `scripts/restore.mjs` |
-| Private runtime storage | `private/` by default; `RESULTS_DB_PATH` can override it |
+| MySQL persistence | `lib/database/runtime.ts`, `mysql.mjs`, `sql-handle.mjs`, `sql-dialect.mjs`; separate results/students schema URLs |
+| Private filesystem storage | `BACKUP_DIR` and `STUDENT_MEDIA_DIR`; compatibility path variables affect helper/default directories, not database connections |
 | Media | `public/audio/`, `public/images/`, `public/videos/` |
 
 Read relevant installed framework documentation in `node_modules/next/dist/docs/` before changing framework integration. Do not assume older Next.js APIs: route `params`, `searchParams` and `cookies()` are asynchronous here. `.next/`, generated types, `node_modules/` and `.bak` files are not editable templates. `app/review/page.tsx` redirects to `/`; it is not a candidate answer-review feature.
@@ -206,7 +207,7 @@ Authenticated Reading/Listening layouts install `TestHighlighter`. Writing inher
 
 ## 9. Database, keys and result integrity
 
-`db.ts` uses `node:sqlite` `DatabaseSync`, WAL, foreign keys, 5-second busy timeout and `BEGIN IMMEDIATE` transactions. Default is `private/results.sqlite`, overridden by `RESULTS_DB_PATH`. Inspected schema version: 6.
+`lib/results/db.ts` returns the MySQL results handle; `lib/student/db.ts` returns the students/CMS handle. `lib/database/runtime.ts` requires `DB_BACKEND=mysql`. Await all operations and transaction callbacks; preserve connection-pinned transactions, parameter binding, constraints and attempt locks. Current local bounds and schema URL configuration are documented in MYSQL_AGENT.md and MYSQL_OPERATIONS.md. File-path compatibility variables do not select the live database engine.
 
 | Table | Actual role |
 | --- | --- |
@@ -222,7 +223,7 @@ Authenticated Reading/Listening layouts install `TestHighlighter`. Writing inher
 | `audit` | Administrative/result/audio diagnostic events |
 | `login_limits` | Login throttling |
 
-`db()` may migrate/seed. Use direct `DatabaseSync(path,{readOnly:true})` for audits, not startup helpers. Do not reset real storage for checks. Inspection found 20 Listening and 20 Reading key rows; this is not certification of all answer values or remote deployment.
+`db()` does not provision, migrate or seed an empty MySQL installation. Use approved read-only MySQL inspection for audits and separately isolated schemas for mutating checks. Never initialize/reset application storage to inspect it. Reference key counts in earlier inspection records are historical evidence, not certification of current rows or approved answers.
 
 Key structure from `types.ts` (structural example, NOT an approved key):
 
@@ -235,7 +236,7 @@ Key structure from `types.ts` (structural example, NOT an approved key):
 }
 ```
 
-Approval requires all 40 rules and the approved paper-specific band conversion. Keys are private runtime records, never public/component data. `private/test-1-approved-keys.json` optionally seeds only Test 1 with INSERT OR IGNORE; Git deployment does not transfer database keys.
+Approval requires all 40 rules and the approved paper-specific band conversion. Keys are private runtime records, never public/component data. Startup does not import private key files; key provisioning requires a separately approved process. Git deployment does not transfer database keys.
 
 Scoring rules:
 
@@ -281,12 +282,12 @@ Candidates see only their own submissions; scores/feedback require release. Writ
 ## 11. Operational protections and actual limits
 
 - `testReadiness` checks approved complete keys and non-empty audio, NOT correctness or matching media. `requireReady` exists; inspect its call sites before asserting universal enforcement.
-- `instrumentation.ts` starts maintenance in Node runtime outside production build. Backups run at startup/every six hours, retaining 28. Portal backup creation validates SQLite integrity and uses private storage.
+- `instrumentation.ts` starts maintenance in Node runtime outside production build. Results backups run at startup/every six hours, retaining 28 matching snapshots. Each exporter reads a consistent MySQL snapshot and validates its portable archive. This is not automatic students/CMS or media backup coverage; see MYSQL_OPERATIONS.md.
 - Database backups exclude source, audio/images/videos, environment files and local notes/highlights. Keep independent media backups.
 - Never expose databases, keys, secrets, CSVs or backups under `public/`. Preserve `.gitignore` exclusions for private storage, `.env*`, build outputs and key exports.
-- Restore requires a stopped server and `--confirm-restore`, rejects remaining WAL/SHM, validates integrity/tables, retains the old DB and clears sessions. Never delete WAL/SHM to bypass the check or run restores/resets without authorization.
+- The file-replacement restore command refuses MySQL. Recovery requires a separately approved isolated MySQL destination, verified records/relationships and explicit approval before switching application connections. Never replace server data files, erase volumes or run imports/resets without authorization.
 - `CLASSROOM_HTTP=true` is only for trusted classroom HTTP. Preserve secure public cookies and exact origin/host checks.
-- Railway requires a persistent volume and DB path inside it; classroom HTTP there is rejected. Do not change replicas, volumes, domain settings or deploy during content work. Current SQLite assumes coherent single-database operation.
+- The new Railway deployment requires persistent MySQL data and separate private website media/backup storage, two schema URLs, verified TLS and exact HTTPS origin configuration. Classroom HTTP there is rejected. Do not change replicas, volumes, domains or deploy during content work. Multiple replicas are not certified by the local tests.
 - `next.config.ts` allows exact current LAN IPv4 origins for development, not wildcard origins. Do not weaken security to solve visual problems.
 - Local source/HTTP checks do not certify Railway, LAN reliability, concurrency capacity, full audio or real end-to-end candidate operation.
 
@@ -331,7 +332,7 @@ Run relevant available checks in the authorized scope. Mutating integration chec
 
 This rulebook is based on source reads of the architecture map, shared clients/lifecycle/safety/access/auth/assignments/exposure/database/scoring/store, imported Reading/Listening schema inventories, representative legacy components, Writing prompts/editor/result, shared question components/styles, admin key/marking/assignment/result/backup APIs and read-only SQLite table/version/key-count inspection. No candidate credentials, identities, answer values or results are reproduced here.
 
-It is not a fresh line-by-line audit of every historical question or a physical browser/classroom/remote-deployment certification. `README.md`, `OPERATIONS.md`, `RESULTS-SYSTEM.md`, `ASSIGNMENT-SECURITY.md` and `SUBMISSION-SESSION-FIXES.md` provide background but can contain older counts/policies; confirm implementation before relying on them. `CLAUDE.md` points to this file.
+It is not a fresh line-by-line audit of every historical question or a physical browser/classroom/remote-deployment certification. Current checked-in operational guidance is in `README.md`, `MYSQL_OPERATIONS.md` and `MYSQL_AGENT.md`, with dated verification reports. Historical document names mentioned in older conversations are not guaranteed to exist in this repository. Confirm implementation before relying on older counts or policies.
 
 Update this document when explicitly approved mechanisms change. Keep structural examples labelled as examples, and do not turn known legacy exceptions into unrequested migrations.
 

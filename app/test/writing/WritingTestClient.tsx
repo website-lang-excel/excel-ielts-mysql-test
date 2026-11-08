@@ -32,6 +32,7 @@ export default function WritingTest({ testNumber }: { testNumber: number | null 
   };
 
   useEffect(() => {
+ // eslint-disable-next-line react-hooks/set-state-in-effect -- Clear readiness before asynchronously restoring the external draft; autosave must remain gated until restoration completes.
     let active=true,retry:number|undefined;setIsReady(false);
     const load=()=>{void resumeDraft(testNumber || 1).then(draft=>{
       if(!active)return;

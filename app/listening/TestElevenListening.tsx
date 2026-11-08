@@ -5,7 +5,7 @@ type Props = {
 };
 type ChoiceQuestion = { number: number; prompt: string; options: string[] };
 const answerStyle = "h-9 w-44 max-w-full border border-[#2185d0] bg-white px-2 text-[16px] outline-none focus:border-[#2185d0] focus:ring-1 focus:ring-[#2185d0]";
-const cellStyle = "border border-[#777] px-3 py-3 align-top";
+
 
 export default function TestElevenListening({ part, answers, updateAnswer }: Props) {
   const blank = (number: number) => (

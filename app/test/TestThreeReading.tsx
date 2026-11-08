@@ -5,10 +5,9 @@ import { HeadingBank, HeadingDrop } from "./HeadingDragAndDrop";
 
 import { SummaryGap } from "./SummaryWithoutClues";
 
-import { saveSection, useAnswerDraft, useCountdown } from "@/lib/results/client";
+import { useAnswerDraft, useCountdown } from "@/lib/results/client";
 
 import { useState, type PointerEvent as ReactPointerEvent } from "react";
-import { useRouter } from "next/navigation";
 import { Bell, Menu, NotebookPen, Wifi } from "lucide-react";
 import { testThreePassages } from "./test3-reading-data";
 
@@ -32,7 +31,7 @@ const paragraphHeadingGroup = {
 };
 
 export default function TestThreeReading() {
-  const router = useRouter();
+
   const [passageIndex, setPassageIndex] = useState(0);
   const timeLeft = useCountdown(3, "reading");
   const [paneSplit, setPaneSplit] = useState(50);
@@ -47,15 +46,12 @@ export default function TestThreeReading() {
     setPaneSplit(Math.min(75, Math.max(25, ((event.clientX - bounds.left) / bounds.width) * 100)));
   };
 
-const handleContinue = async () => {
-    sessionStorage.setItem("ieltsAnswersTest3Reading", JSON.stringify(answers));
-    try { await saveSection("reading",3,answers,true); router.replace("/listening/instructions?test=3"); } catch(error){window.alert((error as Error).message);}
-  };
+
   const minutes = Math.floor(timeLeft / 60);
   const seconds = String(timeLeft % 60).padStart(2, "0");
   const setAnswer = (number: number, value: string) => setAnswers((current) => ({ ...current, [number]: value }));
   const numberBadge = (number: number) => <span className="inline-flex h-8 min-w-8 shrink-0 items-center justify-center rounded-sm border border-[#2185d0] bg-white px-1 font-medium leading-none">{number}</span>;
-  const headingAnswer = (number: number) => <select id={`answer-${number}`} aria-label={`Answer for question ${number}`} value={answers[number] || ""} onChange={(event) => setAnswer(number, event.target.value)} className="w-48 max-w-full border border-gray-400 bg-white px-2 py-1 outline-none focus:border-[#2185d0]"><option value="">Select</option>{deerHeadings.map(([key, label]) => <option key={key} value={key}>{key} — {label}</option>)}</select>;
+
   const agencyAnswer = (number: number) => <select id={`answer-${number}`} aria-label={`Answer for question ${number}`} value={answers[number] || ""} onChange={(event) => setAnswer(number, event.target.value)} className="w-48 max-w-full border border-gray-400 bg-white px-2 py-1 outline-none focus:border-[#2185d0]"><option value="">Select</option>{thamesAgencies.map(([key, label]) => <option key={key} value={key}>{key} — {label}</option>)}</select>;
   const summaryInput = (number: number) => number >= 7 && number <= 13 ? <SummaryGap number={number} answers={answers} onAnswer={setAnswer} /> : <><span className="mx-1 font-semibold">{number}.</span><input id={`question-${number}`} aria-label={`Answer for question ${number}`} value={answers[number] || ""} onChange={(event) => setAnswer(number, event.target.value)} className="mx-1 inline-block h-[42px] w-[198px] max-w-full border border-[#2185d0] bg-white px-2 align-middle outline-none focus:border-[#2185d0]" autoComplete="off" /></>;
 
@@ -149,7 +145,7 @@ const handleContinue = async () => {
           <div className="self-start mt-1 text-[14px] font-bold leading-5">Test taker ID<div className="text-[13px] font-normal">Time remaining: {minutes}:{seconds}</div></div>
         </div>
         <div className="flex items-center gap-5 text-[#222]">
-          
+
           <button aria-label="Notes" title="Notes"><NotebookPen size={22} /></button>
           <button aria-label="Connection status"><Wifi size={22} /></button>
           <button aria-label="Notifications"><Bell size={22} /></button>

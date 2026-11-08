@@ -1,4 +1,4 @@
-# Excel IELTS — MySQL test version
+# Excel IELTS — MySQL website
 
 Separate MySQL-compatible copy of the IELTS application. Application reads/writes use MySQL, with separate results and Student Portal/CMS schemas. Exam content, UI, scoring, timers, autosave and recovery policies are preserved.
 
@@ -21,12 +21,27 @@ npm run build
 npm run start -- --hostname 127.0.0.1 --port 3307
 ```
 
-The already-prepared local version on the owner's computer remains in its separate local directory and can be started there with npm run local:mysql. Its portable-runtime metadata and credentials are intentionally excluded here. Those convenience helpers require private machine metadata and are not a database installer for a new clone.
+Open `http://127.0.0.1:3307` for the commands above, with APP_ORIGIN matching that exact origin. MySQL must already be running. These are startup instructions, not a claim that a server is currently running.
+
+The convenience commands `local:mysql`, `build:mysql`, `start:mysql` and `stop:mysql` require private machine configuration. This working tree currently has no root `.local-mysql.json` or root private environment file. Do not copy configuration from another project or reinitialize a database to make those helpers work. See [MYSQL_OPERATIONS.md](MYSQL_OPERATIONS.md).
 
 ## Migration, backups and verification
 
-scripts/mysql/export-sqlite.py captures nonintrusive private source copies. scripts/mysql/migrate.mjs validates/plans and imports only explicitly confirmed empty isolated destinations; it refuses to overwrite/adopt existing databases. Keep exports private. Backup commands use the private runtime environment and export consistent SQLite-format snapshots from MySQL; the live application still uses MySQL. File-replacement restore refuses MySQL; recovery must use a new empty destination and verification before a separately approved switch.
+See [MYSQL_OPERATIONS.md](MYSQL_OPERATIONS.md) for MySQL backup coverage and recovery limits. Current automatic snapshots cover the results schema only; complete protection must also cover students/CMS and private media. Recovery requires an isolated destination, verification and separately approved connection changes. Existing importer tooling does not provision a database merely because the repository is published.
 
-Local verification passed database record hashes/relationships, restoration, ten-candidate HTTP flows, auth, CMS, practice types, mock module progression, autosave/recovery and bookings. The production build passed. Full lint has 12 pre-existing errors and 29 warnings in unchanged original files; migration-scoped lint has no new findings. Manual browser/audio and future-host testing remain required.
+As of **8 November 2026**, all four approved code issues are fixed locally:
+
+- MySQL queue/backpressure: progressive 5/10/20/50-student tests and another 50-student run passed. See [MYSQL_POOL_FIX_REPORT.md](MYSQL_POOL_FIX_REPORT.md).
+- Seven regression runners: 116 groups passed. See [MYSQL_REGRESSION_FIX_REPORT.md](MYSQL_REGRESSION_FIX_REPORT.md).
+- Malformed CMS JSON imports: clear HTTP 400 validation response; seven focused groups passed. See [MYSQL_JSON_IMPORT_FIX_REPORT.md](MYSQL_JSON_IMPORT_FIX_REPORT.md).
+- Full lint: zero errors/warnings, with reviewed intentional exceptions. TypeScript and production build passed. See [MYSQL_LINT_FIX_REPORT.md](MYSQL_LINT_FIX_REPORT.md).
+
+These are finite local checks, not full-duration browser/audio or Railway capacity certification. Manual browser acceptance and the eventual new Railway deployment checks remain outstanding.
+
+## Approved destinations and workflow
+
+Work only in `C:/Users/Asus/Documents/Codex/website-lang-excel-mysql`, the [website-lang-excel/excel-ielts-mysql-test](https://github.com/website-lang-excel/excel-ielts-mysql-test) repository and the new Railway project identified in [MYSQL_AGENT.md](MYSQL_AGENT.md). No other accounts or projects are authorized.
+
+See [MYSQL_OPERATIONS.md](MYSQL_OPERATIONS.md) for verified configuration, backup coverage, recovery restrictions, local test commands and manual acceptance. Local work and passing checks do not authorize commits, pushes or deployments. Obtain the owner's manual-testing confirmation and explicit approval for publication/deployment.
 
 No deployment, production migration, existing-repository update or Railway change is authorized by publication of this test repository.

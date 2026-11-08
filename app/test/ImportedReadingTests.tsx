@@ -1,14 +1,14 @@
 "use client";
+/* eslint-disable @next/next/no-img-element -- Keep the existing native logo/diagram dimensions, CSS and direct media URLs; image optimization is outside this lint-only repair. */
 
 import PartNavigation from "./PartNavigation";
 import SentenceEndings from "./SentenceEndings";
 import { HeadingBank, HeadingDrop, headingQuestion } from "./HeadingDragAndDrop";
 import ParagraphInformationTable from "./ParagraphInformationTable";
 import SummaryWithoutClues from "./SummaryWithoutClues";
-import { saveSection, useAnswerDraft, useCountdown } from "@/lib/results/client";
+import { useAnswerDraft, useCountdown } from "@/lib/results/client";
 
 import { Fragment, useState, type PointerEvent as ReactPointerEvent } from "react";
-import { useRouter } from "next/navigation";
 import { Bell, Menu, NotebookPen, Wifi } from "lucide-react";
 import type { ImportedReadingTest, ReadingQuestionGroup } from "./imported-reading-types";
 import test7 from "./test7-import.json";
@@ -24,7 +24,7 @@ const tests: Record<number, ImportedReadingTest> = {
 };
 
 export default function ImportedReadingTests({ testNumber }: { testNumber: number }) {
-  const router = useRouter();
+
   const test = tests[testNumber];
   const [passageIndex, setPassageIndex] = useState(0);
   const timeLeft = useCountdown(testNumber, "reading");
@@ -40,10 +40,7 @@ const movePaneDivider = (event: ReactPointerEvent<HTMLDivElement>) => {
     if (!bounds || bounds.width === 0) return;
     setPaneSplit(Math.min(75, Math.max(25, ((event.clientX - bounds.left) / bounds.width) * 100)));
   };
-  const handleContinue = async () => {
-    sessionStorage.setItem(`ieltsAnswersTest${testNumber}Reading`, JSON.stringify(answers));
-    try { await saveSection("reading",testNumber,answers,true); router.replace(`/listening/instructions?test=${testNumber}`); } catch(error){window.alert((error as Error).message);}
-  };
+
   const selectMultiple = (numbers: number[], value: string) => {
     setAnswers((current) => {
       const chosen = numbers.map((number) => current[number]).filter(Boolean);

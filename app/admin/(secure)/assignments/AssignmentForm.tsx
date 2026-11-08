@@ -12,12 +12,15 @@ export default function AssignmentForm({students,rows}:{students:Student[];rows:
  const assign=async(payload:Record<string,unknown>,method="POST")=>{try{return await request('/api/admin/assignments',payload,method);}catch(e){if(e instanceof RequestError&&e.status===409&&e.message.includes('Confirm interruption')&&window.confirm(e.message))return request('/api/admin/assignments',{...payload,confirmInterrupt:true},method);throw e;}};
  const router=useRouter(),[message,setMessage]=useState(''),[busy,setBusy]=useState(false);
  const [candidateId,setCandidateId]=useState(''),[test,setTest]=useState(1),[mode,setMode]=useState<TestMode>('full'),[purpose,setPurpose]=useState<'fresh'|'repeat'>('fresh');
- const [history,setHistory]=useState<ExposureSummary[]|null>(null),[historyError,setHistoryError]=useState('');
  const [historyRevision,setHistoryRevision]=useState(0);
- useEffect(()=>{let current=true;setHistory(null);setHistoryError('');if(!candidateId)return;
-  void request<{modules:ExposureSummary[]}>(`/api/admin/assignments?${new URLSearchParams({candidateId,testId:String(test),mode})}`,undefined,'GET').then(value=>{if(current)setHistory(value.modules);}).catch(error=>{if(current)setHistoryError((error as Error).message);});
+ const historyKey=JSON.stringify([candidateId,test,mode,historyRevision]);
+ const [historyResult,setHistoryResult]=useState<{key:string;modules:ExposureSummary[]|null;error:string}|null>(null);
+ const history=historyResult?.key===historyKey?historyResult.modules:null;
+ const historyError=historyResult?.key===historyKey?historyResult.error:'';
+ useEffect(()=>{let current=true;if(!candidateId)return;
+  void request<{modules:ExposureSummary[]}>(`/api/admin/assignments?${new URLSearchParams({candidateId,testId:String(test),mode})}`,undefined,'GET').then(value=>{if(current)setHistoryResult({key:historyKey,modules:value.modules,error:''});}).catch(error=>{if(current)setHistoryResult({key:historyKey,modules:null,error:(error as Error).message});});
   return()=>{current=false;};
- },[candidateId,test,mode,historyRevision]);
+ },[candidateId,test,mode,historyKey]);
  const blocked=purpose==='fresh'&&(!history||history.some(module=>module.status!=='fresh'));
  return <><form className="mb-8 max-w-xl space-y-4" onSubmit={async e=>{e.preventDefault();if(blocked)return;const data=new FormData(e.currentTarget);setBusy(true);setMessage('');try{const expiry=String(data.get('expiresAt')||'');await assign({candidateId,testId:test,mode,purpose,expiresAt:expiry?new Date(expiry).toISOString():''});setMessage(`${purposeLabel(purpose)} assigned. Previous completed results are kept.`);setHistoryRevision(value=>value+1);router.refresh();}catch(e){setMessage((e as Error).message);setHistoryRevision(value=>value+1);}finally{setBusy(false);}}}>
  <label className="block">Candidate<select required name="candidateId" value={candidateId} onChange={e=>setCandidateId(e.target.value)} className="mt-1 block w-full border p-2"><option value="">Select candidate</option>{students.map(s=><option key={s.id} value={s.id}>{s.name} ({s.registrationId})</option>)}</select></label>

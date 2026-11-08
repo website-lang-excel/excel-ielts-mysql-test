@@ -3,8 +3,8 @@ import { recoveryKind } from "@/lib/results/recovery-policy";
 
 import PartNavigation from "../test/PartNavigation";
 
-import { useEffect, useRef, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { Wifi, Bell, Menu, NotebookPen } from "lucide-react";
 import TestTwoListening from "./TestTwoListening";
 import TestThreeListening from "./TestThreeListening";
@@ -21,7 +21,7 @@ import ListeningTestsFifteenEighteen from "./ListeningTestsFifteenEighteen";
 import ListeningTestsTwelveSixteen from "./ListeningTestsTwelveSixteen";
 import ListeningTestsThirteenNineteen from "./ListeningTestsThirteenNineteen";
 
-import { draftRevision, draftKey, request, RequestError, saveSection, useAnswerDraft } from "@/lib/results/client";
+import { draftRevision, draftKey, request, RequestError, useAnswerDraft } from "@/lib/results/client";
 import { statusSnapshot, publishStatus, tabId, useAttemptStatus } from "@/lib/results/safety-client";
 import { acceptAudioAcknowledgement, unauthorizedAudioSeek } from "@/lib/results/listening-progress";
 import { attemptKey } from "@/lib/results/client";
@@ -48,7 +48,7 @@ async function flushAudioDiagnostics(id: string, test: string) {
 }
 
 export default function ListeningTest() {
-  const router = useRouter();
+
   const searchParams = useSearchParams();
   const testNumber = searchParams.get("test") || "1";
   const audioSource = /^(?:[1-9]|10|11|12|13|14|15|16|17|18|19|20)$/.test(testNumber)
@@ -66,7 +66,7 @@ export default function ListeningTest() {
   const retryBusy=useRef(false);
   const progressBlocked=useRef(false);
   const state=useAttemptStatus();
-  const [transitioning,setTransitioning]=useState(false),[audioError,setAudioError]=useState("");
+  const [audioError,setAudioError]=useState("");
   const reporting=useRef(false),lastReport=useRef(0),restored=useRef(false),pendingEnd=useRef(false);
   const listeningComplete=state?.stage==="LISTENING_COMPLETED"||state?.stage==="COMPLETED";
   const [playbackBlocked,setPlaybackBlocked]=useState(false);
@@ -77,11 +77,12 @@ export default function ListeningTest() {
   const [activePart, setActivePart] = useState(1);
 
   const [answers, setAnswers] = useState<Record<number, string>>({});
-  const latestAnswers=useRef(answers);latestAnswers.current=answers;
+  const latestAnswers=useRef(answers);
+  useLayoutEffect(()=>{latestAnswers.current=answers;},[answers]);
 
   const draftReady=useAnswerDraft("listening",testNumber,answers,setAnswers);
 
-  const diagnoseAudio = (kind: string, error?: unknown, ended = false, audio = audioRef.current) => {
+  const diagnoseAudio = useCallback((kind: string, error?: unknown, ended = false, audio = audioRef.current) => {
     // Diagnostics must never interfere with playback or answer saving.
     try {
       const id = sessionStorage.getItem(attemptKey(testNumber)); if (!id) return;
@@ -91,7 +92,7 @@ export default function ListeningTest() {
       sessionStorage.setItem(key, JSON.stringify([...pendingDiagnostics(key), event].slice(-20)));
       void flushAudioDiagnostics(id, testNumber);
     } catch {}
-  };
+  }, [testNumber, audioRetry]);
   useEffect(() => {
     const flush = () => { const id = sessionStorage.getItem(attemptKey(testNumber)); if (id) void flushAudioDiagnostics(id, testNumber); };
     flush();const timer = window.setInterval(flush, 15000);window.addEventListener("online", flush);
@@ -129,7 +130,7 @@ export default function ListeningTest() {
       document.removeEventListener("keydown", preventMediaKey, true);
       for (const action of actions) { try { mediaSession?.setActionHandler(action, null); } catch {} }
     };
-  }, [testNumber, draftReady, audioRetry, hasAudio]);
+  }, [testNumber, draftReady, audioRetry, hasAudio, diagnoseAudio]);
 
   useEffect(() => {
     if(!draftReady)return;
@@ -138,7 +139,9 @@ export default function ListeningTest() {
     const restore=()=>{intentionalAudioPause.current=false;if(Number.isFinite(audio.duration)){const target=Math.min(saved,audio.duration);authorizedSeek.current=target;lastPlayedPosition.current=target;audio.currentTime=target;}restored.current=true;if(state?.stage!=="LISTENING_COMPLETED")void audio.play().then(()=>setPlaybackBlocked(false)).catch(error=>{diagnoseAudio("play-blocked",error);setPlaybackBlocked(true);});};
     if(audio.readyState>=1)restore();else audio.addEventListener("loadedmetadata",restore,{once:true});
     return()=>{intentionalAudioPause.current=true;audio.removeEventListener("loadedmetadata",restore);audio.pause();};
-  }, [testNumber,draftReady,audioRetry]);
+  // Restore only when this recording/draft/retry changes; lifecycle acknowledgements must not pause and seek the recording again.
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- Stage is deliberately sampled by this restoration, not a trigger for replaying it.
+  }, [testNumber,draftReady,audioRetry,diagnoseAudio]);
   useEffect(()=>{const block=(event:Event)=>{if((event as CustomEvent).detail){intentionalAudioPause.current=true;audioRef.current?.pause();setPlaybackBlocked(true);}};window.addEventListener("ielts:safety-blocked",block);return()=>window.removeEventListener("ielts:safety-blocked",block);},[]);
   const reportAudio=async(ended=false)=>{
     const audio=audioRef.current,id=sessionStorage.getItem(attemptKey(testNumber));if(!audio||!id||!draftReady||!restored.current||progressBlocked.current||statusSnapshot()?.stage==="LISTENING_COMPLETED")return;
@@ -188,12 +191,7 @@ export default function ListeningTest() {
     return()=>{window.clearInterval(timer);window.removeEventListener("online",recover);};
   },[draftReady,listeningComplete,recoverAudio]);
 
-  const handleContinueToReading = async () => {
-    if((process.env.NODE_ENV !== "development" && !listeningComplete)||transitioning)return;setTransitioning(true);
-    sessionStorage.setItem("ieltsListeningAnswers", JSON.stringify(answers));
-    sessionStorage.setItem("ieltsListeningTest", testNumber);
-    try { await saveSection("listening",testNumber,answers,true); router.replace(statusSnapshot()?.path||`/listening/instructions?test=${testNumber}`); } catch(error){window.alert((error as Error).message);setTransitioning(false);}
-  };
+
 
   const formatTime = (time: number) => {
     if (!time || isNaN(time)) return "00:00";
@@ -209,10 +207,7 @@ export default function ListeningTest() {
   const progress =
     hasAudio && duration > 0 ? (currentTime / duration) * 100 : 0;
 
-  const questions = Array.from(
-    { length: 40 },
-    (_, index) => index + 1
-  );
+
 
   const updateAnswer = (questionNumber: number, value: string) => {
     if(finalSnapshot.current||listeningComplete)return;
@@ -244,7 +239,7 @@ export default function ListeningTest() {
           <div className="self-start mt-1 text-[14px] leading-5 font-bold">Test taker ID<div className="font-normal text-[13px]">{isFinished ? "Completed" : "Listening"} · {formatTime(hasAudio ? currentTime : 0)} / {formatTime(hasAudio ? duration : 0)}</div></div>
         </div>
         <div className="flex items-center gap-5 text-[#222]">
-          
+
           <button aria-label="Notes" title="Notes"><NotebookPen size={22} /></button>
           <button aria-label="Connection status"><Wifi size={22} /></button>
           <button aria-label="Notifications"><Bell size={22} /></button>

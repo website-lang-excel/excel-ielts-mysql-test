@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Ignored local credentials, database runtimes and disposable audit fixtures.
+    "private/**",
   ]),
 ]);
 

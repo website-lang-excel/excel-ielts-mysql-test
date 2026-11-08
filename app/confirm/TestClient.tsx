@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-img-element -- Keep the existing native logo/diagram dimensions, CSS and direct media URLs; image optimization is outside this lint-only repair. */
 import Link from "next/link";
 
 import { useState } from "react";

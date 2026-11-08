@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import type { Dispatch, SetStateAction } from "react";
 import type { Answers, Skill } from "./types";
 import { lifecycle, statusSnapshot, tabId } from "./safety-client";
@@ -119,7 +119,7 @@ export function safeAnswers(value:unknown):Record<number,string> {
 export function useDraftAutosave<T>(test:number|string,skill:string,value:T,enabled:boolean,saveValue:(value:T)=>Promise<unknown>,onError?:(error:unknown)=>void,onSaved?:()=>void) {
  const encoded=JSON.stringify(value);
  const latest=useRef({value,encoded,saveValue,onError,onSaved});
- latest.current={value,encoded,saveValue,onError,onSaved};
+ useLayoutEffect(()=>{latest.current={value,encoded,saveValue,onError,onSaved};},[value,encoded,saveValue,onError,onSaved]);
 
  useEffect(()=>{
   if(!enabled)return;
@@ -138,6 +138,7 @@ export function useDraftAutosave<T>(test:number|string,skill:string,value:T,enab
 export function useAnswerDraft(skill: Skill,test: number|string,answers: Record<number,string>,setAnswers: Dispatch<SetStateAction<Record<number,string>>>,enabled=true) {
  const ready=useRef(false),[loaded,setLoaded]=useState(false);
  useEffect(()=>{
+ // eslint-disable-next-line react-hooks/set-state-in-effect -- Clear draft readiness before restoring server/tab storage; retain the existing autosave safety gate and retry timing.
   let active=true,retry:number|undefined;ready.current=false;setLoaded(false);
   if(!enabled)return;
   const load=()=>{void resumeDraft(test).then(draft=>{

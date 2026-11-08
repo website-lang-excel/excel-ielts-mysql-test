@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element -- Keep the existing native logo/diagram dimensions, CSS and direct media URLs; image optimization is outside this lint-only repair. */
 type Props = {
   part: number;
   answers: Record<number, string>;
@@ -21,22 +22,7 @@ export default function TestFiveListening({ part, answers, updateAnswer }: Props
     </div>
   );
 
-  const chooseTwo = (numbers: [number, number], options: string[]) => {
-    const selected = numbers.map((number) => answers[number]).filter(Boolean);
-    return <div className="space-y-3">
-      <div id={`question-${numbers[0]}`} className="scroll-m-6"><span className="inline-flex h-8 min-w-8 items-center justify-center rounded-sm border border-[#2185d0]">{numbers[0]}–{numbers[1]}</span></div>
-      <span id={`question-${numbers[1]}`} className="block scroll-m-6" />
-      {options.map((option, index) => {
-        const value = String.fromCharCode(65 + index);
-        const checked = selected.includes(value);
-        return <label key={value} className="flex items-center gap-2"><input type="checkbox" checked={checked} disabled={!checked && selected.length >= 2} onChange={() => {
-          const next = checked ? selected.filter((answer) => answer !== value) : [...selected, value];
-          updateAnswer(numbers[0], next[0] || "");
-          updateAnswer(numbers[1], next[1] || "");
-        }} /><span>{option}</span></label>;
-      })}
-    </div>;
-  };
+
 
   const listAnswer = (number: number, options: string[]) => (
     <div id={`question-${number}`} key={number} className="flex scroll-m-6 items-center gap-3"><b>{number}</b><select aria-label={`Answer for question ${number}`} value={answers[number] || ""} onChange={(event) => updateAnswer(number, event.target.value)} className="h-9 w-full max-w-xs border border-[#2185d0] bg-white px-2 focus:outline-none focus:ring-1 focus:ring-[#2185d0]"><option value="">Select</option>{options.map((option) => <option key={option} value={option}>{option}</option>)}</select></div>

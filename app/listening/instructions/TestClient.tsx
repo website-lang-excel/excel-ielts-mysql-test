@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable @next/next/no-img-element -- Keep the existing native logo/diagram dimensions, CSS and direct media URLs; image optimization is outside this lint-only repair. */
 import {useEffect,useState} from "react";
 import {useRouter,useSearchParams} from "next/navigation";
 import {ensureAttempt} from "@/lib/results/client";
@@ -20,7 +21,8 @@ export default function SectionDashboard({videos}:{videos:Record<Skill,boolean>}
  const assignedSections=sections.filter(section=>includesModule(modeOf(state??{}),section.skill));
  const index=sections.findIndex(s=>s.skill===current);
  const ended=!!state?.pendingSection&&!state.completionAcknowledged;
- useEffect(()=>{setExpanded(false);},[current]);
+ const [expandedFor,setExpandedFor]=useState(current);
+ if(expandedFor!==current){setExpandedFor(current);setExpanded(false);}
  useEffect(()=>{let live=true;void ensureAttempt(test).catch(e=>{if(live)setError((e as Error).message);});return()=>{live=false;};},[test]);
  const action=async(kind:string)=>{
   if(busy)return;setBusy(true);setError("");

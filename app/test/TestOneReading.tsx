@@ -121,12 +121,7 @@ export default function TestOneReading({ pane, section, answers, onAnswer }: Pro
     />
   );
 
-  const selectAnswer = (number: number, choices: readonly (readonly [string, string])[]) => (
-    <select id={`question-${number}`} aria-label={`Answer for question ${number}`} value={answers[number] || ""} onChange={(event) => onAnswer(number, event.target.value)} className="w-48 max-w-full border border-gray-400 bg-white px-2 py-1 outline-none focus:border-[#2185d0]">
-      <option value="">Select</option>
-      {choices.map(([value, label]) => <option key={value} value={value}>{value} — {label}</option>)}
-    </select>
-  );
+
 
   const numberBadge = (number: number) => (
     <span className="inline-flex h-8 min-w-8 shrink-0 items-center justify-center rounded-sm border border-[#2185d0] bg-white px-1 font-medium leading-none">

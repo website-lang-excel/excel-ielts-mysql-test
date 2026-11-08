@@ -10,7 +10,15 @@ export const importColumns = ['id', 'categoryId', 'topicId', 'type', 'difficulty
 export function parseImport(filename: string, encoded: string) { if (encoded.length > 6 * 1024 * 1024)
     fail(413, 'Import files must be at most 4 MB.'); const bytes = Buffer.from(encoded, 'base64'); if (bytes.length > 4 * 1024 * 1024)
     fail(413, 'Import files must be at most 4 MB.'); if (filename.toLowerCase().endsWith('.json')) {
-    const data = JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/, ''));
+    let data: unknown;
+    try {
+        data = JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/, ''));
+    }
+    catch (error) {
+        if (error instanceof SyntaxError)
+            fail(400, 'Invalid JSON file. Check the JSON syntax and upload it again.');
+        throw error;
+    }
     const rows = list(data, 1000).map(object);
     return { headers: [...new Set(rows.flatMap(Object.keys))], rows };
 } const data = filename.toLowerCase().endsWith('.xlsx') ? parseXLSX(bytes) : filename.toLowerCase().endsWith('.csv') ? parseCSV(bytes.toString('utf8').replace(/^\uFEFF/, '')) : null; if (!data)

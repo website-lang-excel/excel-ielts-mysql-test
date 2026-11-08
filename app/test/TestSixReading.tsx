@@ -4,10 +4,9 @@ import PartNavigation from "./PartNavigation";
 import ParagraphInformationTable from "./ParagraphInformationTable";
 import { SummaryGap } from "./SummaryWithoutClues";
 
-import { saveSection, useAnswerDraft, useCountdown } from "@/lib/results/client";
+import { useAnswerDraft, useCountdown } from "@/lib/results/client";
 
 import { useState, type PointerEvent as ReactPointerEvent } from "react";
-import { useRouter } from "next/navigation";
 import { Bell, Menu, NotebookPen, Wifi } from "lucide-react";
 import { testSixPassages } from "./test6-reading-data";
 
@@ -24,7 +23,7 @@ const paragraphLetters = ["A", "B", "C", "D", "E", "F", "G", "H"];
 const paragraphPrompts = ["results of animal experiments", "recognition of the scientists’ valuable work", "a statement about the beginning of mass production", "Fleming’s cautionary advice", "examples of uses for penicillin", "the starting point for Fleming’s original research"];
 
 export default function TestSixReading() {
-  const router = useRouter();
+
   const [passageIndex, setPassageIndex] = useState(0);
   const timeLeft = useCountdown(6, "reading");
   const [paneSplit, setPaneSplit] = useState(50);
@@ -38,7 +37,7 @@ export default function TestSixReading() {
     if (!bounds || bounds.width === 0) return;
     setPaneSplit(Math.min(75, Math.max(25, ((event.clientX - bounds.left) / bounds.width) * 100)));
   };
-const handleContinue = async () => { sessionStorage.setItem("ieltsAnswersTest6Reading", JSON.stringify(answers)); try { await saveSection("reading",6,answers,true); router.replace("/listening/instructions?test=6"); } catch(error){window.alert((error as Error).message);} };
+
   const minutes = Math.floor(timeLeft / 60);
   const seconds = String(timeLeft % 60).padStart(2, "0");
   const textInput = (number: number) => <><span className="mx-1 inline-flex min-w-5 items-center justify-center font-semibold align-middle">{number}</span><input id={`question-${number}`} aria-label={`Answer for question ${number}`} value={answers[number] || ""} onChange={(event) => setAnswer(number, event.target.value)} className="mx-1 inline-block h-8 w-36 border border-[#2185d0] bg-white px-2 align-middle outline-none focus:border-[#2185d0]" autoComplete="off" /></>;

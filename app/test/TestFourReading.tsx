@@ -4,10 +4,9 @@ import PartNavigation from "./PartNavigation";
 import SentenceEndings from "./SentenceEndings";
 import { HeadingBank, HeadingDrop } from "./HeadingDragAndDrop";
 
-import { saveSection, useAnswerDraft, useCountdown } from "@/lib/results/client";
+import { useAnswerDraft, useCountdown } from "@/lib/results/client";
 
 import { useState, type PointerEvent as ReactPointerEvent } from "react";
-import { useRouter } from "next/navigation";
 import { Bell, Menu, NotebookPen, Wifi } from "lucide-react";
 import { testFourPassages } from "./test4-reading-data";
 
@@ -31,7 +30,7 @@ const paragraphHeadingGroup = {
 };
 
 export default function TestFourReading() {
-  const router = useRouter();
+
   const [passageIndex, setPassageIndex] = useState(0);
   const timeLeft = useCountdown(4, "reading");
   const [paneSplit, setPaneSplit] = useState(50);
@@ -50,10 +49,7 @@ export default function TestFourReading() {
     if (!bounds || bounds.width === 0) return;
     setPaneSplit(Math.min(75, Math.max(25, ((event.clientX - bounds.left) / bounds.width) * 100)));
   };
-const handleContinue = async () => {
-    sessionStorage.setItem("ieltsAnswersTest4Reading", JSON.stringify(answers));
-    try { await saveSection("reading",4,answers,true); router.replace("/listening/instructions?test=4"); } catch(error){window.alert((error as Error).message);}
-  };
+
   const minutes = Math.floor(timeLeft / 60);
   const seconds = String(timeLeft % 60).padStart(2, "0");
 

@@ -4,7 +4,7 @@ import PartNavigation from "./PartNavigation";
 
 import { useState, type PointerEvent as ReactPointerEvent } from "react";
 import { Wifi, Bell, Menu, NotebookPen } from "lucide-react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import TestOneReading from "./TestOneReading";
 import TestTwoReading from "./TestTwoReading";
 import TestThreeReading from "./TestThreeReading";
@@ -15,11 +15,11 @@ import ImportedReadingTests from "./ImportedReadingTests";
 import ReadingTestsElevenToFifteen from "./ReadingTestsElevenToFifteen";
 import ReadingTestsSixteenToTwenty from "./ReadingTestsSixteenToTwenty";
 
-import { statusSnapshot } from "@/lib/results/safety-client";
-import { saveSection, useAnswerDraft, useCountdown } from "@/lib/results/client";
+
+import { useAnswerDraft, useCountdown } from "@/lib/results/client";
 
 export default function TestPage() {
-  const router = useRouter();
+
   const searchParams = useSearchParams();
   const testNumber = searchParams.get("test") || "1";
 
@@ -59,10 +59,7 @@ export default function TestPage() {
     }
   };
 
-  const handleContinueToWriting = async () => {
-    sessionStorage.setItem("ieltsAnswers", JSON.stringify(answers));
-    try { await saveSection("reading",testNumber,answers,true);router.replace(statusSnapshot()?.path||`/listening/instructions?test=${testNumber}`); }catch(error){window.alert((error as Error).message);}
-  };
+
 
   const minutes = Math.floor(timeLeft / 60);
   const seconds = String(timeLeft % 60).padStart(2, "0");
@@ -86,7 +83,7 @@ export default function TestPage() {
           <div className="self-start mt-1 text-[14px] leading-5 font-bold">Test taker ID<div className="font-normal text-[13px]">Time remaining: {minutes}:{seconds}</div></div>
         </div>
         <div className="flex items-center gap-5 text-[#222]">
-          
+
           <button aria-label="Notes" title="Notes"><NotebookPen size={22} /></button>
           <button aria-label="Connection status"><Wifi size={22} /></button>
           <button aria-label="Notifications"><Bell size={22} /></button>
