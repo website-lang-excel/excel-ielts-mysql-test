@@ -1,0 +1,482 @@
+{
+  "number": 30,
+  "passages": [
+    {
+      "title": "The CT Scanner",
+      "instructions": [
+        "You should spend about 20 minutes on Questions 1–13, which are based on Reading Passage 1 below."
+      ],
+      "paragraphs": [
+        "A\nThe computed tomography scanner, better known as the CT scanner, was originally designed to provide cross-sectional images of the brain. The word tomography comes from the Greek word tomos, meaning “section,” and graphia, meaning “picture.” Godfrey Hounsfield developed the technique in 1972 and was later knighted and awarded the Nobel Peace Prize for his contribution to the medical field. Within four years of this development, CT scans, also called CAT scans (computed axial tomography), were restructured, allowing technicians to scan the entire body for evidence of tumors, injuries, and other abnormalities. Rather than taking a single picture as in an X ray, a CT scanner sends several beams into an area and takes photographs from many different angles.",
+        "B\nWhile the original CT scans took Hounsfield several hours to reconstruct into a useful image, today’s machines can produce an in-depth image in a fraction of a second. Creating a scanner that could produce images at a faster rate was crucial in the development of tomography, as it reduced the degree of distortion in an image caused when patients breathed and moved. As well as providing images with better resolution, today’s scanners also provide more comfort for the patient.",
+        "C\nDuring a CT scan, a patient must lie still on a special table while the radiology technician locates the specific area that needs to be photographed. The table slides into a round tunnel (gantry), which can be rotated or moved forward and backward in order to obtain the necessary view. Inside the donut-shaped¹ machine, a number of X rays are taken, each producing a small slice of the image that doctors require. When passing through dense tissue such as a bone, the X-ray beams are weak and appear white in the CT images. Tissues such as those found in the brain are less dense and appear gray. Images that appear black denote organs such as lungs or others that can fill with air.",
+        "D\nThe CT scanner is made up of several computer systems, including the host computer, which organizes² the entire process. One of the computers converts the raw data into an image, while another allows the technician to control the rotation of the gantry. After the information is processed, it is displayed on a monitor for radiologists and physicians to analyze.³ The information is also saved and printed to keep in a doctor’s records and to share and discuss with patients and their family members.",
+        "E\nPhysicians order CT scans for a number of different reasons, including searching for and assessing tumors, cysts, kidney stones, and bone injuries. Without this technology, surgeons would have to perform many needless and costly operations. Brain, chest, and abdominal CT scans are the most common, though physicians also rely on the CT scanner to guide their needles while draining an abscess or performing a biopsy. Most emergency or shock-treatment centers contain a CT scanner in order to assess trauma victims. CT scans can pinpoint internal bleeding both in the brain and throughout the body.",
+        "F\nIn many cases, a patient must be given a contrast material before undergoing a CT scan. During “dynamic CT scanning,” iodine dye is either injected into the blood or added to a drink that the patient must ingest approximately forty-five minutes before entering the scanner. The liquid X-ray dye makes it easier to see the organs and blood vessels when the pictures are developed. The intravenous contrast material is typically used for chest or pelvic scans, while oral-contrast material is used for abdominal scans. In some cases, physicians request that pictures be taken both before and after the contrast material enters the patient’s body. Patients who receive contrast material in the arm often report feeling a warm sensation, and in rare cases an allergic reaction occurs. Contrast material causes water loss and is avoided when scanning patients who suffer from kidney failure.",
+        "G\nThe danger of radiation exposure caused by X-ray beams is generally considered minimal compared to the benefits that a CT scan can provide. In many cases, especially in the detection of tumors and internal bleeding, CT scans provide information that can save a person’s life. Full-body scanning, which is saved for serious conditions such as coronary artery disease, remains a controversial procedure as prolonged exposure to radiation is linked to cancer. Pregnant women are excluded from receiving CT scans, as the X rays can be harmful to the fetus. When pregnant women require an evaluation, most physicians favor using other procedures such as an ultrasound or an MRI.",
+        "¹ British: doughnut-shaped\n² British: organises\n³ British: analyse"
+      ],
+      "start": 1,
+      "end": 13,
+      "groups": [
+        {
+          "title": "Questions 1–7",
+          "type": "match",
+          "optionTitle": "LIST OF HEADINGS",
+          "instructions": [
+            "The following reading passage has seven sections, A–G. Choose the correct heading for each section from the list of headings below. Write the correct number, i–x, on lines 1–7 on your answer sheet. There are more headings than sections, so you will not use them all."
+          ],
+          "options": [
+            {
+              "label": "i",
+              "text": "Scanning the Brain and Chest"
+            },
+            {
+              "label": "ii",
+              "text": "The Role of Computers"
+            },
+            {
+              "label": "iii",
+              "text": "The CT Scan Is Invented"
+            },
+            {
+              "label": "iv",
+              "text": "The High Cost of CT Scans"
+            },
+            {
+              "label": "v",
+              "text": "Risks Associated with CT Scans"
+            },
+            {
+              "label": "vi",
+              "text": "Emergency Room Care"
+            },
+            {
+              "label": "vii",
+              "text": "Faster and More Comfortable"
+            },
+            {
+              "label": "viii",
+              "text": "How Doctors Use CT Scans"
+            },
+            {
+              "label": "ix",
+              "text": "The Patient Is Photographed"
+            },
+            {
+              "label": "x",
+              "text": "Enhancing Scan Images with Dyes"
+            }
+          ],
+          "questions": [
+            {
+              "number": 1,
+              "prompt": "Section A"
+            },
+            {
+              "number": 2,
+              "prompt": "Section B"
+            },
+            {
+              "number": 3,
+              "prompt": "Section C"
+            },
+            {
+              "number": 4,
+              "prompt": "Section D"
+            },
+            {
+              "number": 5,
+              "prompt": "Section E"
+            },
+            {
+              "number": 6,
+              "prompt": "Section F"
+            },
+            {
+              "number": 7,
+              "prompt": "Section G"
+            }
+          ]
+        },
+        {
+          "title": "Questions 8–10",
+          "type": "multiple",
+          "instructions": [
+            "Choose THREE answers from the list below and write the correct letters, A–F, on lines 8–10 on your answer sheet."
+          ],
+          "questions": [
+            {
+              "numbers": [
+                8,
+                9,
+                10
+              ],
+              "prompt": "Which of the following are facts about the original CT scanner mentioned in the passage?",
+              "options": [
+                "A It made it difficult for patients to breathe.",
+                "B It was created to take pictures of the brain.",
+                "C It was much bigger than current CT scanners.",
+                "D It was developed in 1972.",
+                "E It took several hours to produce a completed image.",
+                "F It produced images in color."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Questions 11–13",
+          "type": "multiple",
+          "instructions": [
+            "Choose THREE answers from the list below and write the correct letters, A–F, on lines 11–13 on your answer sheet."
+          ],
+          "questions": [
+            {
+              "numbers": [
+                11,
+                12,
+                13
+              ],
+              "prompt": "Which of the following are facts about contrast materials used for CT scans mentioned in the passage?",
+              "options": [
+                "A They are bright in color.",
+                "B They can be given by injection.",
+                "C They have a bitter taste.",
+                "D They might cause a feeling of warmth in the arm.",
+                "E They are administered only by a specially trained technician.",
+                "F They may cause allergies in a few patients."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Nineteenth-Century Paperback Literature",
+      "instructions": [
+        "You should spend about 20 minutes on Questions 14–27, which are based on Reading Passage 2 below."
+      ],
+      "paragraphs": [
+        "A publishing craze that hit both America and England from the mid- to late nineteenth century attracted the readership of the semiliterate working class. In America, dime novels typically centered on tales of the American Revolution and the Wild West, while British penny bloods (later called penny dreadfuls) told serial tales of horror or fictionalized¹ versions of true crimes. These paperback novels were sold at newsstands and dry goods stores and succeeded in opening up the publishing market for both writers and readers. The industrial revolution facilitated the growth of literacy, making it easier to print and transport publications in large quantities, thus providing inexpensive entertainment for the masses.",
+        "Though Johann Gutenberg’s printing press was designed in the fifteenth century, it was not until after the first newspapers began circulating in the eighteenth century that it became a profitable invention. Throughout the nineteenth century, commoners in England were becoming educated through normal schools, church schools, and mutual instruction classes, and by the 1830s, approximately 75 percent of the working class had learned to read. In 1870, the Forster Education Act made elementary education mandatory for all children. Though few children’s books were available, penny dreadfuls were highly accessible, especially to male youths who created clubs in order to pool their money and start their own libraries. Similar to reading a newspaper, dime novels and penny dreadfuls were meant to be read quickly and discarded, unlike the hardbound high literature that was written in volumes and published for the elite. Struggling authors, many of whom had limited writing and storytelling skills, suddenly found an audience desperate to read their work. When the first typewriter became available in the 1870s, authors were able to maximize² their output. Successful authors, some of whom wrote over 50,000 words a month, were able to earn a decent living at a penny per word.",
+        "From the 1830s to 1850s, penny bloods featured tales of gore that often depicted the upper class as corrupt. One of the most beloved characters from the penny blood serials was Sweeney Todd. In the original story, String of Pearls: A Romance, published in 1846, Sweeney Todd was a demon barber who used his razor to torture his victims before turning them into meat pies. In 1847, hack-playwright George Dibdin Pitt adapted Thomas Prest’s story for the stage, renaming it The String of Pearls: The Fiend of Fleet Street. With no copyright laws, authors were always at risk of having their ideas pilfered. Pitt’s play was released again one year later at one of London’s “bloodbath” theaters¹ under the name Founded on Fact. The Sweeney Todd story also made its way into musicals and comedies. Controversy still exists over whether Thomas Prest’s character was based on a real person. No records of a barber shop on Fleet Street, or a barber named Sweeney Todd have been found, though Thomas Prest was known for getting his inspiration from “The Old Bailey” of the London Times, a section devoted to real-life horror stories.",
+        "Despite the warning from Lord Shaftsbury that the paperback literature was seducing middle-class society into an unproductive life of evil, the penny bloods grew in popularity. They provided a literary voice for commoners at an affordable price. Eventually, penny bloods became known as penny dreadfuls and began to focus more on adventure than horror.",
+        "In 1860, Beadle and Adams was the first firm in the United States to publish a title that would be categorized² as a dime novel. Malaeska: The Indian Wife of the White Hunter, by Anne Stephens, had originally been published twenty years earlier as a series in a magazine. In novel form, approximately 300,000 copies of the story were sold in the first year, paving the way for the new fad in America. Many dime novels were written as serials with recurring characters, such as Deadwood Dick, Commander Cody, and Wild Bill. Originally, the paperbacks were intended for railroad travelers; however, during the Civil War, soldiers quickly became the most avid dime novel readers. Beadle dime novels became so popular that the company had to build a factory of hack writers to mass produce them. As urbanization³ spread, stories of the Wild West were in less demand, and tales of urban outlaws became popular. At that time, dime novels were chosen for their illustrated covers rather than their sensational stories and characters. Despite their popularity, by the late 1880s dry goods stores were so full of unsold books that prices dropped to less than five cents per copy. Many titles that could still not be sold were given away or destroyed. The International Copyright Law, passed by Congress in 1890, required publishers to pay royalties to foreign authors. Selling at less than five cents a copy, the paperback industry was doomed until the arrival of pulp paper.",
+        "British spellings (first page): ¹ fictionalised; ² maximise.\nBritish spellings (continuation): ¹ theatres; ² categorised; ³ urbanisation."
+      ],
+      "start": 14,
+      "end": 27,
+      "groups": [
+        {
+          "title": "Questions 14–19",
+          "type": "match",
+          "instructions": [
+            "Which of the characteristics below belongs to which type of literature? On lines 14–19 on your answer sheet write:"
+          ],
+          "options": [
+            {
+              "label": "A",
+              "text": "if it is characteristic of penny bloods"
+            },
+            {
+              "label": "B",
+              "text": "if it is characteristic of dime novels"
+            },
+            {
+              "label": "C",
+              "text": "if it is characteristic of both penny bloods and dime novels"
+            }
+          ],
+          "questions": [
+            {
+              "number": 14,
+              "prompt": "They were popular in America."
+            },
+            {
+              "number": 15,
+              "prompt": "They were popular in Britain."
+            },
+            {
+              "number": 16,
+              "prompt": "They showed members of the upper class as corrupt."
+            },
+            {
+              "number": 17,
+              "prompt": "They were inexpensive."
+            },
+            {
+              "number": 18,
+              "prompt": "They featured tales of the Wild West."
+            },
+            {
+              "number": 19,
+              "prompt": "They were popular among members of the working class."
+            }
+          ]
+        },
+        {
+          "title": "Questions 20–23",
+          "type": "match",
+          "optionTitle": "EVENTS",
+          "instructions": [
+            "Match each year with the event that occurred during that year. Choose the correct event, A–F, from the box below and write the correct letter on lines 20–23 on your answer sheet. There are more events than years, so you will not use them all."
+          ],
+          "options": [
+            {
+              "label": "A",
+              "text": "The first dime novel was published in the United States."
+            },
+            {
+              "label": "B",
+              "text": "Lord Shaftsbury warned people about the dangers of penny bloods."
+            },
+            {
+              "label": "C",
+              "text": "The price of dime novels fell."
+            },
+            {
+              "label": "D",
+              "text": "The price of dime novels fell."
+            },
+            {
+              "label": "E",
+              "text": "A law about copyrights was passed."
+            },
+            {
+              "label": "F",
+              "text": "The first Sweeney Todd story was published."
+            }
+          ],
+          "questions": [
+            {
+              "number": 20,
+              "prompt": "1870"
+            },
+            {
+              "number": 21,
+              "prompt": "1846"
+            },
+            {
+              "number": 22,
+              "prompt": "1860"
+            },
+            {
+              "number": 23,
+              "prompt": "1890"
+            }
+          ]
+        },
+        {
+          "title": "Questions 24–27",
+          "type": "truth",
+          "instructions": [
+            "Do the following statements agree with the information in the reading passage? On lines 24–27 on your answer sheet write:",
+            "YES if the statement agrees with the views of the writer",
+            "NO if the statement contradicts the views of the writer",
+            "NOT GIVEN if there is no information on this in the passage"
+          ],
+          "labels": [
+            "YES",
+            "NO",
+            "NOT GIVEN"
+          ],
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "The literacy rate in England rose in the nineteenth century."
+            },
+            {
+              "number": 25,
+              "prompt": "Children’s books were popular in the nineteenth century."
+            },
+            {
+              "number": 26,
+              "prompt": "Most people agree that Sweeney Todd was based on a real person."
+            },
+            {
+              "number": 27,
+              "prompt": "Dime novels were popular among Civil War soldiers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cosmic Black Holes",
+      "instructions": [
+        "You should spend about 20 minutes on Questions 28–40, which are based on Reading Passage 3 below."
+      ],
+      "paragraphs": [
+        "In 1687, the English scientist Isaac Newton published his monumental work, Philosophiae Naturalis Principia Mathematica (Mathematical Principles of Natural Philosophy), containing his theory of gravitation and the mathematics to support it. In essence, Newton’s law of gravitation stated that the gravitational force between two objects, for example, two astronomical bodies, is directly proportional to their masses. Astronomers found that it accurately predicted all the observable data that science at that time was able to collect, with one exception—a very slight variation in the orbit of the planet Mercury around the sun.",
+        "It was 228 years before anyone was able to offer a refinement of Newton’s law that accounted for the shape of Mercury’s orbit. In 1915, Albert Einstein’s general theory of relativity was published. Using the equations of general relativity, he calculated the shape of Mercury’s orbit. The results predicted astronomical observations exactly and provided the first proof of his theory. Expressing it very simplistically, the general theory of relativity presumes that both matter and energy can distort space–time and cause it to curve. What we commonly call gravity is in fact the effect of that curvature.",
+        "Among other phenomena, Einstein’s theory predicted the existence of black holes, although initially he had doubts about their existence. Black holes are areas in space where the gravitational field is so strong that nothing can escape them. Because of the immense gravitational pull, they consume all the light that comes near them, and thus they are “black.” In fact, neither emitting nor reflecting light, they are invisible. Due to this, they can be studied only by inference based on observations of their effect on the matter—both stars and gases¹—around them and by computer simulation. In particular, when gases are being pulled into a black hole, they can reach temperatures up to 1,000 times the heat of the sun and become an intensely glowing source of X rays.",
+        "Surrounding each black hole is an “event horizon,” which defines the area over which the gravitational force of the black hole operates. Anything passing over the lip of the event horizon is pulled into the black hole. Because observations of event horizons are difficult due to their relatively small size, even less is known about them than about black holes themselves.",
+        "Black holes exist in three sizes. Compact ones, called star-mass black holes and which have been known to exist for some time, are believed to be the result of the death of a single star. When a star has consumed its fuel to the point that it no longer has the energy to support its mass, the core collapses and forms a black hole. Shock waves then bounce out, causing the shell of the star to explode. In a way that is not yet understood, the black hole may then reenergize² and create multiple explosions within the first few minutes of its existence. So-called super-massive black holes, also well documented, contain the mass of millions or even billions of stars. And just recently one intermediate black hole, with about 500 times the mass of the sun, has been discovered. Scientists have postulated that the intermediate black hole may provide a “missing link” in understanding the evolution of black holes.",
+        "Current scientific data suggest that black holes are fairly common and lie at the center of most galaxies. Based on indirect evidence gained using X-ray telescopes, thousands of black holes have been located in our galaxy and beyond. The black hole at the center of the Milky Way, known as Sagittarius A* (pronounced “A-star”), is a supermassive one, containing roughly four million times the mass of our sun. Astronomers suggest that orbiting around Sagittarius A*, 26,000 light years from Earth, may be as many as tens of thousands of smaller black holes. One possible theory to explain this is that a process called “dynamical friction” is causing stellar black holes to sink toward the center of the galaxy.",
+        "It is thought that the first black holes came into existence not long after the big bang. Newly created clouds of gases slowly coalesced into the first stars. As these early stars collapsed, they gave rise to the first black holes. A number of theories proposed that the first black holes were essentially “seeds,” which then gravitationally attracted and consumed enormous quantities of matter found in adjacent gas clouds and dust. This allowed them to grow into the super-massive black holes that now sit in the centers of galaxies. However, a new computer simulation proposes that such growth was minimal. When the simulated star collapsed and formed a black hole, there was very little matter anywhere near the black hole’s event horizon. Being in essence “starved,” it grew by less than 1 percent over the course of its first hundred million years. The new simulations do not definitively invalidate the seed theory, but they make it far less likely. On the other hand, it is known that black holes a billion times more massive than our sun did exist in the early universe. Researchers have yet to discover how these super-massive black holes were formed in such a short time, and the origin of these giants poses one of the most fundamental questions in astrophysics.",
+        "It has become practically a hallmark of the research on black holes that with each new study, more is known, more theories are generated, and yet more questions are raised than answered.",
+        "¹ British: gasses\n² British: reenergise"
+      ],
+      "start": 28,
+      "end": 40,
+      "groups": [
+        {
+          "title": "Questions 28–34",
+          "type": "match",
+          "instructions": [
+            "Complete each sentence with the correct ending, A–N, below.",
+            "Write the correct letter, A–N, on lines 28–34 on your answer sheet."
+          ],
+          "options": [
+            {
+              "label": "A",
+              "text": "by observing the matter around them."
+            },
+            {
+              "label": "B",
+              "text": "suggested the presence of black holes in outer space."
+            },
+            {
+              "label": "C",
+              "text": "when a single star collapses."
+            },
+            {
+              "label": "D",
+              "text": "difficult to study."
+            },
+            {
+              "label": "E",
+              "text": "barely visible light."
+            },
+            {
+              "label": "F",
+              "text": "an inescapable gravitational pull."
+            },
+            {
+              "label": "G",
+              "text": "did not apply to most astronomical bodies."
+            },
+            {
+              "label": "H",
+              "text": "by direct observation."
+            },
+            {
+              "label": "I",
+              "text": "could not explain Mercury’s path around the sun."
+            },
+            {
+              "label": "J",
+              "text": "caused doubt about the existence of black holes."
+            },
+            {
+              "label": "K",
+              "text": "lose visibility."
+            },
+            {
+              "label": "L",
+              "text": "become very hot."
+            },
+            {
+              "label": "M",
+              "text": "with large event horizons."
+            },
+            {
+              "label": "N",
+              "text": "at the center of each black hole."
+            }
+          ],
+          "questions": [
+            {
+              "number": 28,
+              "prompt": "Newton’s law of gravitation"
+            },
+            {
+              "number": 29,
+              "prompt": "Einstein’s theory of relativity"
+            },
+            {
+              "number": 30,
+              "prompt": "We define black holes as areas that have"
+            },
+            {
+              "number": 31,
+              "prompt": "Scientists study black holes"
+            },
+            {
+              "number": 32,
+              "prompt": "Gases that are pulled into a black hole"
+            },
+            {
+              "number": 33,
+              "prompt": "Because event horizons are comparatively small, they are"
+            },
+            {
+              "number": 34,
+              "prompt": "Compact black holes occur"
+            }
+          ]
+        },
+        {
+          "title": "Questions 35 and 36",
+          "type": "choice",
+          "instructions": [
+            "Choose the correct letter, A, B, or C, and write them on lines 35 and 36 on your answer sheet."
+          ],
+          "questions": [
+            {
+              "number": 35,
+              "prompt": "Black holes can be found",
+              "options": [
+                "A only in the Milky Way.",
+                "B in most galaxies.",
+                "C close to the sun."
+              ]
+            },
+            {
+              "number": 36,
+              "prompt": "Sagittarius A* is",
+              "options": [
+                "A a black hole located 26,000 light years from Earth.",
+                "B one of thousands of black holes orbiting Earth.",
+                "C a well-known compact black hole."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Questions 37–40",
+          "type": "truth",
+          "instructions": [
+            "Do the following statements agree with the information given in the passage? On lines 37–40 on your answer sheet, write:",
+            "TRUE if the statement agrees with the information",
+            "FALSE if the statement contradicts the information",
+            "NOT GIVEN if there is no information on this"
+          ],
+          "labels": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "questions": [
+            {
+              "number": 37,
+              "prompt": "It is not certain when the big bang occurred."
+            },
+            {
+              "number": 38,
+              "prompt": "According to the “seed” theory, the first black holes eventually became super-massive black holes."
+            },
+            {
+              "number": 39,
+              "prompt": "The “seed” theory has been proven true by computer simulation."
+            },
+            {
+              "number": 40,
+              "prompt": "The black holes that existed in the early universe were all compact black holes."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

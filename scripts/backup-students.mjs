@@ -1,5 +1,0 @@
-import {backup} from 'node:sqlite';import {mkdirSync} from 'node:fs';import {resolve,dirname,sep} from 'node:path';import {randomUUID} from 'node:crypto';import {openStudents} from './student-storage.mjs';
-import {createSqliteSnapshot} from '../lib/database/snapshot.mjs';
-const mysql=process.env.DB_BACKEND==='mysql',database=mysql?undefined:openStudents(true),source=database?database.location():resolve(process.env.STUDENT_DB_PATH||resolve(dirname(process.env.RESULTS_DB_PATH||'private/results.sqlite'),'students.sqlite')),directory=resolve(process.env.STUDENT_BACKUP_DIR||resolve(dirname(source),'student-backups'));
-if(directory===resolve('public')||directory.startsWith(resolve('public')+sep))throw Error('Backups must be private.');mkdirSync(directory,{recursive:true,mode:0o700});
-try{const file=resolve(directory,'students-'+new Date().toISOString().replace(/[:.]/g,'-')+'-'+randomUUID()+'.sqlite');if(mysql)await createSqliteSnapshot('students',file);else await backup(database,file);console.log('Student backup created:',file);}finally{database?.close();}

@@ -1,0 +1,18 @@
+{
+  "task1": {
+    "title": "",
+    "prompt": "The graphs below show unemployment rates and average earnings according to level of education.",
+    "instruction": "Summarize¹ the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "image": {
+      "src": "/images/writing-test-39-task-1.png",
+      "alt": "Unemployment rates and average weekly earnings by education level in 2016: high school diploma, some college, college degree and graduate degree.",
+      "width": 320,
+      "height": 495
+    }
+  },
+  "task2": {
+    "title": "",
+    "prompt": "Some people think that young people should choose their professions themselves. Others believe that their parents should choose for them.\n\nDiscuss both these views and give your own opinion.",
+    "instruction": ""
+  }
+}

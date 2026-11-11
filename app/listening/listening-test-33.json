@@ -1,0 +1,244 @@
+{
+  "number": 33,
+  "parts": [
+    [
+      {
+        "title": "Questions 1–10",
+        "type": "fill",
+        "instruction": "Complete the form below.\nWrite NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+        "heading": "Customer Order Form",
+        "box": true,
+        "paragraphs": [
+          "Example: ClearPoint Telephone Company",
+          "Order taken by: Ms. Jones",
+          "Name: Harold {{1}}",
+          "Address: {{2}} Fulton Avenue, apartment 12",
+          "Type of service: {{3}}",
+          "Employer: Wrightsville Medical Group",
+          "Occupation: {{4}}",
+          "Work phone: {{5}}",
+          "Time at current job: {{6}}",
+          "Special services: {{7}} {{8}}",
+          "Installation scheduled for: Day {{9}}",
+          "Time of day {{10}}"
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 11–14",
+        "type": "choice",
+        "instruction": "Choose the correct letter A, B, or C.",
+        "questions": [
+          {
+            "number": 11,
+            "prompt": "The fair will take place at the",
+            "options": [
+              "fairgrounds.",
+              "park.",
+              "school."
+            ]
+          },
+          {
+            "number": 12,
+            "prompt": "The fair will begin on Friday",
+            "options": [
+              "morning.",
+              "afternoon.",
+              "evening."
+            ]
+          },
+          {
+            "number": 13,
+            "prompt": "The fair will begin with a",
+            "options": [
+              "parade.",
+              "dance performance.",
+              "speech by the mayor."
+            ]
+          },
+          {
+            "number": 14,
+            "prompt": "There will be free admission on",
+            "options": [
+              "Friday.",
+              "Saturday.",
+              "Sunday."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Questions 15–20",
+        "type": "table",
+        "instruction": "Complete the chart below.\nWrite NO MORE THAN ONE WORD for each answer.",
+        "columns": [
+          "Day/Time",
+          "Event"
+        ],
+        "rows": [
+          [
+            "Saturday afternoon",
+            "{{15}} show"
+          ],
+          [
+            "Saturday evening",
+            "{{16}} by the lake"
+          ],
+          [
+            "Sunday afternoon",
+            "{{17}} contest"
+          ],
+          [
+            "Sunday evening",
+            "{{18}} food\n{{19}} for children\n{{20}} for sale"
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 21–23",
+        "type": "fill",
+        "instruction": "Complete the information below.\nWrite NO MORE THAN TWO WORDS for each answer.",
+        "heading": "How to get academic credit for work experience",
+        "box": true,
+        "paragraphs": [
+          "First, read the {{21}}. Find courses that match your work experience. Then write {{22}} of your work experience. Submit that together with a letter from your {{23}} to the university admissions office."
+        ]
+      },
+      {
+        "title": "Questions 24–28",
+        "type": "match",
+        "instruction": "Where can the student go to get the information and items listed below?\nWrite the correct letter, A, B, or C, next to Questions 24–28.",
+        "options": [
+          {
+            "label": "A",
+            "text": "Student Services Center"
+          },
+          {
+            "label": "B",
+            "text": "university website"
+          },
+          {
+            "label": "C",
+            "text": "library"
+          }
+        ],
+        "questions": [
+          {
+            "number": 24,
+            "prompt": "course catalog¹"
+          },
+          {
+            "number": 25,
+            "prompt": "admissions form"
+          },
+          {
+            "number": 26,
+            "prompt": "admissions requirements"
+          },
+          {
+            "number": 27,
+            "prompt": "information about professors"
+          },
+          {
+            "number": 28,
+            "prompt": "parking pass"
+          }
+        ]
+      },
+      {
+        "title": "Questions 29 and 30",
+        "type": "choice",
+        "instruction": "Choose the correct letter A, B, or C.",
+        "questions": [
+          {
+            "number": 29,
+            "prompt": "What are full-time students eligible for?",
+            "options": [
+              "Discounted books",
+              "The work-study program¹",
+              "A free bus pass"
+            ]
+          },
+          {
+            "number": 30,
+            "prompt": "How can a student get financial assistance?",
+            "options": [
+              "Speak with a counselor²",
+              "Apply to the admissions office",
+              "Make arrangements with a bank"
+            ]
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 31–35",
+        "type": "table",
+        "instruction": "Complete the chart with information about the black bear.\nWrite NO MORE THAN TWO WORDS for each answer.",
+        "columns": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "Range",
+            "Lives in {{31}} of North America"
+          ],
+          [
+            "Diet",
+            "Ninety percent of diet consists of {{32}}\nAlso eats {{33:0}} and {{33:1}}"
+          ],
+          [
+            "Cubs",
+            "Baby bear cubs are born during the {{34}}"
+          ],
+          [
+            "Life span",
+            "Black bears live for about {{35}} in the wild."
+          ]
+        ]
+      },
+      {
+        "title": "Questions 36–40",
+        "type": "match",
+        "instruction": "Which characteristics fit black bears and which fit grizzly bears?\nWrite A if it is a characteristic of black bears. Write B if it is a characteristic of grizzly bears.",
+        "options": [
+          {
+            "label": "A",
+            "text": "black bears"
+          },
+          {
+            "label": "B",
+            "text": "grizzly bears"
+          }
+        ],
+        "questions": [
+          {
+            "number": 36,
+            "prompt": "Has a patch of light fur on its chest"
+          },
+          {
+            "number": 37,
+            "prompt": "Weighs 225 kilos"
+          },
+          {
+            "number": 38,
+            "prompt": "Has a shoulder hump"
+          },
+          {
+            "number": 39,
+            "prompt": "Has pointed ears"
+          },
+          {
+            "number": 40,
+            "prompt": "Has shorter claws"
+          }
+        ]
+      }
+    ]
+  ]
+}

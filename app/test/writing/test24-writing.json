@@ -1,0 +1,18 @@
+{
+  "task1": {
+    "title": "",
+    "prompt": "The chart below details the waste disposal in one European country between 2005 and 2008.",
+    "instruction": "Write at least 150 words.",
+    "image": {
+      "src": "/images/writing-test-24-task-1.jpeg",
+      "alt": "Waste disposal in one European country from 2005 to 2008: landfill, burning and dumping at sea, in million tonnes.",
+      "width": 1390,
+      "height": 790
+    }
+  },
+  "task2": {
+    "title": "",
+    "prompt": "It is difficult for people in the cities to get enough physical exercise.\nWhat are the causes and solutions?",
+    "instruction": "Give reasons for your answer and include any relevant examples from your own knowledge or experience.\nWrite at least 250 words."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "task1": {
+    "title": "",
+    "prompt": "The graph below shows the number of overseas visitors to three different areas in a European country between 1987 and 2007.",
+    "instruction": "Write at least 150 words.",
+    "image": {
+      "src": "/images/writing-test-23-task-1.jpeg",
+      "alt": "Overseas visitors to the coast, mountains and lakes in a European country, 1987 to 2007, in thousands.",
+      "width": 1225,
+      "height": 595
+    }
+  },
+  "task2": {
+    "title": "",
+    "prompt": "The users of social media, such as Facebook, Twitter, are replacing face-to-face contact in this century.\nDo you think the advantages of this way outweigh the disadvantages?",
+    "instruction": "Give reasons for your answer and include any relevant examples from your own knowledge or experience.\nWrite at least 250 words."
+  }
+}

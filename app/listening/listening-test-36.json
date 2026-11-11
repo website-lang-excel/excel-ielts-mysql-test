@@ -1,0 +1,290 @@
+{
+  "number": 36,
+  "parts": [
+    [
+      {
+        "title": "Questions 1–4",
+        "type": "fill",
+        "instruction": "Complete the form below.\nWrite NO MORE THAN ONE WORD AND/OR A NUMBER for each answer.",
+        "box": true,
+        "paragraphs": [
+          "Example: Global Bicycle Tours",
+          "Tour name: River Valley tour. Tour month: {{1}}",
+          "Customer Name: {{2}} Schmidt",
+          "Address: P.O. Box {{3}}",
+          "Bicycle rental required? Yes / ✗ No",
+          "Dietary restrictions: {{4}}"
+        ]
+      },
+      {
+        "title": "Questions 5–7",
+        "type": "choice",
+        "instruction": "Choose the correct letter A, B, or C.",
+        "questions": [
+          {
+            "number": 5,
+            "prompt": "What size deposit does the caller have to pay?",
+            "options": [
+              "5 percent",
+              "30 percent",
+              "50 percent"
+            ]
+          },
+          {
+            "number": 6,
+            "prompt": "When does the deposit have to be paid?",
+            "options": [
+              "Two weeks from now",
+              "Four weeks from now",
+              "Six weeks from now"
+            ]
+          },
+          {
+            "number": 7,
+            "prompt": "How will the luggage be carried?",
+            "options": [
+              "By bus",
+              "By bicycle",
+              "By van"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Questions 8–10",
+        "type": "multiple",
+        "instruction": "Choose THREE letters, A–F.",
+        "prompt": "Which THREE things should the caller take on the tour?",
+        "numbers": [
+          8,
+          9,
+          10
+        ],
+        "options": [
+          "raincoat",
+          "spare tire",
+          "maps",
+          "water bottle",
+          "camera",
+          "guide book"
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 11–15",
+        "type": "match",
+        "instruction": "What change has been made to each part of the health club?\nWrite the correct letter, A–F, next to Questions 11–15.",
+        "heading": "HARTFORD HEALTH CLUB",
+        "options": [
+          {
+            "label": "A",
+            "text": "installed a new floor"
+          },
+          {
+            "label": "B",
+            "text": "repainted"
+          },
+          {
+            "label": "C",
+            "text": "moved to a new location"
+          },
+          {
+            "label": "D",
+            "text": "rebuilt"
+          },
+          {
+            "label": "E",
+            "text": "enlarged"
+          },
+          {
+            "label": "F",
+            "text": "replaced the equipment"
+          }
+        ],
+        "questions": [
+          {
+            "number": 11,
+            "prompt": "swimming pools"
+          },
+          {
+            "number": 12,
+            "prompt": "locker rooms"
+          },
+          {
+            "number": 13,
+            "prompt": "exercise room"
+          },
+          {
+            "number": 14,
+            "prompt": "tennis court"
+          },
+          {
+            "number": 15,
+            "prompt": "club store"
+          }
+        ]
+      },
+      {
+        "title": "Questions 16–18",
+        "type": "fill",
+        "instruction": "Complete the sentences below.\nWrite NO MORE THAN TWO WORDS for each answer.",
+        "paragraphs": [
+          "Tomorrow, {{16}} for adults and children will start.",
+          "On Wednesday, there will be a {{17}}.",
+          "A {{18}} is planned for next weekend."
+        ]
+      },
+      {
+        "title": "Questions 19 and 20",
+        "type": "choice",
+        "instruction": "Answer the questions below.\nChoose the correct letter A, B, or C.",
+        "questions": [
+          {
+            "number": 19,
+            "prompt": "How many months did it take to complete the renovation work?",
+            "options": [
+              "Three",
+              "Nine",
+              "Twelve"
+            ]
+          },
+          {
+            "number": 20,
+            "prompt": "What project is planned for next year?",
+            "options": [
+              "An indoor pool",
+              "An outdoor tennis court",
+              "An outdoor pool"
+            ]
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 21–25",
+        "type": "multiple",
+        "instruction": "Choose FIVE letters, A–I.",
+        "prompt": "What FIVE things will the students do during their museum internship?",
+        "numbers": [
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "options": [
+          "art conservation",
+          "administrative duties",
+          "guide tours",
+          "attend board meetings",
+          "give classes",
+          "research",
+          "write brochures",
+          "plan a reception",
+          "meet artists"
+        ]
+      },
+      {
+        "title": "Questions 26–30",
+        "type": "fill",
+        "instruction": "Complete the notes below.\nWrite NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+        "heading": "City Art Museum",
+        "box": true,
+        "paragraphs": [
+          "Construction of the main museum happened in {{26}}.",
+          "Construction of the {{27}} happened sixty years later.",
+          "Collections: modern art, works by {{28}}, sculpture, European art.",
+          "Classes: {{29}} classes for adults\nArts and crafts workshops for children",
+          "Weekly {{30}} in the fall and winter"
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 31–35",
+        "type": "choice",
+        "instruction": "Choose the correct letter A, B, or C.",
+        "questions": [
+          {
+            "number": 31,
+            "prompt": "The tomato originally came from",
+            "options": [
+              "Mexico.",
+              "Spain.",
+              "Peru."
+            ]
+          },
+          {
+            "number": 32,
+            "prompt": "The original color¹ of the tomato was",
+            "options": [
+              "red.",
+              "green.",
+              "yellow."
+            ]
+          },
+          {
+            "number": 33,
+            "prompt": "The Aztec word for tomato means",
+            "options": [
+              "golden apple.",
+              "plump thing.",
+              "small fruit."
+            ]
+          },
+          {
+            "number": 34,
+            "prompt": "In the 1500s, people in Spain and Italy",
+            "options": [
+              "enjoyed eating tomatoes.",
+              "used tomatoes as ornamental plants.",
+              "made medicine from tomatoes."
+            ]
+          },
+          {
+            "number": 35,
+            "prompt": "In the 1600s, the British",
+            "options": [
+              "saw tomatoes as poisonous.",
+              "published tomato recipes.",
+              "ate tomato sauce daily."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Questions 36–40",
+        "type": "table",
+        "instruction": "Complete the timeline with information about the history of the tomato in the United States.\nWrite NO MORE THAN TWO WORDS for each answer.",
+        "columns": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "1806",
+            "Tomatoes were mentioned as food in {{36}}."
+          ],
+          [
+            "1809",
+            "Thomas Jefferson {{37}} at his home in Virginia."
+          ],
+          [
+            "1820",
+            "A man proved that tomatoes were not poisonous by eating them {{38}}."
+          ],
+          [
+            "1830s",
+            "{{39}} appeared in newspapers and magazines."
+          ],
+          [
+            "1930s",
+            "People began to eat {{40}}."
+          ]
+        ]
+      }
+    ]
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "number": 24,
+  "parts": [
+    [
+      {
+        "title": "Questions 1-4",
+        "type": "fill",
+        "instruction": "Complete the schedule below.\nWrite NO MORE THAN THREE WORDS for each answer.",
+        "heading": "Globetrotters Language School Class Schedule",
+        "paragraphs": [
+          "Chinese",
+          "Level: Advanced",
+          "\tDays: {{1}} \tevenings",
+          "Japanese",
+          "\tLevel: {{2}} \t",
+          "\tDays: Tuesday and Thursday mornings Level: {{3}} \t",
+          "Days: Monday, Wednesday, and Friday mornings",
+          "French",
+          "Level: Intermediate",
+          "\tDays: Friday {{4}} \t"
+        ]
+      },
+      {
+        "title": "Questions 5-8",
+        "type": "table",
+        "instruction": "Complete the information below.\nWrite NO MORE THAN ONE NUMBER for each answer.",
+        "heading": "Tuition Information",
+        "columns": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "One week",
+            "\t$ {{5}} \t"
+          ],
+          [
+            "Four weeks",
+            "\t$ {{6}} \t"
+          ],
+          [
+            "Six weeks",
+            "\t$ {{7}} \t"
+          ],
+          [
+            "Twelve weeks",
+            "\t$ {{8}} \t"
+          ]
+        ]
+      },
+      {
+        "title": "Questions 9-10",
+        "type": "fill",
+        "instruction": "Complete the sentences below.\nWrite NO MORE THAN THREE WORDS for each answer.",
+        "paragraphs": [
+          "\tStudents can register for a class by visiting  {{9}} \t.",
+          "\t{{10}} \tis in charge of student registration."
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 11-15",
+        "type": "map",
+        "instruction": "Label the map below.\nWrite the correct letter, A–J, next to questions 11–15.",
+        "image": "/images/listening-test-24-map.jpeg",
+        "viewBox": "0 0 565 400",
+        "imageWidth": 565,
+        "imageHeight": 400,
+        "alt": "City Shopping District map showing Pear Street, Cherry Street, the harbor direction and locations A to I.",
+        "options": [
+          {
+            "label": "A",
+            "text": "A"
+          },
+          {
+            "label": "B",
+            "text": "B"
+          },
+          {
+            "label": "C",
+            "text": "C"
+          },
+          {
+            "label": "D",
+            "text": "D"
+          },
+          {
+            "label": "E",
+            "text": "E"
+          },
+          {
+            "label": "F",
+            "text": "F"
+          },
+          {
+            "label": "G",
+            "text": "G"
+          },
+          {
+            "label": "H",
+            "text": "H"
+          },
+          {
+            "label": "I",
+            "text": "I"
+          },
+          {
+            "label": "J",
+            "text": "J"
+          }
+        ],
+        "questions": [
+          {
+            "number": 11,
+            "prompt": "Harbor View Bookstore"
+          },
+          {
+            "number": 12,
+            "prompt": "Pear Café"
+          },
+          {
+            "number": 13,
+            "prompt": "Souvenir Store"
+          },
+          {
+            "number": 14,
+            "prompt": "Art Gallery"
+          },
+          {
+            "number": 15,
+            "prompt": "Harbor Park"
+          }
+        ]
+      },
+      {
+        "title": "Questions 16-20",
+        "type": "fill",
+        "instruction": "Complete the sentences below.\nWrite ONE WORD ONLY for each answer.",
+        "paragraphs": [
+          "\tThe park was built in {{16}} \t.",
+          "\t\tA {{17}} \tstands in the center of the park. Take the path through the {{18}} \t.",
+          "\tIn the middle of the garden is a {{19}} \t.",
+          "\tA {{20}} \ttakes you down to the harbor and a view of the boats."
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 21-24",
+        "type": "fill",
+        "instruction": "Complete the information about the archives.\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+        "heading": "Welcome to City Archives",
+        "paragraphs": [
+          "The following people may use the archives:",
+          "\t\tUniversity students with a valid {{21}} \t\t City residents with payment of {{22}} \t All others: Special permission from the director is required.",
+          "Hours:",
+          "\tDays: {{23}} \t",
+          "\tHours: 9:30 A.M. until {{24}} \tP.M."
+        ]
+      },
+      {
+        "title": "Questions 25-30",
+        "type": "match",
+        "instruction": "What can be found on each floor of the archives building? Write the correct letter, A–G next to questions 25–30.",
+        "options": [
+          {
+            "label": "A",
+            "text": "\tnineteenth-century documents"
+          },
+          {
+            "label": "B",
+            "text": "\tmaps"
+          },
+          {
+            "label": "C",
+            "text": "\tpersonal papers"
+          },
+          {
+            "label": "D",
+            "text": "\tphotographs"
+          },
+          {
+            "label": "E",
+            "text": "\tbooks about the city"
+          },
+          {
+            "label": "F",
+            "text": "\tnewspapers"
+          },
+          {
+            "label": "G",
+            "text": "\tinformation about the woolen mill"
+          }
+        ],
+        "questions": [
+          {
+            "number": 25,
+            "prompt": "\tbasement"
+          },
+          {
+            "number": 26,
+            "prompt": "ground floor"
+          },
+          {
+            "number": 27,
+            "prompt": "second floor"
+          },
+          {
+            "number": 28,
+            "prompt": "third floor"
+          },
+          {
+            "number": 29,
+            "prompt": "fourth floor"
+          },
+          {
+            "number": 30,
+            "prompt": "fifth floor"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 31-33",
+        "type": "fill",
+        "instruction": "Complete the notes below.\nWrite NO MORE THAN TWO WORDS for each answer.",
+        "heading": "Historical Uses of Wind Power",
+        "paragraphs": [
+          "Ancient China",
+          "\tWindmills were used to {{31}} \t",
+          "Ancient Persia",
+          "\tFarmers used wind power to {{32}} \t",
+          "The Netherlands",
+          "\tPeople used windmills to {{33}} \t"
+        ]
+      },
+      {
+        "title": "Questions 34-40",
+        "type": "table",
+        "instruction": "Complete the chart below.\nWrite NO MORE THAN TWO WORDS for each answer.",
+        "heading": "Wind Power",
+        "columns": [
+          "Advantages",
+          "Disadvantages"
+        ],
+        "rows": [
+          [
+            "Unlike oil and coal, wind power does not cause {{34}}",
+            "The cost of the initial investment is high."
+          ],
+          [
+            "There are limited supplies of oil and coal, but wind is a {{35}}",
+            "The {{37}} of the wind is not constant."
+          ],
+          [
+            "It {{36}} to generate electricity with the wind.",
+            "Wind turbines are usually located far from {{38}}"
+          ],
+          [
+            "Wind turbines do not take up much land.",
+            "Wind turbines may spoil {{39}}"
+          ],
+          [
+            "",
+            "Wind turbines create as much {{40}} as a high-speed car."
+          ]
+        ]
+      }
+    ]
+  ]
+}

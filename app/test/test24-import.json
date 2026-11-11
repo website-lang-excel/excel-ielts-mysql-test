@@ -1,0 +1,387 @@
+{
+  "number": 24,
+  "passages": [
+    {
+      "title": "Odonata",
+      "instructions": [
+        "You should spend about 20 minutes on Questions 1–13, which are based on Reading Passage 1 below."
+      ],
+      "paragraphs": [
+        "Odonata is the order of insects that includes dragonflies and damselflies. To the human eye, their shining colors and delicate-looking wings make them beautiful creatures to behold. In the natural world, however, they are fearsome predators. Dragonflies and damselflies get their name from the powerful serrated jaws they use to tear apart their prey. The word odonata means “toothed jaw.”",
+        "Dragonflies and damselflies are often confused with each other because they are very similar. Close observation reveals the differences between them. The most obvious difference is the way they hold their wings while at rest. Dragonflies hold their wings out to the side while damselflies fold their wings back. Dragonflies have very large eyes that seem to cover the entire face because they are so close together that they touch each other. Damselflies’ eyes are smaller, and there is a space between them. Dragonflies are larger and stronger animals than damselflies and fly longer distances. Thus, they can be found in woods and fields away from the water. Damselflies are not such strong fliers and are most often seen around the edges of ponds and streams since they do not normally fly far from the water.",
+        "The largest odonata living today are the Hawaiian endemic dragonfly and the Central American damselfly, each of these species having a wingspan of 19 centimeters. The smallest is the libellulid dragonfly, native to east Asia, with a wingspan of just 20 millimeters. Fossils have been discovered that prove that dragonflies have been in existence for over 300 million years. The largest dragonfly fossil ever found belongs to the now-extinct meganeura monyi, which lived 300 million years ago and had a wingspan of 75 centimeters. This giant was a fearsome predator indeed, which feasted on small amphibians as well as on other insects.",
+        "Dragonflies and damselflies both lay their eggs on or just below the surface of the water in a pond or stream. Some species lay their eggs on the stem of an aquatic plant. The babies emerge from the eggs in the form of nymphs. They live underwater, breathing through gills and preying upon water insects, tadpoles, small fish, and even other nymphs. They hunt by hiding in the shadows at the bottom of a pond or stream, waiting for prey animals to swim by. They have a special lip that they can extend far forward in order to grab their prey when it comes close. Depending on the species, they live this way for several months or even several years. As the nymph grows, it sheds its skin several times. Finally, it leaves the water and sheds its skin one last time. The adult emerges, ready to live the next few weeks or months on land and in the air. The adults do not live for more than four months, and many species live as adults for only a few weeks.",
+        "The exceptional visual abilities and flying skills of dragonflies and damselflies make them very adept hunters. Their special eyes give them a nearly 360-degree field of vision, and they can detect even the smallest movement or flash of light caused by other flying insects. They have two sets of wings that can move independently of each other. This gives them great maneuverability in the air, which is important to these creatures because they catch their prey while flying. They can hover, make sharp turns, and fly backward. Some species of dragonflies can fly 60 kilometers an hour or more. Their prey consists of flying insects such as mosquitoes, deerflies, smaller dragonflies, and butterflies and moths. One species of dragonfly takes spiders out of their webs.",
+        "Bloodthirsty predators that they are, dragonflies and damselflies are prey for other animals in their turn. The nymphs are eaten by fish, frogs, toads, and other aquatic creatures. In the adult stage, they are hunted by birds, frogs, and larger dragonflies and damselflies. They might also be caught in a spider’s web. What goes around comes around."
+      ],
+      "start": 1,
+      "end": 13,
+      "groups": [
+        {
+          "title": "Questions 1-6",
+          "type": "match",
+          "instructions": [
+            "Which of the facts below are true of dragonflies and which are true of damselflies, according to the information in the passage?"
+          ],
+          "options": [
+            {
+              "label": "A",
+              "text": "if it is a fact about dragonflies only"
+            },
+            {
+              "label": "B",
+              "text": "if it is a fact about damselflies only"
+            },
+            {
+              "label": "C",
+              "text": "if it is a fact about both dragonflies and damselflies"
+            }
+          ],
+          "questions": [
+            {
+              "number": 1,
+              "prompt": "They have sawlike jaws."
+            },
+            {
+              "number": 2,
+              "prompt": "They hold their wings on their backs while resting."
+            },
+            {
+              "number": 3,
+              "prompt": "Their eyes have a gap between them."
+            },
+            {
+              "number": 4,
+              "prompt": "They can be seen in fields at a distance from ponds and streams."
+            },
+            {
+              "number": 5,
+              "prompt": "The largest species has a wingspan of 19 centimeters."
+            },
+            {
+              "number": 6,
+              "prompt": "The largest fossil has a wingspan of 75 centimeters."
+            }
+          ]
+        },
+        {
+          "title": "Questions 7-13",
+          "type": "fill",
+          "instructions": [
+            "Complete the notes about the life cycle of odonata below. Choose your answers from the box below."
+          ],
+          "paragraphs": [
+            "The eggs are laid {{7}}. The young dragonflies and damselflies, called {{8}}, live underwater for a few {{9}}. They eat small water animals, catching their food {{10}}. When they are almost fully grown, they leave the water. The adults live for only a few {{11}}. They are skillful {{12}} and catch their prey {{13}}."
+          ],
+          "options": [
+            {
+              "label": "A",
+              "text": "in the air"
+            },
+            {
+              "label": "B",
+              "text": "with their lips"
+            },
+            {
+              "label": "C",
+              "text": "tadpoles"
+            },
+            {
+              "label": "D",
+              "text": "fliers"
+            },
+            {
+              "label": "E",
+              "text": "near the water’s surface"
+            },
+            {
+              "label": "F",
+              "text": "nymphs"
+            },
+            {
+              "label": "G",
+              "text": "at the bottom of a pond"
+            },
+            {
+              "label": "H",
+              "text": "months or years"
+            },
+            {
+              "label": "I",
+              "text": "weeks or months"
+            },
+            {
+              "label": "J",
+              "text": "swimmers"
+            },
+            {
+              "label": "K",
+              "text": "with their wings"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "History of Fire Fighting and Prevention",
+      "instructions": [
+        "You should spend about 20 minutes on Questions 14–26, which are based on Reading Passage 2 below."
+      ],
+      "paragraphs": [
+        "More than two thousand years ago, Roman emperor Augustus organized a group of watchmen whose job was mainly to look out for fires and sound an alarm in the event of one. For many centuries that followed, fire equipment was limited to buckets of water that got passed from person to person. The ax was later found to be a useful tool both for removing fuel in large fires and for opening holes to allow smoke and flames to escape from burning buildings. Watchmen also learned to create firebreaks with long hooked poles and ropes in order to pull down structures that provided fuel for a fire. In 1066, in order to reduce the risk of fire in thatched-roof houses, King William the Conqueror made a ruling: Citizens had to extinguish their cooking fires at night. His term couvre-feu, meaning “cover fire,” is the origin of the modern day term curfew, which no longer carries a literal translation.",
+        "The event that had the largest influence in the history of fire fighting was the Great Fire of London in 1666. The devastating blaze originated at the King’s Bakery near the London Bridge. At the onset, Lord Mayor Bludworth showed little concern for the fire, assuming it would extinguish itself before he could organize a group of men to attend to it. However, the summer of 1666 had been uncharacteristically hot and dry, and the wooden houses nearby caught fire quickly. Within a short time, the wind had carried the fire across the city, burning down over 300 houses in its path. Although the procedure of pulling down buildings to prevent a fire from spreading was standard in Britain, the mayor grew concerned over the cost it would involve to rebuild the city and ordered that the surrounding structures be left intact. By the time the king ordered the destruction of buildings in the fire’s path, the fire was too large to control. It was not until the Duke of York ordered the Paper House to be destroyed in order to create a crucial firebreak that the London fire finally began to lose its fuel.",
+        "When it became clear that four-fifths of the city had been destroyed by the fire, drastic measures were taken in London to create a system of organized fire prevention. At the hands of architects such as Christopher Wren, most of London was rebuilt using stone and brick, materials that were far less flammable than wood and straw. Because of the long history of fires in London, those who could afford to build new homes and businesses began to seek insurance for their properties. As insurance became a profitable business, companies soon realized the monetary benefits of hiring men to extinguish fires. In the early years of insurance companies, all insured properties were marked with an insurance company’s name or logo. If a fire broke out and a building did not contain the insurance mark, the fire brigades were called away and the building was left to burn.",
+        "The British insurance companies were largely responsible for employing people to develop new technology for extinguishing fires. The first fire engines were simple tubs on wheels that were pulled to the location of the fire, with water being supplied by a bucket brigade. Eventually, a hand pump was designed to push the water out of the tub into a hose with a nozzle. The pump allowed for a steady stream of water to shoot through a hose directly at the fire source. Before long, companies began to utilize water pipes made from hollowed tree trunks that were built under the roadway. By digging down into the road, firemen could insert a hole into the tree-trunk pipe and access the water to feed into the pump.",
+        "Fire fighting became a competitive business, as companies fought to be the first to arrive at a scene to access the water pipes. After a series of fires destroyed parts of London, fire-fighting companies were forced to reconsider their intentions. By the eighteenth century, fire brigades began to join forces, and in 1833 the Sun Insurance Company along with ten other London companies created the London Fire Engine Establishment. In 1865, the government became involved, bringing standards to both fire prevention and fire fighting and establishing London’s Metropolitan Fire Brigade. Though the firemen were well paid, they were constantly on duty and thus obliged to call their fire station home for both themselves and their families.",
+        "New technology for fighting fires continued to develop in both Europe and the New World. Leather hoses with couplings that joined the lengths together were hand-sewn in the Netherlands and used until the late 1800s, when rubber hoses became available. The technology for steam engine fire trucks was available in Britain and America in 1829, but most brigades were hesitant to use them until the 1850s. It was the public that eventually forced the brigades into putting the more efficient equipment to use. In the early 1900s, when the internal-combustion engine was developed, the trucks became motorized. This was a timely advancement in fire-fighting history, as World War I put added pressure on brigades throughout the world."
+      ],
+      "start": 14,
+      "end": 26,
+      "groups": [
+        {
+          "title": "Questions 14-20",
+          "type": "table",
+          "instructions": [
+            "Complete the chart below.",
+            "Use NO MORE THAN THREE WORDS from the text for each answer."
+          ],
+          "columns": [
+            "Cause",
+            "Effect"
+          ],
+          "rows": [
+            [
+              "Men used poles and ropes to pull down buildings near a fire.",
+              "The fire did not have {{14}}."
+            ],
+            [
+              "Thatched-roof houses burn down easily.",
+              "The King ordered people to {{15}} their fires nightly."
+            ],
+            [
+              "At the time of the Great Fire of London, the weather was {{16}}.",
+              "The fire spread quickly."
+            ],
+            [
+              "The Mayor of London thought it would be too expensive to {{17}}.",
+              "He told people not to pull down buildings in the fire’s path."
+            ],
+            [
+              "The Great Fire destroyed most of London.",
+              "People built new buildings out of {{18}}."
+            ],
+            [
+              "There had been many {{19}} in London over time.",
+              "People started to buy insurance to protect their homes."
+            ],
+            [
+              "Insurance companies did not want to pay for rebuilding clients’ houses destroyed by fire.",
+              "Insurance companies hired men to {{20}}."
+            ]
+          ]
+        },
+        {
+          "title": "Questions 21-23",
+          "type": "choice",
+          "instructions": [
+            "Choose the correct letters, A–C."
+          ],
+          "questions": [
+            {
+              "number": 21,
+              "prompt": "The first fire engines",
+              "options": [
+                "A carried water to the site of the fire.",
+                "B used hand pumps.",
+                "C had very long hoses."
+              ]
+            },
+            {
+              "number": 22,
+              "prompt": "In 1865,",
+              "options": [
+                "A London was destroyed by a series of fires.",
+                "B fire brigades began to join forces.",
+                "C the Metropolitan Fire Brigade was established."
+              ]
+            },
+            {
+              "number": 23,
+              "prompt": "Firemen who worked for the Metropolitan Fire Brigade",
+              "options": [
+                "A earned low salaries.",
+                "B lived at the fire station.",
+                "C were not allowed to marry."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Questions 24-26",
+          "type": "truth",
+          "instructions": [
+            "Do the following statements agree with the information in the reading passage?"
+          ],
+          "labels": [
+            "YES",
+            "NO",
+            "NOT GIVEN"
+          ],
+          "questions": [
+            {
+              "number": 24,
+              "prompt": "Leather hoses for fire fighting were made by machine."
+            },
+            {
+              "number": 25,
+              "prompt": "Steam engine fire trucks were used until the early 1900s."
+            },
+            {
+              "number": 26,
+              "prompt": "Fires caused a great deal of damage in London during World War I."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Luddites",
+      "instructions": [
+        "You should spend about 20 minutes on Questions 27–40, which are based on Reading Passage 3 below."
+      ],
+      "paragraphs": [
+        "The term Luddite is used to refer to a person who is opposed to new technology. The word derives from the name Ned Ludd, a man who may or may not have actually existed. The original Luddites were textile workers in early nineteenth-century England who protested changes brought on by the industrial revolution. These weavers made lace and stockings by hand, carrying out their craft independently in their homes according to traditional methods. In the 1800s, automated power looms and stocking frames were introduced, radically changing the traditional work system. Weavers’ work was moved from individual homes to factories; individuals could not afford to buy the new machines for themselves. The new machines were not difficult to run. They could be operated by unskilled workers and turned out an inferior product, but they produced large quantities cheaply, which was the aim of the new factory owners. The makers of finely crafted, handmade textiles could not compete with the new machines. Instead of continuing their tradition as skilled, independent workers, they would have to go to work in factories for low wages.",
+        "The industrial revolution was happening everywhere. In the textile-producing towns of England, workers focused on the new weaving machines as the source of their troubles. The height of Luddite activity occurred in the years 1811–1812. Groups of men, often in disguise, would arrive at a factory and make demands for higher wages and better working conditions. If these demands were not met, the group retaliated by smashing the factory machines. These groups often claimed that they were working under the command of General Ned Ludd, and thus came to be called Luddites.",
+        "Who was Ned Ludd? Rumors about this mysterious person abounded. He came to be associated with that traditional champion of the poor, Robin Hood. The original Luddite activity was centered around Nottingham, and many said that Ned Ludd hid out in nearby Sherwood Forest, just as the legendary Robin Hood had. According to another tradition, Ned Ludd was a weaver who had accidentally broken two stocking frames, and from that, came to be the one blamed any time an expensive piece of weaving equipment was damaged. Whoever Ned Ludd may or may not have been, riots protesting the new factories were carried out in his name throughout England’s textile-producing region.",
+        "Workers’ families suffered as wages fell and food prices rose. There were food riots in several towns, and Luddite activity spread. In the winter of 1812, the Frame-Breaking Act was passed, making the destruction of factory equipment a crime punishable by death. The government sent thousands of troops into areas affected by the riots. In the spring of that year, several factory owners were killed during Luddite riots, and a number of textile workers died as well. Following one of the largest incidents, when rioters set fire to a mill in Westhoughton, four rioters, including a young boy, were executed. In another incident that spring, a group of over a thousand workers attacked a mill in Lancashire with sticks and rocks. When they were beaten back by armed guards protecting the mill, they moved to the mill owner’s house and burned it down. The wave of violence resulted in a crack down by the government. Suspected Luddites were arrested and imprisoned, and many of them were hanged.",
+        "By the summer of 1812, Luddite activity had begun to die down, although there continued to be sporadic incidents over the next several years. In 1816, a bad harvest and economic downturn led to a small revival of rioting. In June of that year, workers attacked two mills, smashing equipment and causing thousands of dollars worth of damage. Government troops were brought in to stop the violence. In the end, six of the rioters were executed for their participation. However, rioting never again reached the levels it had in 1811 and 1812.",
+        "The Luddites were short-lived, but they left an impressive mark. They were responsible for destroying close to one thousand weaving machines during the height of their activity in 1811–1812, as well as burning down several factories. Beyond the physical damage, however, they left their mark in people’s minds. The famed English novelist Charlotte Brontë set her novel Shirley in Yorkshire at the time of the riots. This novel is still widely read today. In our present time of rapid technological change, people who are concerned about the pace of technological advance often call themselves Neo-Luddites. Although the responses to it may differ, concern about the changes brought on by technology continues."
+      ],
+      "start": 27,
+      "end": 40,
+      "groups": [
+        {
+          "title": "Questions 27-32",
+          "type": "match",
+          "instructions": [
+            "Match each cause in List A with its effect in List B. There are more effects in List B than you will need, so you will not use them all."
+          ],
+          "options": [
+            {
+              "label": "A",
+              "text": "Troops were sent into the area."
+            },
+            {
+              "label": "B",
+              "text": "Weavers stopped working at home and went to work in factories."
+            },
+            {
+              "label": "C",
+              "text": "Rioters often wore disguises."
+            },
+            {
+              "label": "D",
+              "text": "Workers destroyed factory equipment."
+            },
+            {
+              "label": "E",
+              "text": "Many rioters were hanged."
+            },
+            {
+              "label": "F",
+              "text": "Charlotte Brontë wrote a novel about the Luddites."
+            },
+            {
+              "label": "G",
+              "text": "Prices went up, and salaries went down."
+            },
+            {
+              "label": "H",
+              "text": "Factory owners did not need to hire skilled weavers."
+            },
+            {
+              "label": "I",
+              "text": "Luddite rioting resumed for a short while."
+            },
+            {
+              "label": "J",
+              "text": "People compared Ned Ludd to Robin Hood."
+            }
+          ],
+          "questions": [
+            {
+              "number": 27,
+              "prompt": "The new weaving machines were expensive to buy."
+            },
+            {
+              "number": 28,
+              "prompt": "The new weaving machines were easy to operate."
+            },
+            {
+              "number": 29,
+              "prompt": "Workers’ demands for better pay and conditions were not met."
+            },
+            {
+              "number": 30,
+              "prompt": "Rioting spread to many towns."
+            },
+            {
+              "number": 31,
+              "prompt": "A law was passed against destroying factory equipment."
+            },
+            {
+              "number": 32,
+              "prompt": "Economic conditions worsened in 1816."
+            }
+          ]
+        },
+        {
+          "title": "Questions 33-40",
+          "type": "truth",
+          "instructions": [
+            "Do the following statements agree with the information given in the passage?"
+          ],
+          "labels": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "questions": [
+            {
+              "number": 33,
+              "prompt": "A Luddite is a person who resists new technology."
+            },
+            {
+              "number": 34,
+              "prompt": "Before the nineteenth century, weavers made lace by hand."
+            },
+            {
+              "number": 35,
+              "prompt": "Factory owners as well as workers died as a result of Luddite rioting."
+            },
+            {
+              "number": 36,
+              "prompt": "The Luddite movement did not spread beyond England."
+            },
+            {
+              "number": 37,
+              "prompt": "Nobody knows for certain who Ned Ludd was."
+            },
+            {
+              "number": 38,
+              "prompt": "Worker protests during the economic downturn of 1816 were nonviolent."
+            },
+            {
+              "number": 39,
+              "prompt": "Luddite activity lasted for many years."
+            },
+            {
+              "number": 40,
+              "prompt": "Neo-Luddites do not use computers."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

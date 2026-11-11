@@ -1,3 +1,13 @@
+import test21Writing from "./test21-writing.json";
+import test22Writing from "./test22-writing.json";
+import test23Writing from "./test23-writing.json";
+import test24Writing from "./test24-writing.json";
+import test27Writing from "./test27-writing.json";
+import test30Writing from "./test30-writing.json";
+import test33Writing from "./test33-writing.json";
+import test36Writing from "./test36-writing.json";
+import test39Writing from "./test39-writing.json";
+
 export const writingPrompts = [
   {
     task1: {
@@ -309,4 +319,28 @@ export const writingPrompts = [
       "instruction": "You should use your own ideas, knowledge and experience and support your arguments with examples and relevant evidence."
     }
   },
+  test21Writing,
+  test22Writing,
+  test23Writing,
+  test24Writing,
+  // IDs 25 and 26 have no approved content; preserve their empty indexes.
+  undefined,
+  undefined,
+  test27Writing,
+  // IDs 28 and 29 have no approved content.
+  undefined,
+  undefined,
+  test30Writing,
+  // IDs 31 and 32 have no approved content.
+  undefined,
+  undefined,
+  test33Writing,
+  // IDs 34 and 35 have no approved content.
+  undefined,
+  undefined,
+  test36Writing,
+  // IDs 37 and 38 have no approved content.
+  undefined,
+  undefined,
+  test39Writing,
 ] as const;

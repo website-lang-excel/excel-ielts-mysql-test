@@ -1,0 +1,274 @@
+{
+  "number": 23,
+  "parts": [
+    [
+      {
+        "title": "Questions 1-7",
+        "type": "fill",
+        "instruction": "Complete the form.\nWrite NO MORE THAN TWO WORDS OR A NUMBER for each answer.",
+        "heading": "Client Details",
+        "paragraphs": [
+          "Name: Andrew Peterson (Example)",
+          "Educational Qualification: Degree in {{1}}",
+          "Previous Job: {{2}}",
+          "Hobbies: {{3}}",
+          "Main Skills: {{4}}",
+          "Expected Salary ($): {{5}}",
+          "Can start: {{6}}",
+          "Other languages: {{7}}"
+        ]
+      },
+      {
+        "title": "Questions 8-10",
+        "type": "multiple",
+        "instruction": "Choose THREE letters from the list, A-G.",
+        "prompt": "Which THREE qualities do employers most value in their staff?",
+        "numbers": [
+          8,
+          9,
+          10
+        ],
+        "options": [
+          "Problem-solving skills",
+          "Diligence",
+          "Experience",
+          "Flexible hours",
+          "Independent thinking",
+          "Good personality",
+          "Qualifications"
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 11 - 15",
+        "type": "fill",
+        "instruction": "Answer the questions.\nWrite ONE WORD ONLY for each answer.",
+        "paragraphs": [
+          "What does the centre provide first? {{11}}",
+          "What is important to control? {{12}}",
+          "What will be used to assess member's fitness level? {{13}}",
+          "How often is the exercise schedule reviewed? {{14}}",
+          "How many exercise programs are available? {{15}}"
+        ]
+      },
+      {
+        "title": "Questions 16-20",
+        "type": "match",
+        "instruction": "Write the correct letter, A-G, next to the questions.",
+        "heading": "Which place is best for",
+        "options": [
+          {
+            "label": "A",
+            "text": "jogging machines"
+          },
+          {
+            "label": "B",
+            "text": "Yoga studio"
+          },
+          {
+            "label": "C",
+            "text": "Weight units"
+          },
+          {
+            "label": "D",
+            "text": "Front-desk area"
+          },
+          {
+            "label": "E",
+            "text": "Squash courts"
+          },
+          {
+            "label": "F",
+            "text": "Shower blocks"
+          },
+          {
+            "label": "G",
+            "text": "Swimming pool"
+          }
+        ],
+        "questions": [
+          {
+            "number": 16,
+            "prompt": "developing confidence?"
+          },
+          {
+            "number": 17,
+            "prompt": "reducing stress?"
+          },
+          {
+            "number": 18,
+            "prompt": "building fitness?"
+          },
+          {
+            "number": 19,
+            "prompt": "meeting others?"
+          },
+          {
+            "number": 20,
+            "prompt": "finding information?"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 21 - 25",
+        "type": "choice",
+        "instruction": "Choose the correct letter, A, B, or C.",
+        "questions": [
+          {
+            "number": 21,
+            "prompt": "The position needs someone good at",
+            "options": [
+              "Computers.",
+              "Dealing with people.",
+              "Arts."
+            ]
+          },
+          {
+            "number": 22,
+            "prompt": "The directors will select someone from the faculty of",
+            "options": [
+              "Arts.",
+              "Computing.",
+              "Business."
+            ]
+          },
+          {
+            "number": 23,
+            "prompt": "The position will require the person to",
+            "options": [
+              "Work long hours.",
+              "Train others.",
+              "Do weekend work."
+            ]
+          },
+          {
+            "number": 24,
+            "prompt": "The position will come with a",
+            "options": [
+              "Car.",
+              "Parking space.",
+              "Much better salary."
+            ]
+          },
+          {
+            "number": 25,
+            "prompt": "The best aspect of the job is it",
+            "options": [
+              "Gives more responsibility.",
+              "Comes with a private office.",
+              "Is a step to higher positions"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Questions 26-30",
+        "type": "table",
+        "instruction": "Complete the table.\nWrite NO MORE THAN TWO WORDS OR A NUMBER for each answer.",
+        "columns": [
+          "Candidates",
+          "Years of Experience",
+          "Qualification",
+          "Possible Concerns"
+        ],
+        "rows": [
+          [
+            "Steven",
+            "{{26}}",
+            "MBA",
+            "{{28}}"
+          ],
+          [
+            "Abdul",
+            "7",
+            "{{27}}",
+            "limited English"
+          ],
+          [
+            "Lek",
+            "8",
+            "degree",
+            "{{29}}"
+          ],
+          [
+            "Oscar",
+            "12",
+            "Certificates",
+            "{{30}}"
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 31-33",
+        "type": "choice",
+        "instruction": "Choose the correct letter, A, B, or C.",
+        "questions": [
+          {
+            "number": 31,
+            "prompt": "Caves are",
+            "options": [
+              "Often ignored.",
+              "Mostly in remote areas.",
+              "Often difficult to explore."
+            ]
+          },
+          {
+            "number": 32,
+            "prompt": "People who explore caves",
+            "options": [
+              "Mostly need to know about cartography",
+              "Enjoy overcoming the difficulties.",
+              "Usually know about cave sciences."
+            ]
+          },
+          {
+            "number": 33,
+            "prompt": "China has",
+            "options": [
+              "Probably the most undiscovered caves.",
+              "A growing number of cave explorers.",
+              "Some of the best documented caves."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Questions 34-40",
+        "type": "table",
+        "instruction": "Complete the table and notes.\nWrite NO MORE THAN TWO WORDS OR A NUMBER for each answer.",
+        "heading": "Three Main Reasons for Cave Formation",
+        "columns": [
+          "Dissolution",
+          "Volcanic Lava Tubes",
+          "Action of Waves"
+        ],
+        "rows": [
+          [
+            "mainly involves {{34}}",
+            "topmost surface cools down and {{35}} hotter lava continue to flow beneath",
+            "waves pound in to cliffs then erode into {{36}}or less rigid rocks."
+          ]
+        ]
+      },
+      {
+        "title": "Questions 34-40",
+        "type": "fill",
+        "instruction": "Complete the table and notes.\nWrite NO MORE THAN TWO WORDS OR A NUMBER for each answer.",
+        "heading": "Limestone caves",
+        "paragraphs": [
+          "often have formations made of {{37}} carbonate",
+          "e.g. stalactites, stalagmites, and {{38}}",
+          "e.g.",
+          "Lechuguilla",
+          "finally revealed in {{39}}",
+          "interestingly, formed from the {{40}}"
+        ]
+      }
+    ]
+  ]
+}

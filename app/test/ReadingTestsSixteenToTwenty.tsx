@@ -18,6 +18,15 @@ import test17 from "./test17-import.json";
 import test18 from "./test18-import.json";
 import test19 from "./test19-import.json";
 import test20 from "./test20-import.json";
+import test21 from "./test21-import.json";
+import test22 from "./test22-import.json";
+import test23 from "./test23-import.json";
+import test24 from "./test24-import.json";
+import test27 from "./test27-import.json";
+import test30 from "./test30-import.json";
+import test33 from "./test33-import.json";
+import test36 from "./test36-import.json";
+import test39 from "./test39-import.json";
 
 const tests: Record<number, ImportedReadingTest> = {
   16: test16 as ImportedReadingTest,
@@ -25,6 +34,15 @@ const tests: Record<number, ImportedReadingTest> = {
   18: test18 as ImportedReadingTest,
   19: test19 as ImportedReadingTest,
   20: test20 as ImportedReadingTest,
+  21: test21 as ImportedReadingTest,
+  22: test22 as ImportedReadingTest,
+  23: test23 as ImportedReadingTest,
+  24: test24 as ImportedReadingTest,
+  27: test27 as ImportedReadingTest,
+  30: test30 as ImportedReadingTest,
+  33: test33 as ImportedReadingTest,
+  36: test36 as ImportedReadingTest,
+  39: test39 as ImportedReadingTest,
 };
 
 export default function ReadingTestsSixteenToTwenty({ testNumber }: { testNumber: number }) {
@@ -105,7 +123,7 @@ const movePaneDivider = (event: ReactPointerEvent<HTMLDivElement>) => {
               <div className="flex items-start gap-3"><b>{question.number}.</b><p>{richText(question.prompt)}</p></div>
               <div className="space-y-2 pl-8">{options.map((option, index) => {
                 const value = group.type === "choice" ? readingOptionValue(testNumber, question.number, option, index) : option;
-                return <label key={option} className={`flex cursor-pointer ${testNumber === 16 || testNumber === 17 || testNumber === 18 || testNumber === 19 || testNumber === 20 ? "items-center gap-5" : "items-start gap-3"} py-1`}>
+                return <label key={option} className={`flex cursor-pointer ${testNumber === 16 || testNumber === 17 || testNumber === 18 || testNumber === 19 || testNumber === 20 || testNumber === 21 || testNumber === 22 || testNumber === 23 || testNumber === 24 || testNumber === 27 || testNumber === 30 || testNumber === 33 || testNumber === 36 || testNumber === 39 ? "items-center gap-5" : "items-start gap-3"} py-1`}>
                 <input type="radio" name={`question-${question.number}`} value={value} checked={answers[question.number] === value} onChange={() => setAnswer(question.number, value)} />
                 <span>{richText(option)}</span>
               </label>; })}</div>
@@ -170,7 +188,7 @@ const movePaneDivider = (event: ReactPointerEvent<HTMLDivElement>) => {
             <p><b>{question.numbers[0]}–{question.numbers[question.numbers.length - 1]}.</b> {richText(question.prompt)}</p>
             <div className="space-y-2 pl-8">{question.options.map((option, index) => {
               const value = readingOptionValue(testNumber, question.numbers[0], option, index);
-              return <label key={option} className={`flex cursor-pointer ${testNumber === 16 || testNumber === 17 || testNumber === 18 || testNumber === 19 || testNumber === 20 ? "items-center gap-5" : "items-start gap-3"} py-1`}>
+              return <label key={option} className={`flex cursor-pointer ${testNumber === 16 || testNumber === 17 || testNumber === 18 || testNumber === 19 || testNumber === 20 || testNumber === 21 || testNumber === 22 || testNumber === 23 || testNumber === 24 || testNumber === 27 || testNumber === 30 || testNumber === 33 || testNumber === 36 || testNumber === 39 ? "items-center gap-5" : "items-start gap-3"} py-1`}>
               <input type="checkbox" aria-label={option} value={value} checked={selected.includes(value)} onChange={() => selectMultiple(question.numbers, value)} disabled={selected.length >= question.numbers.length && !selected.includes(value)} />
               <span>{richText(option)}</span>
             </label>; })}</div>
@@ -188,7 +206,7 @@ const movePaneDivider = (event: ReactPointerEvent<HTMLDivElement>) => {
     <div className="mx-5 mt-2 mb-1 min-h-[58px] shrink-0 rounded border border-[#d5d5d5] bg-[#f2f2ef] px-4 py-1"><h2 className="text-[14px] font-bold leading-5">Part {passageIndex + 1}</h2><p className="text-[14px] leading-5">Read the text and answer questions {passage.start}–{passage.end}.</p></div>
     <div className="relative flex min-h-0 flex-1 overflow-hidden bg-white">
       <section className="h-full min-w-0 shrink-0 overflow-y-auto border-r border-[#999] bg-white" style={{ width: `${paneSplit}%` }} aria-label={`Reading Passage ${passageIndex + 1}`}>
-        <article className="space-y-4 px-5 py-4 text-[16px] leading-6"><h2 className="text-center text-xl font-bold">{passage.title}</h2>{passage.paragraphs.map((paragraph, index) => {
+        <article className="space-y-4 px-5 py-4 text-[16px] leading-6">{passage.instructions?.map((instruction,index)=><p key={index}>{instruction}</p>)}<h2 className="text-center text-xl font-bold">{passage.title}</h2>{passage.paragraphs.map((paragraph, index) => {
           if (testNumber === 18 && passageIndex === 0) {
             if (index === 0) return <h3 key={index} className="text-center font-bold italic">{richText(paragraph)}</h3>;
             if (["Nursing Absenteeism", "Method", "Results", "Discussion", "Conclusion"].includes(paragraph)) return <h3 key={index} className="pt-2 font-bold">{richText(paragraph)}</h3>;
@@ -196,7 +214,8 @@ const movePaneDivider = (event: ReactPointerEvent<HTMLDivElement>) => {
             if (strategy) return <p key={index}><strong>{strategy[1]}</strong>{richText(strategy[2])}</p>;
           }
           const section = paragraph.match(/^([A-Z])\s*\n+([\s\S]*)$/);
-          return <section key={index} className="space-y-2">{section ? <><div className="flex items-center gap-2"><h3 className="shrink-0 font-bold">{section[1]}</h3>{headingSlot(section[1])}</div><p>{richText(section[2])}</p></> : <p>{richText(paragraph)}</p>}</section>;
+          const illustration = section ? passage.paragraphImages?.[section[1]] : undefined;
+          return <section key={index} className="space-y-2">{section ? <><div className="flex items-center gap-2"><h3 className="shrink-0 font-bold">{section[1]}</h3>{headingSlot(section[1])}</div>{illustration && <img src={illustration.src} alt={illustration.alt} width={illustration.width} height={illustration.height} className="mx-auto h-auto max-w-full" />}<p>{richText(section[2])}</p></> : <p>{richText(paragraph)}</p>}</section>;
         })}</article>
       </section>
       <section className="h-full min-w-0 shrink-0 overflow-y-auto bg-white pb-20" style={{ width: `${100 - paneSplit}%` }} aria-label="Reading questions">

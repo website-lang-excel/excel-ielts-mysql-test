@@ -1,0 +1,282 @@
+{
+  "number": 21,
+  "parts": [
+    [
+      {
+        "title": "Questions 1-6",
+        "type": "fill",
+        "instruction": "Complete the notes.\nWrite NO MORE THAN THREE WORDS OR A NUMBER for each answer.",
+        "heading": "SchoolExcursion",
+        "paragraphs": [
+          "Day: Wednesday (Example)",
+          "Destination: {{1}}",
+          "Weather: {{2}}",
+          "Arrivaltime: {{3}}",
+          "ActivitiesPlanned",
+          "See: {{4}}",
+          "Eat: Catered lunch",
+          "Attend: {{5}}",
+          "Returntime: {{6}}"
+        ]
+      },
+      {
+        "title": "Questions7-10",
+        "type": "table",
+        "instruction": "Complete the table.\nWrite ONE WORD ONLY for each answer.",
+        "columns": [
+          "Nationality",
+          "%"
+        ],
+        "rows": [
+          [
+            "{{7}}",
+            "26"
+          ],
+          [
+            "{{8}}",
+            "25"
+          ],
+          [
+            "{{9}}",
+            "16"
+          ],
+          [
+            "Indonesian",
+            "15"
+          ],
+          [
+            "{{10}}",
+            "8"
+          ],
+          [
+            "Saudi",
+            "7"
+          ],
+          [
+            "Other",
+            "3"
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 11 - 15",
+        "type": "choice",
+        "instruction": "Choose the correct letter, A, B, or C.",
+        "questions": [
+          {
+            "number": 11,
+            "prompt": "The company deals mostly with:",
+            "options": [
+              "Big cities.",
+              "Nature holidays.",
+              "Nepal."
+            ]
+          },
+          {
+            "number": 12,
+            "prompt": "The overseas consultants deal mostly with:",
+            "options": [
+              "Asia.",
+              "North America.",
+              "Europe."
+            ]
+          },
+          {
+            "number": 13,
+            "prompt": "For deserts and gorges, customers should come in the:",
+            "options": [
+              "Morning.",
+              "Afternoon.",
+              "Night."
+            ]
+          },
+          {
+            "number": 14,
+            "prompt": "Trips to regional locations are good because:",
+            "options": [
+              "The buses are comfortable.",
+              "There is storage for suitcases.",
+              "They can be seen quickly."
+            ]
+          },
+          {
+            "number": 15,
+            "prompt": "SleekLine buses are particularly known for their:",
+            "options": [
+              "Service.",
+              "Size.",
+              "Comfort."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Questions 16-20",
+        "type": "map",
+        "instruction": "Identify the rooms in the office plan.\nWrite the correct letter, A-G, next to the questions.",
+        "image": "/images/listening-test-21-office-plan.jpeg",
+        "imageWidth": 1000,
+        "imageHeight": 669,
+        "viewBox": "0 0 1000 669",
+        "alt": "Office plan with rooms labelled A to G.",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "questions": [
+          {
+            "number": 16,
+            "prompt": "Local Tours"
+          },
+          {
+            "number": 17,
+            "prompt": "Interstate Tours"
+          },
+          {
+            "number": 18,
+            "prompt": "International Tours"
+          },
+          {
+            "number": 19,
+            "prompt": "Asian Region"
+          },
+          {
+            "number": 20,
+            "prompt": "General Office"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 21 - 24",
+        "type": "table",
+        "instruction": "Complete the timetable.\nWrite the correct letter, A-H, for each answer.",
+        "columns": [
+          "",
+          "Morning",
+          "Afternoon"
+        ],
+        "rows": [
+          [
+            "Monday",
+            "Opening Lecture",
+            "{{21}}"
+          ],
+          [
+            "Tuesday",
+            "{{22}}",
+            "Study Skills"
+          ],
+          [
+            "Wednesday",
+            "x",
+            "{{23}}"
+          ],
+          [
+            "Thursday",
+            "x",
+            "x"
+          ],
+          [
+            "Friday",
+            "x",
+            "{{24}}"
+          ]
+        ],
+        "options": [
+          {
+            "label": "A",
+            "text": "BBQ"
+          },
+          {
+            "label": "B",
+            "text": "Careers lecture"
+          },
+          {
+            "label": "C",
+            "text": "Computer lab visit"
+          },
+          {
+            "label": "D",
+            "text": "Dance"
+          },
+          {
+            "label": "E",
+            "text": "Library tour"
+          },
+          {
+            "label": "F",
+            "text": "Student Union induction"
+          },
+          {
+            "label": "G",
+            "text": "University tour"
+          },
+          {
+            "label": "H",
+            "text": "Legal rights lecture"
+          }
+        ]
+      },
+      {
+        "title": "Questions 25-30",
+        "type": "diagram",
+        "instruction": "Complete the labels.\nWrite ONE WORD OR A NUMBER for each answer.",
+        "image": "/images/listening-test-21-style-guide.jpeg",
+        "imageWidth": 1000,
+        "imageHeight": 885,
+        "viewBox": "0 0 1000 885",
+        "alt": "University Style Guide showing label blanks 25 to 30 for page formatting.",
+        "paragraphs": [
+          "{{25}}",
+          "{{26}}",
+          "{{27}}",
+          "{{28}}",
+          "{{29}}",
+          "{{30}}"
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 31-34",
+        "type": "fill",
+        "instruction": "Complete the sentences.\nWrite NO MORE THAN TWO WORDS for each answer.",
+        "paragraphs": [
+          "Behavior in parks is controlled by {{31}}",
+          "Insect numbers are reduced by having {{32}}",
+          "A wilderness park does not have any {{33}}",
+          "Observing trees and lying in the grass are examples of {{34}}"
+        ]
+      },
+      {
+        "title": "Questions 35-40",
+        "type": "fill",
+        "instruction": "Complete the notes.\nWrite NO MORE THAN TWO WORDS OR A NUMBER for each answer.",
+        "heading": "PARKS",
+        "paragraphs": [
+          "1000 years ago",
+          "sufficient wilderness",
+          "large forests: people could {{35}}",
+          "desire to preserve nature began with {{36}}",
+          "Princes Park",
+          "land originally worth £ {{37}}",
+          "designed by Joseph Paxton",
+          "in the middle was a {{38}}",
+          "Neighborhood Parks",
+          "now regarded as a {{39}}",
+          "satisfy a natural desire",
+          "can be famous, e.g. in {{40}}"
+        ]
+      }
+    ]
+  ]
+}

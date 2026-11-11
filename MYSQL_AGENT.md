@@ -6,7 +6,7 @@ Established: 8 November 2026, Asia/Dhaka. Applies to this MySQL project only. Re
 
 The owner requires complete separation between the existing SQLite website and this MySQL website.
 
-- Permitted local working project: `C:/Users/Asus/Documents/Codex/website-lang-excel-mysql`.
+- Permitted local working project: `C:/Users/Asus/Desktop/IELTS-MYSQL`.
 - Permitted GitHub repository: `https://github.com/website-lang-excel/excel-ielts-mysql-test`.
 - Permitted Railway account: `nothingforthefirsttime@gmail.com`.
 - Permitted Railway workspace: `website-lang-excel's Projects`.

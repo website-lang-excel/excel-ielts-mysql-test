@@ -1,0 +1,207 @@
+{
+  "number": 22,
+  "parts": [
+    [
+      {
+        "title": "Questions 1-5",
+        "type": "fill",
+        "instruction": "Complete the sentences.\nWrite NO MORE THAN TWO WORDS for each answer.",
+        "paragraphs": [
+          "Example",
+          "Peter consumes far too much soft drink",
+          "Peter and Mary’s diet will be both sensible and {{1}}",
+          "Every two months, they can eat {{2}}",
+          "On Saturdays, they will go {{3}}",
+          "This coming Saturday, they will go to {{4}}",
+          "In every meal, there will be {{5}}"
+        ]
+      },
+      {
+        "title": "Questions 6-10",
+        "type": "table",
+        "instruction": "Choose the correct letter, C, I, or B.",
+        "columns": [
+          "",
+          "Peter’s opinion",
+          "Mary’s opinion"
+        ],
+        "rows": [
+          [
+            "Tuesdays",
+            "B",
+            "{{6}}"
+          ],
+          [
+            "Thursdays",
+            "{{7}}",
+            "{{8}}"
+          ],
+          [
+            "Sundays",
+            "{{9}}",
+            "{{10}}"
+          ]
+        ],
+        "options": [
+          {
+            "label": "C",
+            "text": "Chocolate"
+          },
+          {
+            "label": "I",
+            "text": "Ice cream"
+          },
+          {
+            "label": "B",
+            "text": "Biscuits"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 11 - 16",
+        "type": "table",
+        "instruction": "Complete the table.\nWrite NO MORE THAN TWO WORDS for each answer.",
+        "columns": [
+          "Advantages of Stanfield Childcare Centre",
+          "Detail",
+          "Another Detail"
+        ],
+        "rows": [
+          [
+            "1",
+            "Walls are {{11}}",
+            "includes the {{12}}"
+          ],
+          [
+            "2",
+            "Teachers are able to teach a {{13}}",
+            "There are many special {{14}}"
+          ],
+          [
+            "3",
+            "They {{15}} Surfaces daily.",
+            "procedures to limit the spread of {{16}}"
+          ]
+        ]
+      },
+      {
+        "title": "Questions 17-20",
+        "type": "match",
+        "instruction": "Choose the correct letter, A, B, or C.\nNBYou may use a letter more than once.",
+        "options": [
+          {
+            "label": "A",
+            "text": "Andrea"
+          },
+          {
+            "label": "B",
+            "text": "Bella"
+          },
+          {
+            "label": "C",
+            "text": "Cathy"
+          }
+        ],
+        "heading": "Which childcare worker:",
+        "questions": [
+          {
+            "number": 17,
+            "prompt": "has her own children?"
+          },
+          {
+            "number": 18,
+            "prompt": "often sleeps at the center?"
+          },
+          {
+            "number": 19,
+            "prompt": "is good with shy children?"
+          },
+          {
+            "number": 20,
+            "prompt": "is a good cook?"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 21 - 25",
+        "type": "flow",
+        "instruction": "Complete the flowchart.\nWrite ONE WORD ONLY for each answer.",
+        "heading": "Foundation for Essay Writing",
+        "paragraphs": [
+          "Decide on {{21}} you like.",
+          "Focus on {{22}} area of interest.",
+          "Write {{23}} statement.",
+          "Create {{24}}",
+          "Ensure this {{25}} clearly."
+        ]
+      },
+      {
+        "title": "Questions 26-30",
+        "type": "fill",
+        "instruction": "Complete the summary.\nWrite NO MORE THAN TWO WORDS OR A NUMBER for each answer.",
+        "paragraphs": [
+          "There are several {{26}} involved in producing a good essay. The writer must think independently and give {{27}} examples as support, each one with a reference (which is a {{28}}). The formatting must follow the {{29}} issued by the university, as well as the word count decided by the lecturer, although it can vary by {{30}}"
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 31-33",
+        "type": "choice",
+        "instruction": "Choose the correct letter, A, B, or C.",
+        "questions": [
+          {
+            "number": 31,
+            "prompt": "Geocentrism",
+            "options": [
+              "has a long history.",
+              "is similar to heliocentrism.",
+              "took some time to be deduced."
+            ]
+          },
+          {
+            "number": 32,
+            "prompt": "Heliocentrism",
+            "options": [
+              "was realised only recently.",
+              "was not generally accepted.",
+              "fitted the views of the church."
+            ]
+          },
+          {
+            "number": 33,
+            "prompt": "The night sky",
+            "options": [
+              "is relatively simple.",
+              "remains basically the same.",
+              "was once used for navigation."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Questions 34-40",
+        "type": "fill",
+        "instruction": "Complete the notes.\nWrite ONE WORD OR A NUMBER for each answer.",
+        "paragraphs": [
+          "Nicolaus Copernicus",
+          "started the Copernican {{34}}",
+          "his book published the year he was {{35}} and then passed away",
+          "This book generated little {{36}}",
+          "Other scientists",
+          "Galileo was persecuted.",
+          "{{37}} was killed.",
+          "even the sun believed to be in {{38}}",
+          "Modern geocentrism",
+          "based on the {{39}}",
+          "Believers also support creationism.",
+          "{{40}} of Americans believe in this."
+        ]
+      }
+    ]
+  ]
+}

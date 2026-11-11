@@ -1,0 +1,18 @@
+{
+  "task1": {
+    "title": "",
+    "prompt": "The charts below show degrees granted in different fields at the National University in the years 1995, 2005, and 2015.",
+    "instruction": "Summarize the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "image": {
+      "src": "/images/writing-test-30-task-1.png",
+      "alt": "Degrees granted at the National University in 1995, 2005 and 2015: Computer Science, Medicine, Law and Business.",
+      "width": 500,
+      "height": 220
+    }
+  },
+  "task2": {
+    "title": "",
+    "prompt": "All children should study a foreign language in school, starting in the earliest grades.\n\nTo what extent do you agree or disagree with this statement?",
+    "instruction": "Give reasons for your answer and include any relevant examples from your own knowledge or experience."
+  }
+}

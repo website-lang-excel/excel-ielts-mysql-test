@@ -1,0 +1,245 @@
+{
+  "number": 27,
+  "parts": [
+    [
+      {
+        "title": "Questions 1-5",
+        "type": "table",
+        "instruction": "Complete the chart below.\nWrite NO MORE THAN TWO WORDS for each answer.",
+        "columns": [
+          "Days",
+          "Class/Activity",
+          "Age Group"
+        ],
+        "rows": [
+          [
+            "Wednesday, Saturday",
+            "{{1}}",
+            "children, teens"
+          ],
+          [
+            "{{2}}",
+            "Tennis",
+            "{{3}}"
+          ],
+          [
+            "Tuesday, Thursday",
+            "{{4}}",
+            "children, teens, adults"
+          ],
+          [
+            "Friday",
+            "Book club",
+            "{{5}}"
+          ]
+        ]
+      },
+      {
+        "title": "Questions 6-10",
+        "type": "fill",
+        "instruction": "Complete the notes below.\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+        "paragraphs": [
+          "Membership fees ${{6}} (individual)",
+          "$ {{7}} (family)",
+          "Located at 107 {{8}} Street",
+          "Parking is located {{9}}",
+          "The Center is closed on {{10}}"
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 11-15",
+        "type": "multiple",
+        "instruction": "Choose FIVE letters, A–J.",
+        "prompt": "Which FIVE things should hikers take on the hiking trip?",
+        "numbers": [
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "options": [
+          "sleeping bag",
+          "tent",
+          "food",
+          "dishes",
+          "hiking boots",
+          "backpack",
+          "walking poles",
+          "maps",
+          "jacket",
+          "first-aid kit"
+        ]
+      },
+      {
+        "title": "Questions 16-20",
+        "type": "fill",
+        "instruction": "Complete the sentences below.\nWrite NO MORE THAN TWO WORDS for each answer.",
+        "paragraphs": [
+          "• Always stay ahead of the {{16}}.",
+          "• Stop and wait at any {{17}}.",
+          "• Don’t try to climb {{18}}.",
+          "• Don’t {{19}} wild animals.",
+          "• Always carry {{20}} with you."
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 21-24",
+        "type": "multiple",
+        "instruction": "Choose FOUR letters, A–G.",
+        "prompt": "Which FOUR of the following are required of student teachers?",
+        "numbers": [
+          21,
+          22,
+          23,
+          24
+        ],
+        "options": [
+          "weekly journal",
+          "sample lesson plans",
+          "meetings with other student teachers",
+          "observing other teachers",
+          "evaluation from supervising teacher",
+          "portfolio",
+          "final exam"
+        ]
+      },
+      {
+        "title": "Questions 25-25",
+        "type": "choice",
+        "instruction": "Choose the correct letter, A, B, or C.",
+        "questions": [
+          {
+            "number": 25,
+            "prompt": "Who has to sign the agreement form?",
+            "options": [
+              "the student teacher",
+              "the supervising teacher",
+              "the advisor"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Questions 26-30",
+        "type": "table",
+        "instruction": "Complete the schedule below.\nWrite NO MORE THAN THREE WORDS for each answer.",
+        "columns": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "First week",
+            "{{26}} due"
+          ],
+          [
+            "Fourth week",
+            "{{27}} meeting"
+          ],
+          [
+            "Seventh week",
+            "{{28}}"
+          ],
+          [
+            "Fourteenth week",
+            "{{29}} due"
+          ],
+          [
+            "Fifteenth week",
+            "{{30}}"
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 31-35",
+        "type": "choice",
+        "instruction": "Choose the correct letter, A, B, or C.",
+        "questions": [
+          {
+            "number": 31,
+            "prompt": "Retailers place popular items",
+            "options": [
+              "in the back of the store.",
+              "near the front entrance.",
+              "at the end of the aisle."
+            ]
+          },
+          {
+            "number": 32,
+            "prompt": "Carpet patterns are used to",
+            "options": [
+              "help shoppers feel comfortable.",
+              "appeal to shoppers’ decorative sense.",
+              "encourage shoppers to walk in certain directions."
+            ]
+          },
+          {
+            "number": 33,
+            "prompt": "Retailers can keep customers in the store longer by",
+            "options": [
+              "providing places to sit.",
+              "keeping the doors closed.",
+              "lowering the prices."
+            ]
+          },
+          {
+            "number": 34,
+            "prompt": "Music is used in stores to",
+            "options": [
+              "entertain customers.",
+              "slow customers down.",
+              "make customers shop faster."
+            ]
+          },
+          {
+            "number": 35,
+            "prompt": "The scent of vanilla has been used in",
+            "options": [
+              "ice cream shops.",
+              "bakeries.",
+              "clothing stores."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Questions 36-40",
+        "type": "table",
+        "instruction": "Complete the chart about the effects of color.\nWrite NO MORE THAN TWO WORDS for each answer.",
+        "columns": [
+          "Color",
+          "Effect"
+        ],
+        "rows": [
+          [
+            "Purple",
+            "encourages people to {{36}}"
+          ],
+          [
+            "Orange",
+            "makes restaurant customers {{37}}"
+          ],
+          [
+            "Blue",
+            "conveys a sense of {{38}}"
+          ],
+          [
+            "Bright colors",
+            "appeal to {{39}}"
+          ],
+          [
+            "Soft colors",
+            "appeal to {{40}}"
+          ]
+        ]
+      }
+    ]
+  ]
+}

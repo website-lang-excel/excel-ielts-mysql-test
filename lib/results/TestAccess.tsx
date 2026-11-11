@@ -10,7 +10,7 @@ export type TestQuery = { test?: string | string[]; mode?: string | string[] };
 export async function accessError(query: TestQuery,section?:"listening"|"reading"|"writing"|"instructions"|"confirm") {
   const user=await requirePage("student");
   const value=query.test??"1";
-  if(Array.isArray(value)||!/^([1-9]|1[0-9]|20)$/.test(value))return "Invalid mock test.";
+  if(Array.isArray(value)||!/^([1-9]|1[0-9]|2[0-4]|27|30|33|36|39)$/.test(value))return "Invalid mock test.";
   const mode=query.mode??"full";if(!isTestMode(mode))return "Invalid test mode.";
   const target=(path:string)=>modePath(path,mode);
   try {

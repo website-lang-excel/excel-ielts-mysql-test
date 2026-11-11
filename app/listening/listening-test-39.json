@@ -1,0 +1,254 @@
+{
+  "number": 39,
+  "parts": [
+    [
+      {
+        "title": "Questions 1–5",
+        "type": "fill",
+        "instruction": "Complete the information below.\nWrite NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+        "heading": "City Library",
+        "box": true,
+        "paragraphs": [
+          "Head Librarian: Example Mrs. Phillips",
+          "Hours {{1}} to 4:30",
+          "**Books**",
+          "Ground floor¹ {{2}}",
+          "Second floor Adult collection",
+          "Third floor {{3}}",
+          "**Book carts**",
+          "Brown cart books to re-shelve",
+          "Black cart books to {{4}}",
+          "White cart books to {{5}}"
+        ]
+      },
+      {
+        "title": "Questions 6–10",
+        "type": "table",
+        "instruction": "Complete the library schedule below.\nWrite NO MORE THAN ONE WORD AND/OR A NUMBER for each answer.",
+        "columns": [
+          "Activity",
+          "Location",
+          "Day and Time"
+        ],
+        "rows": [
+          [
+            "Story Time",
+            "Children’s Room",
+            "{{6}} at 11:00"
+          ],
+          [
+            "{{7}}",
+            "Reference Room",
+            "Saturday at {{8}}"
+          ],
+          [
+            "Lecture Series",
+            "{{9}} Room",
+            "Friday at {{10}}"
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 11–15",
+        "type": "multiple",
+        "instruction": "Choose FIVE letters, A–I.",
+        "prompt": "Which FIVE activities are available at Golden Lake Resort?",
+        "numbers": [
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "options": [
+          "swimming",
+          "boating",
+          "waterskiing",
+          "fishing",
+          "tennis",
+          "golf",
+          "horseback riding",
+          "hiking",
+          "arts and crafts"
+        ]
+      },
+      {
+        "title": "Questions 16–20",
+        "type": "table",
+        "instruction": "Complete the schedule below.\nWrite NO MORE THAN ONE WORD for each answer.",
+        "columns": [
+          "Night",
+          "Activity"
+        ],
+        "rows": [
+          [
+            "Sunday",
+            "{{16}}"
+          ],
+          [
+            "Monday",
+            "Dessert Night"
+          ],
+          [
+            "Tuesday",
+            "{{17}} Night"
+          ],
+          [
+            "Wednesday",
+            "{{18}}"
+          ],
+          [
+            "Thursday",
+            "{{19}}"
+          ],
+          [
+            "Friday",
+            "Talent Show"
+          ],
+          [
+            "Saturday",
+            "{{20}}"
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 21–23",
+        "type": "multiple",
+        "instruction": "Choose THREE letters, A–F.",
+        "prompt": "Which THREE things are the students required to submit to their professor?",
+        "numbers": [
+          21,
+          22,
+          23
+        ],
+        "options": [
+          "a written summary",
+          "notes",
+          "a case study",
+          "charts and graphs",
+          "a list of resources used",
+          "a video"
+        ]
+      },
+      {
+        "title": "Questions 24 and 25",
+        "type": "fill",
+        "instruction": "Answer the questions below.\nWrite NO MORE THAN THREE WORDS for each answer.",
+        "paragraphs": [
+          "What two sources of information will the students use when preparing their presentation? {{24}}",
+          "What will the students show during their presentation? {{25}}"
+        ]
+      },
+      {
+        "title": "Questions 26–30",
+        "type": "choice",
+        "instruction": "Choose the correct letter A, B, or C.",
+        "questions": [
+          {
+            "number": 26,
+            "prompt": "Only rescue birds that are",
+            "options": [
+              "all alone.",
+              "obviously hurt.",
+              "sitting on the ground."
+            ]
+          },
+          {
+            "number": 27,
+            "prompt": "Protect yourself by wearing",
+            "options": [
+              "gloves.",
+              "a hat.",
+              "protective glasses."
+            ]
+          },
+          {
+            "number": 28,
+            "prompt": "Put the bird in a",
+            "options": [
+              "cage.",
+              "box.",
+              "bag."
+            ]
+          },
+          {
+            "number": 29,
+            "prompt": "Keep the bird calm by",
+            "options": [
+              "petting it.",
+              "talking to it.",
+              "leaving it alone."
+            ]
+          },
+          {
+            "number": 30,
+            "prompt": "When transporting the bird,",
+            "options": [
+              "talk softly.",
+              "play music.",
+              "drive very slowly."
+            ]
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 31–32",
+        "type": "choice",
+        "instruction": "Choose the correct letter A, B, or C.",
+        "questions": [
+          {
+            "number": 31,
+            "prompt": "The Great Barrier Reef consists of about ................ individual coral reefs.",
+            "options": [
+              "400",
+              "900",
+              "3,000"
+            ]
+          },
+          {
+            "number": 32,
+            "prompt": "The larger islands in the Great Barrier Reef are covered with",
+            "options": [
+              "sand.",
+              "plants.",
+              "coral."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Questions 33–38",
+        "type": "fill",
+        "instruction": "Complete the notes below.\nWrite NO MORE THAN TWO WORDS for each answer.",
+        "heading": "Great Barrier Reef",
+        "box": true,
+        "paragraphs": [
+          "**Habitats**",
+          "Habitats include reefs, salt marshes, and {{33}}",
+          "**Types of plants**",
+          "Reef habitat: {{34}}",
+          "Islands: mostly {{35}} at the northern end\nmostly herbaceous at the southern end",
+          "**Types of animals**",
+          "Salt marsh: {{36}}",
+          "Sea grass beds: {{37}}",
+          "Islands: {{38}}"
+        ]
+      },
+      {
+        "title": "Questions 39 and 40",
+        "type": "fill",
+        "instruction": "Answer the questions below.\nWrite NO MORE THAN THREE WORDS for each answer.",
+        "paragraphs": [
+          "What causes coral bleaching? {{39}}",
+          "What has been one response to this problem? {{40}}"
+        ]
+      }
+    ]
+  ]
+}

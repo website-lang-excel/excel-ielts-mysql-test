@@ -1,0 +1,26 @@
+.page { min-height: 100vh; padding: 40px max(5%,calc((100vw - 1280px)/2)); background: #fff; color: #161616; font-family: Arial, Helvetica, sans-serif; }
+.page h1 { margin: 0 0 32px; color: #1e293b; font-size: clamp(30px,4.2vw,58px); font-weight: 700; line-height: 1.2; }
+.skills { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 36px; }
+.skills button { padding: 14px 28px; border: 1px solid #780c25; border-radius: 4px; background: white; color: #780c25; font: inherit; font-size: 18px; font-weight: 600; cursor: pointer; }
+.skills button:hover, .skills button[aria-pressed="true"] { background: #780c25; color: white; }
+.skills button:focus-visible { outline: 3px solid #2185d0; outline-offset: 4px; }
+.books { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 32px 24px; }
+.book { min-width: 0; }
+.cover { display: block; position: relative; container-type: inline-size; }
+.cover img { display: block; width: 100%; height: auto; }
+.number { position: absolute; top: 28.5%; left: 63%; width: 31%; height: 17%; display: flex; align-items: center; justify-content: center; background: linear-gradient(to bottom,#c20122,#c60224); color: #fff; font-family: Arial, Helvetica, sans-serif; font-size: 24cqw; font-weight: 400; line-height: 1; letter-spacing: -1px; }
+.bookButton { display: block; width: 100%; padding: 0; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.bookTitle { display: block; margin: 12px 0 0; font-size: 17px; font-weight: 700; line-height: 1.4; }
+.bookButton:focus-visible, .backButton:focus-visible { outline: 3px solid #2185d0; outline-offset: 4px; }
+.backButton { padding: 10px 0; border: 0; background: transparent; color: #780c25; font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
+.selectedBookTitle { margin: 20px 0 24px; font-size: 25px; font-weight: 700; }
+.tests { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; }
+.testCard { padding: 28px; border: 1px solid #ddd; border-radius: 4px; background: white; }
+.testCard h3 { margin: 0; font-size: 22px; font-weight: 700; }
+.testLink { display: block; color: inherit; text-decoration: none; }
+.testLink:hover { color: #780c25; text-decoration: underline; }
+.testLink:focus-visible { outline: 3px solid #2185d0; outline-offset: 4px; }
+@media(max-width:800px) { .tests { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:1100px) { .books { grid-template-columns: repeat(4,minmax(0,1fr)); } }
+@media(max-width:800px) { .books { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px 18px; } }
+@media(max-width:480px) { .page { padding: 28px 5%; } .books { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 16px; } .bookTitle { font-size: 15px; } }

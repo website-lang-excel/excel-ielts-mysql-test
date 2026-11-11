@@ -1,0 +1,357 @@
+{
+  "number": 39,
+  "passages": [
+    {
+      "title": "Pollination",
+      "instructions": [
+        "You should spend about 20 minutes on Questions 1–14, which are based on Reading Passage 1 below."
+      ],
+      "paragraphs": [
+        "Plants have evolved a wide variety of methods to reproduce themselves. Some plants reproduce asexually by splitting off new roots or bulbs (e.g., garlic, lilies) or even branches, stems, or leaves (e.g., mangroves, spider plants). Plants that reproduce asexually are essentially reproducing clones of themselves. This is a simple and direct method of reproduction, producing new plants more quickly and with less energy than plants using sexual reproduction. The majority of plants, however, reproduce sexually. The advantages from an evolutionary perspective include more genetic variety and better dispersal than the colonies of clones formed by asexual reproduction. In flowering plants, pollen (male) grains are moved from the anther to the stigma, where the pollen fertilizes¹ the ovaries (female), resulting in seeds.",
+        "A few flowering plants such as peas, beans, and tomatoes pollinate themselves, but more commonly, pollination occurs between separate plants, either through pollen being borne by the wind (most conifers and many grasses) or by pollinators, animal species that plants rely on to help move the pollen from one plant to the ovaries of another. Most pollinators are insects, but some species of bird and bats also play an important role.",
+        "Plants have evolved a variety of methods to entice pollinators to do their work. Many produce nectar, a sugary substance that pollinators use as food. A well-known example is the honeybee, which collects nectar as well as pollen for food. When a bee enters one flower, it brushes against the anther, and pollen grains are picked up by the surface of its body. When the bee then enters a second flower and brushes against the stigma, some of that pollen comes in contact with the ovaries of the second plant, thus fertilizing it, resulting in seeds that contain genetic material from the male gametes of the first plant combined with the female reproductive organs of the second plant. Most bees, butterflies, and moths, as well as certain species of bats and birds, are attracted to nectar-producing flowers.",
+        "Flowering plants have evolved a variety of methods for signaling² their usefulness to pollinators or for otherwise making their work easier. Butterflies are attracted to flowers that are open during the day, are bright—typically red, yellow, or orange—and have a “landing platform.” In contrast, many moths are active at night and thus are attracted to flowers that are pale or white, have a strong fragrance, but also have a broad area to land on. Both butterflies and moths have long tongues and have coevolved with plants that have developed deep sources of nectar that are available only to certain species. Hummingbirds are also attracted by color³ especially by bright reds, and flowers that attract these tiny birds also have strong stems and are designed for pollen to be brushed on the hummingbirds’ heads as they sip nectar.",
+        "Bees do not see red; thus, flowers that attract bees tend to be blue, yellow, purple, or other colors. Many bee attractors also have nectar guides, which are spots near the center¹ of each flower that reflect ultraviolet light, making it easier for the bees to find the nectar. Bees are also attracted to flowers with a mintlike or sweet smell. Snapdragons not only attract bees visually, they are adapted to appeal to certain bee species: snapdragons have a landing platform that, if the bee is the correct weight, opens—allowing access to the nectar and pollen.",
+        "Pollinators play a major role in agriculture. While many staple crops such as rice, corn, canola, and wheat are self-pollinating or pollinated by the wind, farmers are dependent on pollinator species for many fruit, vegetable, nut, and seed crops. Over 30 percent of the world’s crops require the work of pollinator species. Bees are the most common agricultural pollinators, with crops including fruit trees such as apples and cherries; vegetables such as squash, beans, tomatoes, and eggplant; flowering shrubs and annual and perennial flowers; forage crops such as clover and alfalfa; and fiber² crops such as cotton. Other pollinators include midges (cocoa), wasps (figs), moths (yucca, papaya), butterflies (asters, daisies, marigolds), and even a few species of bats (agave, palms, durians) and hummingbirds (fuchsia).",
+        "Recent declines in honeybees and in other pollinator species around the world have raised concerns about future food production, and many scientists have called for increased study of the role of pollinators, the agricultural and environmental changes involved in the declines, as well as the economic and environmental effects and ways to prevent further declines.",
+        "¹ British: fertilises\n² British: signalling\n³ British: colour"
+      ],
+      "start": 1,
+      "end": 14,
+      "groups": [
+        {
+          "title": "Questions 1–5",
+          "type": "fill",
+          "instructions": [
+            "Complete the summary using the list of words and phrases below.",
+            "Write the correct letter, A–I, on lines 1–5 on your answer sheet."
+          ],
+          "options": [
+            {
+              "label": "A",
+              "text": "pollen"
+            },
+            {
+              "label": "B",
+              "text": "flowering plants"
+            },
+            {
+              "label": "C",
+              "text": "roots"
+            },
+            {
+              "label": "D",
+              "text": "grains"
+            },
+            {
+              "label": "E",
+              "text": "spider plants"
+            },
+            {
+              "label": "F",
+              "text": "wind"
+            },
+            {
+              "label": "G",
+              "text": "copies"
+            },
+            {
+              "label": "H",
+              "text": "fertilization"
+            },
+            {
+              "label": "I",
+              "text": "time"
+            }
+          ],
+          "paragraphs": [
+            "The reproduction of plants occurs in different ways. Some plants send out new parts such as {{1}} or bulbs. These grow into new plants, which are actually {{2}} of the original plant. The advantage of this form of reproduction is that it does not require a lot of {{3}} or energy. Many {{4}} reproduce themselves by forming seeds through the process of pollination. Some plants pollinate themselves. Others rely on the {{5}} or animals to carry the pollen from plant to plant."
+          ]
+        },
+        {
+          "title": "Questions 6–14",
+          "type": "truth",
+          "instructions": [
+            "Do the following statements agree with the information given in the passage? On lines 6–14 on your answer sheet, write:",
+            "TRUE if the statement agrees with the information",
+            "FALSE if the statement contradicts the information",
+            "NOT GIVEN if there is no information on this"
+          ],
+          "labels": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "questions": [
+            {
+              "number": 6,
+              "prompt": "Honeybees eat both nectar and pollen."
+            },
+            {
+              "number": 7,
+              "prompt": "If an attractive flower is very small, a butterfly will land on its leaves."
+            },
+            {
+              "number": 8,
+              "prompt": "Moths are attracted by scent."
+            },
+            {
+              "number": 9,
+              "prompt": "Certain flowers are shaped to be pollinated by hummingbirds."
+            },
+            {
+              "number": 10,
+              "prompt": "Special markings on a flower help bees to locate the nectar."
+            },
+            {
+              "number": 11,
+              "prompt": "Bees rarely respond to scent."
+            },
+            {
+              "number": 12,
+              "prompt": "Most grain crops are pollinated by insects."
+            },
+            {
+              "number": 13,
+              "prompt": "Close to one third of the world’s harvest depends on animals for pollination."
+            },
+            {
+              "number": 14,
+              "prompt": "Farmers in certain parts of the world have suffered economically because of the decline in the honeybee population."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Paleolithic¹ Cave Art",
+      "instructions": [
+        "You should spend about 20 minutes on Questions 15–27, which are based on Reading Passage 2 below."
+      ],
+      "paragraphs": [
+        "Students of art history tend to be familiar with the images of horses and bison discovered in the famous cave art site in Lascaux, France, in 1940. Less well known but vitally important to understanding Ice Age art and culture is the art discovered by three cave explorers in the Chauvet Cave near Vallon-Pont-d’Arc in southern France in 1994.",
+        "The Chauvet Cave hosts one of the largest groups of Paleolithic drawings yet discovered on one site, as well as the fossilized² remains of a number of now-extinct animals. The art found in the Chauvet Cave differs from that found in most other European cave art sites, which primarily feature prey animals such as horses, bison, wild cattle, and reindeer. The Chauvet paintings include many animals that humans would have feared—panthers, bears, lions, hyenas, and rhinoceroses. While the Chauvet paintings also include many species that would have been hunted by the artists—horses, aurochs, bison, and extinct species of moose and deer—the presence of non-prey animals calls into question a common theory that the primary purpose of cave art was to magically ensure plentiful game. Perhaps the discovery of the Chauvet art points to a shift in emphasis from the hunters’ predators to the hunters’ prey over time, but more evidence is needed.",
+        "Carbon-14 dating has established three of the paintings (one bison and two rhinoceroses) as being 31,000 years old. This discovery pushes the common understanding of the date range for European cave art much further back than what had been assumed. It has also clearly disproved theories that earlier cave art was cruder and more primitive because these older images are equally sophisticated in execution.",
+        "In addition to the hundreds of animal paintings, the Chauvet Cave also has an image of a being, referred to as the Sorcerer, with the body of a human and the head of a bison. There is also part of an image of a woman. In addition, explorers found the skull of a cave bear placed on a squared-off altarlike rock. The cave had been untouched for thousands of years due to a rock slide that had sealed off the cave; the floor of the cave contains the footprints of humans and cave bears, and fire pits, stone tools, remnants of torches, and bones from meals. After scientists collected data and recorded images, the site was placed off-limits to prevent the damage that has occurred at many other caves known for their rock art.",
+        "Ice Age paintings in certain European caves have been extremely well preserved and have reached iconic status because of their beauty and the artists’ skill in execution. As a result, many people assume that the art of early hunters and gatherers was limited to cave paintings. While the artwork in the deep caves has been the best preserved, artwork was also done on the walls of rock shelters and on rock faces out in open light. Paleolithic artists not only painted with pigments but also created engravings by scratching designs into rock with pointed tools, as well as creating low-relief sculptures. Often the artists seemed to have seen a suggestion of an animal’s shape in a rock, and then added detail through incising lines, incorporating clay, or applying pigment. In addition to animal images, most sites also have geometrical designs, including dots and quadrangles. Archeologists¹ have also discovered small sculpted figures from the same time period.",
+        "Images of hands, created either by wetting the palm of the hand with paint and pressing the hand onto rock or by applying paint around the hand, perhaps by spitting pigment from the mouth, are common. However, full images of humans are rare in the European caves. Images combining human and animal elements such as the Chauvet Cave Sorcerer have been found in various sites as have partial images of women, but portrayals of a full human are few and far between, and they tend to be simple abstract depictions. Most of the animal images, on the other hand, are detailed, realistic portrayals of an individual animal species, not simply an abstract symbol meant to depict an animal such as a horse or bison.",
+        "¹ British: Palaeolithic\n² British: fossilised"
+      ],
+      "start": 15,
+      "end": 27,
+      "groups": [
+        {
+          "title": "Questions 15–21",
+          "type": "choice",
+          "instructions": [
+            "Choose the correct letter. Write the correct letter, A, B, or C, on lines 15–21 on your answer sheet."
+          ],
+          "questions": [
+            {
+              "number": 15,
+              "prompt": "As compared with the Chauvet Cave, the cave art site in Lascaux is",
+              "options": [
+                "A more well known.",
+                "B less important.",
+                "C more difficult to explore."
+              ]
+            },
+            {
+              "number": 16,
+              "prompt": "The art discovered in the Chauvet Cave differs from other European cave art because",
+              "options": [
+                "A it does not include images of horses and bison.",
+                "B it shows images of now-extinct animals.",
+                "C it includes images of predatory animals."
+              ]
+            },
+            {
+              "number": 17,
+              "prompt": "According to the passage, a common belief about the function of cave art is that",
+              "options": [
+                "A it was meant to bring animals to be hunted.",
+                "B it was intended to drive away predatory animals.",
+                "C it was used to warn others about the presence of fearsome animals."
+              ]
+            },
+            {
+              "number": 18,
+              "prompt": "As compared with other European cave art sites, the art in the Chauvet Cave is",
+              "options": [
+                "A cruder and more primitive.",
+                "B significantly older.",
+                "C more sophisticated in subject matter."
+              ]
+            },
+            {
+              "number": 19,
+              "prompt": "Images found in the Chauvet Cave include",
+              "options": [
+                "A a crude man.",
+                "B a part-human, part-animal being.",
+                "C a complete drawing of a woman."
+              ]
+            },
+            {
+              "number": 20,
+              "prompt": "In addition to art, other discoveries in the Chauvet Cave include",
+              "options": [
+                "A implements made of stone.",
+                "B human bones.",
+                "C bison pelts."
+              ]
+            },
+            {
+              "number": 21,
+              "prompt": "No human has visited the Chauvet Cave for thousands of years because",
+              "options": [
+                "A cave bears lived inside it.",
+                "B it was declared off limits.",
+                "C the entrance was blocked by rocks."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Questions 22–27",
+          "type": "fill",
+          "instructions": [
+            "Complete the sentences below.",
+            "Choose NO MORE THAN TWO WORDS from the passage for each answer. Write your answers on lines 22–27 on your answer sheet."
+          ],
+          "paragraphs": [
+            "People often believe that Paleolithic art consisted only of {{22}}.",
+            "Ice Age artists used pointed tools to make {{23}} and sculptures on rocks.",
+            "As well as pictures of animals, {{24}} are common in most sites.",
+            "Pictures of {{25}} were sometimes made by wetting the palm with paint.",
+            "It is unusual to see an image of a {{26}} in European cave art.",
+            "Rather than being symbolic, paintings of animals are {{27}} images."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Braille System",
+      "instructions": [
+        "You should spend about 20 minutes on Questions 28–40, which are based on Reading Passage 3 below."
+      ],
+      "paragraphs": [
+        "A\nAbout 200 years ago, a curious three-year-old boy playing in his father’s shop had an accident that ended up changing the lives of hundreds of thousands of people. The little boy was Louis Braille, and his father was a harness maker in Coupvray, France, a small town near Paris. Louis poked his eye with one of the sharp tools on his father’s workbench. The injury and the ensuing infection, which spread through both eyes, caused him to lose his vision. Only a dozen years later, at the age of fifteen, Braille developed a system of raised dots on paper that made it possible for blind people to read and write. While he was not the first person to toy with the idea of tactile reading—that is, reading by feeling shapes on a flat surface—his system surpassed others thanks to its simplicity, ease of use, and adaptability.",
+        "B\nDuring the first few years after his accident, Braille attended a local school with sighted children, where he learned by the only means available to him—listening and memorizing.¹ He was a gifted student and at the age of ten earned a scholarship to attend the Royal Institution for Blind Youth in Paris. He later became a teacher at the Institution and remained there until his death in 1852 at the age of forty-three. The Institution relied largely on oral instruction, but pupils had access to a few books specially designed for blind students by Valentin Haüy, the school’s founder. Haüy had developed a method for pressing shapes of letters onto wet paper and then letting them dry, providing pages with raised characters that students could “read” by running their fingertips across the thick paper. The books were big and cumbersome and took a long time to produce—and to read. In addition, they addressed only part of the blind students’ communication dilemma—the ability to read. For full literacy, students also needed to be able to write.",
+        "C\nA man named Charles Barbier, who had invented a system known as night writing for soldiers to send messages in the dark, provided the inspiration Braille needed for his reading method. Barbier visited the Royal Institution for Blind Youth in 1821 to demonstrate this technique, which used rectangular cells with raised dots. The cells, thirty-six in all, represented sounds rather than individual letters of the alphabet and consisted of a template of twelve dots in six rows of two. Braille saw the system’s benefits right away and then zeroed in on its drawbacks. He thought it should be based on the alphabet—the way sighted people read—and not on phonetics. It also needed a way to designate punctuation marks, accents, numbers, and other symbols, and, for the user to be able to read with ease, a cell had to be small enough to fit beneath one’s fingertip.",
+        "D\nFor the next three years, Braille fine-tuned his system and in 1824 came up with a version that worked to his satisfaction: a six-dot cell (three rows of two) that allowed for sixty-three possible combinations of dots, enough for all twenty-six letters of the Roman alphabet plus accents, capital letters, punctuation marks, and numbers. For example, a cell with one dot at the top left (position one) represents the letter a, whereas a cell with one dot at the bottom right (position six) means the next symbol is a capital letter. The numbers zero to nine are coded the same as the letters a to j, except they are preceded by a cell with dots in positions three through six (bottom left dot and all three dots in the right column). Users could read an individual cell with a single touch of the fingertip, and they scanned dots from left to right as in normal reading. What’s more, the Braille system made it possible to write by punching dots into paper (from right to left because the reverse side is read).",
+        "E\nOriginally, Braille symbols were written with a slate and stylus—the equivalent of paper-and-pencil writing, using the slate to hold the paper and the stylus to prick holes in it. In 1892, a Braille writing machine was invented; used like a typewriter, it has six keys and a space bar. Today, writing Braille is no more difficult or time-consuming than producing a printed document. You need only to hook up a standard computer to a machine that will emboss the text in Braille. Braille’s fellow students quickly learned his system; for the first time, they could take notes in class and write papers, not to mention pass notes back and forth to one another. Yet the system was not widely used in Braille’s lifetime. It did not become the official communication system for blind people in France until 1854, two years after he died.",
+        "F\nThe system remains in use today, only slightly altered from the original version. It has incorporated symbols for math, science, and music and has been adapted to dozens of languages, including many with non-Roman alphabets, such as Chinese and Japanese. Braille symbols often show up in public places, such as on elevator buttons, and their helpfulness in labeling household items like canned goods is undisputed. Nevertheless, knowledge of Braille has declined in recent years as technology has provided innovations, such as recorded books and computers with synthetic speech, that make it less necessary to read the old-fashioned way. Many now deem Braille an obsolete system, but its devotees still consider it a form of literacy as basic as the three R’s.",
+        "¹ British: memorising"
+      ],
+      "start": 28,
+      "end": 40,
+      "groups": [
+        {
+          "title": "Questions 28–36",
+          "type": "match",
+          "instructions": [
+            "Reading Passage 3 has six paragraphs, A–F. Which paragraph contains the following information? Write the correct letter, A–F, on lines 28–36 on your answer sheet. You may use any letter more than once."
+          ],
+          "options": [
+            {
+              "label": "A",
+              "text": "A"
+            },
+            {
+              "label": "B",
+              "text": "B"
+            },
+            {
+              "label": "C",
+              "text": "C"
+            },
+            {
+              "label": "D",
+              "text": "D"
+            },
+            {
+              "label": "E",
+              "text": "E"
+            },
+            {
+              "label": "F",
+              "text": "F"
+            }
+          ],
+          "questions": [
+            {
+              "number": 28,
+              "prompt": "a description of the Braille system of representing letters and numbers"
+            },
+            {
+              "number": 29,
+              "prompt": "Louis Braille’s early education"
+            },
+            {
+              "number": 30,
+              "prompt": "how people write in Braille"
+            },
+            {
+              "number": 31,
+              "prompt": "reasons why Braille is used less now than in the past"
+            },
+            {
+              "number": 32,
+              "prompt": "when the Braille system was officially accepted in France"
+            },
+            {
+              "number": 33,
+              "prompt": "a reading system for the blind used when Louis Braille was a child"
+            },
+            {
+              "number": 34,
+              "prompt": "how Braille is read"
+            },
+            {
+              "number": 35,
+              "prompt": "the reason why Louis Braille was blind"
+            },
+            {
+              "number": 36,
+              "prompt": "a description of the method on which Louis Braille based his system"
+            }
+          ]
+        },
+        {
+          "title": "Questions 37–40",
+          "type": "truth",
+          "instructions": [
+            "Do the following statements agree with the information given in the passage? On lines 37–40 on your answer sheet, write:",
+            "TRUE if the statement agrees with the information",
+            "FALSE if the statement contradicts the information",
+            "NOT GIVEN if there is no information on this"
+          ],
+          "labels": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "questions": [
+            {
+              "number": 37,
+              "prompt": "Braille symbols represent letters and numbers only."
+            },
+            {
+              "number": 38,
+              "prompt": "Braille is used in a variety of languages."
+            },
+            {
+              "number": 39,
+              "prompt": "Braille readers can read faster than sighted readers."
+            },
+            {
+              "number": 40,
+              "prompt": "Modern technology has made Braille less important."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

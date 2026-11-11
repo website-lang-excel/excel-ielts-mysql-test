@@ -51,7 +51,7 @@ export default function ListeningTest() {
 
   const searchParams = useSearchParams();
   const testNumber = searchParams.get("test") || "1";
-  const audioSource = /^(?:[1-9]|10|11|12|13|14|15|16|17|18|19|20)$/.test(testNumber)
+  const audioSource = /^(?:[1-9]|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|27|30|33|36|39)$/.test(testNumber)
     ? `/audio/listening-test-${testNumber}.mp3`
     : undefined;
 
@@ -515,7 +515,7 @@ export default function ListeningTest() {
           <ListeningTestsFourteenSeventeenTwenty testNumber={Number(testNumber)} part={activePart} answers={answers} updateAnswer={updateAnswer} />
         ) : ["15", "18"].includes(testNumber) ? (
           <ListeningTestsFifteenEighteen testNumber={Number(testNumber)} part={activePart} answers={answers} updateAnswer={updateAnswer} />
-        ) : ["12", "16"].includes(testNumber) ? (
+        ) : ["12", "16", "21", "22", "23", "24", "27", "30", "33", "36", "39"].includes(testNumber) ? (
           <ListeningTestsTwelveSixteen testNumber={Number(testNumber)} part={activePart} answers={answers} updateAnswer={updateAnswer} />
         ) : ["13", "19"].includes(testNumber) ? (
           <ListeningTestsThirteenNineteen testNumber={Number(testNumber)} part={activePart} answers={answers} updateAnswer={updateAnswer} />
@@ -531,7 +531,7 @@ export default function ListeningTest() {
               <button onClick={() => setActivePart(part)} className={`text-[13px] leading-4 font-semibold ${activePart === part ? "text-[#111]" : "text-gray-600"}`}>
                 Part {part}
               </button>
-              <div className={testNumber === "1" || testNumber === "2" || testNumber === "3" || testNumber === "4" || testNumber === "5" || testNumber === "6" || testNumber === "7" || testNumber === "8" || testNumber === "9" || testNumber === "10" || testNumber === "11" || ["14", "17", "20"].includes(testNumber) || ["15", "18"].includes(testNumber) || ["12", "16"].includes(testNumber) || ["13", "19"].includes(testNumber) ? "grid grid-cols-10 gap-0.5" : "hidden"}>
+              <div className={testNumber === "1" || testNumber === "2" || testNumber === "3" || testNumber === "4" || testNumber === "5" || testNumber === "6" || testNumber === "7" || testNumber === "8" || testNumber === "9" || testNumber === "10" || testNumber === "11" || ["14", "17", "20"].includes(testNumber) || ["15", "18"].includes(testNumber) || ["12", "16", "21", "22", "23", "24", "27", "30", "33", "36", "39"].includes(testNumber) || ["13", "19"].includes(testNumber) ? "grid grid-cols-10 gap-0.5" : "hidden"}>
                 {Array.from({ length: 10 }, (_, index) => {
                   const number = (part - 1) * 10 + index + 1;
                   return (

@@ -1,0 +1,18 @@
+{
+  "task1": {
+    "title": "",
+    "prompt": "The graph below shows the percentage of urban/suburban and rural households in a certain country that had Internet access between 2011 and 2016.",
+    "instruction": "Summarize¹ the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "image": {
+      "src": "/images/writing-test-36-task-1.png",
+      "alt": "Household Internet access in urban/suburban and rural areas from 2011 to 2016, as percentages.",
+      "width": 275,
+      "height": 195
+    }
+  },
+  "task2": {
+    "title": "",
+    "prompt": "Because of the busy pace of modern life, many children spend most of their time indoors and have little exposure to the natural world.\n\nDiscuss the effects lack of experience and understanding of nature can have on children as they grow up.",
+    "instruction": "Give reasons for your answer and include any relevant examples from your own knowledge or experience."
+  }
+}

@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import VerifyClient from "./VerifyClient";
 export default async function Verify({searchParams}:{searchParams:Promise<{submitted?:string;test?:string;mode?:string}>}){
  const query=await searchParams,selected=Number(query.test);
- const selectedTest=Number.isInteger(selected)&&selected>=1&&selected<=20?selected:undefined;
+ const selectedTest=Number.isInteger(selected)&&selected>=1&&(selected<=24||selected===27||selected===30||selected===33||selected===36||selected===39)?selected:undefined;
  if(!selectedTest&&(await currentUser("student"))?.role==="student")redirect("/candidate");
  return <VerifyClient submitted={query.submitted==="1"} selectedTest={selectedTest} selectedMode={isTestMode(query.mode)?query.mode:"full"}/>;
 }

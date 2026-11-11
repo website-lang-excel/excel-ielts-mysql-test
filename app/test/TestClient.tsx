@@ -71,7 +71,7 @@ export default function TestPage() {
   if (testNumber === "6") return <TestSixReading />;
   if (["7", "8", "9", "10"].includes(testNumber)) return <ImportedReadingTests key={testNumber} testNumber={Number(testNumber)} />;
   if (["11", "12", "13", "14", "15"].includes(testNumber)) return <ReadingTestsElevenToFifteen key={testNumber} testNumber={Number(testNumber)} />;
-  if (["16", "17", "18", "19", "20"].includes(testNumber)) return <ReadingTestsSixteenToTwenty key={testNumber} testNumber={Number(testNumber)} />;
+  if (["16", "17", "18", "19", "20", "21", "22", "23", "24", "27", "30", "33", "36", "39"].includes(testNumber)) return <ReadingTestsSixteenToTwenty key={testNumber} testNumber={Number(testNumber)} />;
 
   return (
     <div inert={!draftReady} aria-busy={!draftReady} className="h-screen flex flex-col bg-white text-black" style={{ fontFamily: "Arial, sans-serif" }}>

@@ -16,7 +16,9 @@ export type ImportedReadingTest = {
   number: number;
   passages: {
     title: string;
+    instructions?: string[];
     paragraphs: string[];
+    paragraphImages?: Record<string, { src: string; alt: string; width: number; height: number }>;
     start: number;
     end: number;
     groups: ReadingQuestionGroup[];

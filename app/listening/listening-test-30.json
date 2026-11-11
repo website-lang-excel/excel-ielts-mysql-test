@@ -1,0 +1,213 @@
+{
+  "number": 30,
+  "parts": [
+    [
+      {
+        "title": "Questions 1–4",
+        "type": "fill",
+        "instruction": "Complete the form below.\nWrite NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+        "heading": "Reservation Form",
+        "box": true,
+        "paragraphs": [
+          "Example: Grandview Hotel",
+          "Arrival date: {{1}} 13th. Number of nights: 2",
+          "Number of guests: {{2}}",
+          "Guest name: Roxanne {{3}}",
+          "Credit card number {{4}}"
+        ]
+      },
+      {
+        "title": "Questions 5–7",
+        "type": "multiple",
+        "instruction": "Choose THREE letters, A–G.",
+        "prompt": "Which THREE places will the caller visit?",
+        "numbers": [
+          5,
+          6,
+          7
+        ],
+        "options": [
+          "art museum",
+          "science museum",
+          "shopping mall",
+          "monument",
+          "post office",
+          "restaurant",
+          "park"
+        ]
+      },
+      {
+        "title": "Questions 8–10",
+        "type": "choice",
+        "instruction": "Choose the correct letter A, B, or C.",
+        "questions": [
+          {
+            "number": 8,
+            "prompt": "When will the caller arrive at the airport?",
+            "options": [
+              "In the morning",
+              "In the afternoon",
+              "At night"
+            ]
+          },
+          {
+            "number": 9,
+            "prompt": "How will the caller get to the hotel?",
+            "options": [
+              "Subway",
+              "Bus",
+              "Taxi"
+            ]
+          },
+          {
+            "number": 10,
+            "prompt": "What time does the hotel front desk close?",
+            "options": [
+              "10:00",
+              "12:00",
+              "2:00"
+            ]
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 11 and 12",
+        "type": "fill",
+        "instruction": "Complete the information below.\nWrite ONE NUMBER for each answer.",
+        "heading": "City Tours\nFare Information",
+        "box": true,
+        "paragraphs": [
+          "Adult All-Day Pass: {{11}} $",
+          "Children ages 5–12 All-Day Pass: {{12}} $",
+          "Children under age 5: Free"
+        ]
+      },
+      {
+        "title": "Questions 13–15",
+        "type": "diagram",
+        "instruction": "Label the map below.\nWrite NO MORE THAN TWO WORDS for each answer.",
+        "image": "/images/listening-test-30-map.png",
+        "imageWidth": 510,
+        "imageHeight": 235,
+        "alt": "Tour route from the Tour Bus Office past the first stop, Fishing Docks, third stop, Shopping District, Danny’s and fifth stop.",
+        "paragraphs": [
+          "1st stop {{13}}",
+          "3rd stop {{14}}",
+          "5th stop {{15}}"
+        ]
+      },
+      {
+        "title": "Questions 16–20",
+        "type": "table",
+        "instruction": "Complete the chart below.\nWrite NO MORE THAN ONE WORD for each answer.",
+        "columns": [
+          "Place",
+          "Activity"
+        ],
+        "rows": [
+          [
+            "First stop",
+            "Enjoy the {{16}} of the bay"
+          ],
+          [
+            "Second stop",
+            "Look at the {{17}}"
+          ],
+          [
+            "Third stop",
+            "{{18}} fish."
+          ],
+          [
+            "Fourth stop",
+            "Purchase {{19}}"
+          ],
+          [
+            "Fifth stop",
+            "Visit the {{20}}"
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 21–23",
+        "type": "fill",
+        "instruction": "Answer the questions below.\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+        "paragraphs": [
+          "When is the research project due? {{21}}",
+          "Where will the students conduct the interviews? {{22}}",
+          "How many interviews will they complete all together? {{23}}"
+        ]
+      },
+      {
+        "title": "Questions 24–30",
+        "type": "fill",
+        "instruction": "Complete the outline showing the steps the students will take to complete their projects.\nWrite NO MORE THAN THREE WORDS for each answer.",
+        "paragraphs": [
+          "A. Read {{24}}",
+          "B. {{25}} their questionnaire",
+          "C. Ask the professor to {{26}}",
+          "D. Conduct {{27}}",
+          "E. Get together to {{28}}",
+          "F. Prepare {{29}}",
+          "G. Give {{30}}"
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Questions 31–40",
+        "type": "table",
+        "instruction": "Complete the timeline below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+        "columns": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "1832",
+            "{{31}}"
+          ],
+          [
+            "In her teens",
+            "Alcott worked to {{32}}"
+          ],
+          [
+            "At age 17",
+            "Alcott wrote {{33}}"
+          ],
+          [
+            "{{34}}",
+            "Alcott enlisted as an army nurse."
+          ],
+          [
+            "{{35}}",
+            "Alcott published her letters in a book called **Hospital Sketches**."
+          ],
+          [
+            "{{36}}",
+            "Alcott returned from her trip to Europe."
+          ],
+          [
+            "{{37}}",
+            "Alcott published **Little Women**."
+          ],
+          [
+            "1879",
+            "{{38}} died."
+          ],
+          [
+            "{{39}}",
+            "The novel **Jo’s Boys** was published."
+          ],
+          [
+            "1888",
+            "{{40}}"
+          ]
+        ]
+      }
+    ]
+  ]
+}

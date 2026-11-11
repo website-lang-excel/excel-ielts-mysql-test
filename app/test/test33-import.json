@@ -1,0 +1,483 @@
+{
+  "number": 33,
+  "passages": [
+    {
+      "title": "The Gulf Stream and Global Warming",
+      "instructions": [
+        "You should spend about 20 minutes on Questions 1–13, which are based on Reading Passage 1 below."
+      ],
+      "paragraphs": [
+        "Labrador and London lie at about the same latitude, but Labrador is frigid and has only 30 miles of paved roads while London is one of the major centers¹ of civilization.² Why do two places, equidistant from the Arctic Circle, have such disparate climates? The Gulf Stream that flows by the British Isles makes all the difference: Its warm waters make northwestern Europe so abundant with life that palm trees can actually grow on the southern shores of England.",
+        "This life-giving Gulf Stream is warm, salty water, which travels along the surface of the Atlantic Ocean from the Caribbean, along the east coast of the United States, and then veers toward Europe. In the tropics, this water is warmed by the sun and becomes saltier because of the higher rate of evaporation in the heat. The Gulf Stream divides as it travels, but the majority of the stream moves north and east. As it travels past Europe, the Gulf Stream warms the atmosphere, and the prevailing westerly winds bring the warmed air to all of northwestern Europe, making the area suitable for intense agriculture. The Gulf Stream makes it possible for Europe to feed an increasingly large population.",
+        "After the Gulf Stream reaches southeast Greenland and western Iceland, much of the heat of the stream is gone, and the colder, denser water then sinks. The bulk of the Gulf Stream is carried down toward the ocean floor into as many as seven large vortices, called chimneys. They suck the Gulf Stream waters down over a mile deep, where the water is then drawn into another dynamic ocean current. Almost 2 miles below the surface, this cold water current flows in reverse, from the north southward. When this cold water nears the equator, it is again pulled up from the bottom of the ocean as the surface water is heated and starts its journey north. This upwelling brings with it minerals and food from the detritus at the bottom of the ocean to refresh food supplies for fish and other marine creatures.",
+        "This stream of water—the warm water traveling³ north along the surface and the cold water traveling south along the floor—has become known as the Great Ocean Conveyor Belt. This flow of ocean currents has been extremely important in regulating the temperature of the globe and in making life possible. These currents in the North Atlantic are part of the Great Conveyor Belt that flows through all the oceans of the world. The least stable section of this global current is in the North Atlantic. The Gulf Stream is the most unstable of all.",
+        "Predictions of the effects of global warming on the Gulf Stream are based on computer models, which differ to some extent. But several important facts are known. South of Greenland, there used to be as many as seven chimneys that pulled water from the Gulf Stream down toward the ocean floor. In the last several years, only one remained, and then, in 2007, that one disappeared. The causes for the demise of the chimneys may include the increase in fresh water from glacial melt. In recent winters, glacial melt has released record amounts of fresh water into the oceans. As the North Atlantic waters, including fresh water from rivers as well as the increased amount of glacial melt, mix with the Gulf Stream, the salt water is diluted. Because fresh water is not as dense as salt water, it does not sink, which impairs the natural mechanism for forming the chimneys. As the chimneys have disappeared, the Gulf Stream has slowed. About 30 percent of the water from the Gulf Stream that used to reach Europe travels elsewhere or is lost in the disintegration of the current, a loss of over six million tons of water flow every second. Without a strong Gulf Stream, the slow, cold water of the lower part of the conveyor belt fails to rise, which reduces the circulation of nutrients for marine life. The problem of warming then worsens: As less surface water, which is full of carbon dioxide from the atmosphere, siphons into the depths of the ocean, less carbon dioxide is removed from the atmosphere, thus increasing global warming.",
+        "Ocean sediments and glacial cores show that there have been global swings in temperature in the past. The last Ice Age, when much of North America and northern Europe were covered in glaciers 2 miles thick, occurred when the average temperature dropped about 5 degrees Celsius. That ice age ended about 20,000 years ago. The last “Little Ice Age,” when the average temperature dropped only 1 to 2 degrees Celsius, occurred in the sixteenth and seventeenth centuries, hitting Europe hardest. At that time, the Gulf Stream had slowed to about half its usual rate.",
+        "Core samples also show that the changes in temperature have been abrupt, not gradual. There would be little time to prepare for the devastating changes resulting from the weakening of the Gulf Stream. The good news is that in the winters of 2008 and 2009, one of the chimneys off southeastern Greenland suddenly burst into action again, bringing the Gulf Stream waters down deep enough to be caught in the conveyor and to keep the ocean currents in the North Atlantic flowing.",
+        "¹ British: centres\n² British: civilisation\n³ British: travelling"
+      ],
+      "start": 1,
+      "end": 13,
+      "groups": [
+        {
+          "title": "Questions 1–7",
+          "type": "choice",
+          "instructions": [
+            "Write the correct letter, A, B, or C, on lines 1–7 on your answer sheet."
+          ],
+          "questions": [
+            {
+              "number": 1,
+              "prompt": "Labrador and London are similar in",
+              "options": [
+                "A climate.",
+                "B distance from the North Pole.",
+                "C abundance of wildlife."
+              ]
+            },
+            {
+              "number": 2,
+              "prompt": "Europe can support a large population because",
+              "options": [
+                "A it has a lot of fresh water.",
+                "B it is at the proper latitude.",
+                "C it has a good climate for farming."
+              ]
+            },
+            {
+              "number": 3,
+              "prompt": "When the Gulf Stream reaches the North Atlantic, it sinks because",
+              "options": [
+                "A it has become colder.",
+                "B it has become less salty.",
+                "C it is blown by the winds."
+              ]
+            },
+            {
+              "number": 4,
+              "prompt": "Ocean currents help make life on Earth possible because they",
+              "options": [
+                "A enable marine life to travel.",
+                "B maintain suitable temperatures.",
+                "C regulate glacial melt."
+              ]
+            },
+            {
+              "number": 5,
+              "prompt": "In 2007, the number of vortices, or chimneys, that pulled the waters of the Gulf Stream down toward the ocean floor was",
+              "options": [
+                "A zero.",
+                "B one.",
+                "C seven."
+              ]
+            },
+            {
+              "number": 6,
+              "prompt": "During the most recent Little Ice Age,",
+              "options": [
+                "A the Gulf Stream slowed down significantly.",
+                "B Europe was affected only slightly.",
+                "C glaciers covered much of North America."
+              ]
+            },
+            {
+              "number": 7,
+              "prompt": "In the past, climate change has happened",
+              "options": [
+                "A at regular intervals.",
+                "B gradually over time.",
+                "C very quickly."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Questions 8–13",
+          "type": "fill",
+          "instructions": [
+            "The flow chart below shows a possible effect of global warming on the Gulf Stream. Complete the flow chart using the list of words, A–L, below.",
+            "Write the correct letter, A–L, on lines 8–13 on your answer sheet."
+          ],
+          "paragraphs": [
+            "Glaciers {{8}}",
+            "↓",
+            "The ocean becomes {{9}}",
+            "↓",
+            "The water doesn’t {{10}}",
+            "↓",
+            "The Gulf Stream current is {{11}}",
+            "↓",
+            "The colder water at the southern end doesn’t {{12}}",
+            "↓",
+            "There is less {{13}} available for sea life"
+          ],
+          "options": [
+            {
+              "label": "A",
+              "text": "less salty"
+            },
+            {
+              "label": "B",
+              "text": "colder"
+            },
+            {
+              "label": "C",
+              "text": "warmer"
+            },
+            {
+              "label": "D",
+              "text": "sink"
+            },
+            {
+              "label": "E",
+              "text": "rise"
+            },
+            {
+              "label": "F",
+              "text": "weakened"
+            },
+            {
+              "label": "G",
+              "text": "strengthened"
+            },
+            {
+              "label": "H",
+              "text": "heated"
+            },
+            {
+              "label": "I",
+              "text": "food"
+            },
+            {
+              "label": "J",
+              "text": "melt"
+            },
+            {
+              "label": "K",
+              "text": "air"
+            },
+            {
+              "label": "L",
+              "text": "form"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Chocolate—Food of the Gods",
+      "instructions": [
+        "You should spend about 20 minutes on Questions 14–27, which are based on Reading Passage 2 below."
+      ],
+      "paragraphs": [
+        "The cacao plant is believed to have evolved at least 4,000 years ago. It is a small evergreen tree, 15–25 feet high, which grows in the tropical forest understory, where it is protected by the shade of larger trees. The scientific name for the cacao plant is Theobroma, which means “food of the gods.” Native to the Amazon and Orinoco River basins, it requires a humid climate and regular rainfall. Small pink flowers grow directly on the trunk and older branches. The fruit, a cacao pod, is melon shaped and weighs roughly 1 pound when fully ripened. A mature tree may have as many as 6,000 flowers but will only produce about twenty pods. Each pod contains between twenty and sixty seeds, called beans. The beans have a 40–50 percent fat content, referred to as cocoa butter. (Cacao is the plant; cocoa is the edible derivative and the primary ingredient in chocolate.)",
+        "Chemical analysis of pottery vessels unearthed in Puerto Escondido, Honduras, and dating from around 3,100 years ago show traces of a compound that is found exclusively in the cacao plant. At that time, the plant was already being used as a beverage ingredient. However, it was not the cacao beans that were first used. Instead, the first cacao-based drink was probably produced by fermenting the pulp in the cacao pods to yield a beerlike beverage. Researchers speculate that the chocolate drink made from the cacao beans and known later throughout Mesoamerica may have arisen as an accidental by-product of the brewing process. In all, ten small, beautifully crafted drinking vessels were found at the Puerto Escondido site, suggesting that even then the cacao brew was not consumed on a frequent basis but was reserved for important feasts or ceremonial events.",
+        "The villagers of Puerto Escondido had likely been influenced by the great Olmec civilization,¹ which flourished for about 800 years beginning 3,200–2,400 years ago in the southern Gulf of Mexico region. Although centered in the modern Mexican states of Tabasco and Veracruz, Olmec influence reached as far south as El Salvador and Honduras. A majority of scholars concur that the Olmec people created the first civilization in the western hemisphere. They built large cities with significant architecture and established commerce extending over hundreds of miles. Relatively little is known about Olmec society because very little archeological² evidence has survived the damp climate of the Gulf of Mexico. What is known, however, is that the later Mayan peoples, who did leave behind a great deal of cultural evidence, based much of their high culture on earlier Olmec traditions.",
+        "Mayan civilization flourished in southern Mexico and Central America from around 500 B.C.E.¹ to around 1500, and the word cacao comes from the Mayan word Ka’kau’. However, this is not a native Mayan word but is derived from the Olmec language. To the Mayans, the cacao pod symbolized² life and fertility. Many of the bas-reliefs carved on their palaces and temples show cacao pods. It is believed that the Mayans took the cacao tree from its native rain forest and began to cultivate it in plantations. After harvesting the seed pods, they scooped out the contents—the cacao beans embedded in a sticky, white flesh—and allowed it all to ferment until the seeds turned dark brown. The seeds were then roasted and ground into a thick chocolate paste.",
+        "From the paste, the Mayans made a hot chocolate drink. However, it was very different from contemporary hot chocolate. The basic drink was made by mixing the paste with water, chili powder, cornmeal, and other ingredients and heating it. Then the liquid was poured back and forth from one vessel held at arm’s height to another resting on the ground. This created a chocolate drink with a thick head of dark foam—considered the best part of the drink. Among the Mayans, as the chocolate drink grew more popular and the ingredients more readily available, people from all levels of society enjoyed it at least on occasion.",
+        "The Maya preserved their knowledge of cacao use through stone carvings, some in jade and obsidian, pottery decorations, and written documents that detailed the use of cacao, described in Mayan as “food of the gods.” Cacao was used in ceremonies, medical treatments, and daily life centuries before the discovery of the New World by Europeans. Certain recipes for cacao drinks included vanilla, nuts, honey from native bees, and various flowers.",
+        "Ek Chuah (meaning “black star” in Yucatec Maya) was the patron god of merchants and commerce. Because cacao seeds were light in weight, easily transported, and of great value, they were used as currency throughout Mesoamerica. Thus Ek Chuah also became the patron god of cacao. Each April, the Maya held a festival to honor³ this deity. The celebration included offerings of cacao, feathers, and incense, the sacrifice of a dog with cacao-colored⁴ markings, other animal sacrifices, and an exchange of gifts. Given that the chocolate drink could be made only through the direct destruction of currency, one can understand why it was called the “food of gods.” The immortals could easily afford it, while for humans it was a precious commodity indeed.",
+        "¹ British: civilisation\n² British: archaeological\n¹ B.C.E. is the abbreviation for “Before the Common Era,” that is, before the year 0.\n² British: symbolised\n³ British: honour\n⁴ British: coloured"
+      ],
+      "start": 14,
+      "end": 27,
+      "groups": [
+        {
+          "title": "Questions 14–18",
+          "type": "truth",
+          "instructions": [
+            "Do the following statements agree with the information in the passage? On lines 14–18 on your answer sheet, write:",
+            "TRUE if the statement agrees with the information",
+            "FALSE if the statement contradicts the information",
+            "NOT GIVEN if there is no information on this"
+          ],
+          "labels": [
+            "TRUE",
+            "FALSE",
+            "NOT GIVEN"
+          ],
+          "questions": [
+            {
+              "number": 14,
+              "prompt": "The mature cacao plant produces about 6,000 pods."
+            },
+            {
+              "number": 15,
+              "prompt": "The cacao plant prefers wet weather."
+            },
+            {
+              "number": 16,
+              "prompt": "Each flower on the cacao plant produces twenty pods."
+            },
+            {
+              "number": 17,
+              "prompt": "Cacao drinks were originally made using the pulp from the pod."
+            },
+            {
+              "number": 18,
+              "prompt": "In ancient Puerto Escondido, cacao drinks were served hot."
+            }
+          ]
+        },
+        {
+          "title": "Questions 19–25",
+          "type": "match",
+          "instructions": [
+            "According to the information in Reading Passage 2, which ancient civilizations do the following phrases describe? On lines 19–25 on your answer sheet, write:"
+          ],
+          "options": [
+            {
+              "label": "A",
+              "text": "if the phrase describes the ancient Olmec civilization only"
+            },
+            {
+              "label": "B",
+              "text": "if the phrase describes the ancient Mayan civilization only"
+            },
+            {
+              "label": "C",
+              "text": "if the phrase describes both the Olmec and the Mayan civilizations"
+            }
+          ],
+          "questions": [
+            {
+              "number": 19,
+              "prompt": "collapsed around 2,400 years ago"
+            },
+            {
+              "number": 20,
+              "prompt": "was located in Mexico"
+            },
+            {
+              "number": 21,
+              "prompt": "grew cacao on large farms"
+            },
+            {
+              "number": 22,
+              "prompt": "left behind little concrete evidence of their culture"
+            },
+            {
+              "number": 23,
+              "prompt": "influenced the ancient inhabitants of Puerto Escondido"
+            },
+            {
+              "number": 24,
+              "prompt": "carved images of cacao pods"
+            },
+            {
+              "number": 25,
+              "prompt": "made a drink by mixing cacao with chili powder and cornmeal"
+            }
+          ]
+        },
+        {
+          "title": "Questions 26 and 27",
+          "type": "choice",
+          "instructions": [
+            "Write the correct letter, A, B, or C, on lines 26 and 27 on your answer sheet."
+          ],
+          "questions": [
+            {
+              "number": 26,
+              "prompt": "The ancient Maya used cacao seeds as",
+              "options": [
+                "A decorations.",
+                "B a dye.",
+                "C money."
+              ]
+            },
+            {
+              "number": 27,
+              "prompt": "In April, the ancient Maya celebrated",
+              "options": [
+                "A dogs.",
+                "B a god.",
+                "C stars."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Intelligence of Corvids",
+      "instructions": [
+        "You should spend about 20 minutes on Questions 28–40, which are based on Reading Passage 3 below."
+      ],
+      "paragraphs": [
+        "For hundreds of years humans thought that tool making was a uniquely human trait. In 1960, Jane Goodall observed chimpanzees using tools in the wild, a discovery to which Goodall’s mentor Louis Leakey famously responded, “We must redefine tool, redefine man, or accept chimpanzees as human.” It is now commonly accepted that various primates engage in tool making, and there is a growing body of evidence that many corvids, a group of bird species that includes crows, jays, rooks, ravens, and magpies, are also tool makers, and that they show many other signs of possessing high intelligence.",
+        "Scientists have observed wild New Caledonian crows making hooks out of twigs to pull grubs from tree holes that are too deep for their beaks. New Caledonian crows also sometimes use their beaks to create small spears from leaves for collecting insects. Because New Caledonian crows are highly social and because tool design varies from area to area, most researchers assume the birds’ tool use is cultural; that is, the tool use is learned from other crows.",
+        "In 2002, however, three researchers at Oxford University reported in Science a startling new twist to tool making in corvids: A New Caledonian crow that had been captured in 2000 as a juvenile had invented a new tool from materials not found in her natural habitat without observing the behavior¹ in other crows. The crow, named Betty, shared space with a male crow named Abel. The researchers had set up an experiment in which both crows were presented with a straight wire and a hooked wire and food that could most easily be retrieved with a hooked wire. When Abel flew away with the hooked wire, Betty bent the straight wire and successfully lifted the bucket of food with her hook. The researchers then set out to see whether they could get Betty to replicate the behavior. Ten times, they set out a single straight wire and food to be retrieved. Betty retrieved the food nine times by bending the wire; once she managed to retrieve the food with the straight wire. Alex Kacelnik, one of the researchers who worked with the crows, noted that she had solved a new problem by doing something she had never done before.",
+        "Professor John Marzloff, at the University of Washington in Seattle, demonstrated another interesting ability in American crows: recognizing² faces of individual humans. In 2005, he and other researchers each wore a caveman mask when they captured, tagged, and then released crows on campus. Then Marzloff and other researchers took turns wearing the mask and walking around campus. Over time, increasing numbers of crows flocked together and cawed at anyone wearing the caveman mask, regardless of the size, gender, and skin color of the mask wearer or whether the wearer was one of the researchers who had originally captured crows. When the same people did not wear the mask, they got no reaction from the crows. This showed that it was clearly the face that was identified as a threat to the flock. Crows that had not originally been captured were joining the harassment of the perceived threat. When Marzloff suggested that researchers try wearing the caveman mask upside down, some crows actually turned their heads upside down to better identify the face of the “enemy.”",
+        "In their studies of western scrub jays published in Science in May 2006, Joann Dally, Nathan Emery, and Nicola Clayton showed that jays have the ability to remember whether a specific other jay saw them hide food somewhere. When it became clear that a jay that observed the hiding might have access to the cache, the hiders retrieved their food and re-hid it when given the opportunity to do so without observation. They did not re-hide food when other jays were introduced to the situation. Similarly, ravens in the wild have been observed misleading other ravens by pretending to hide food in one location then flying off to hide it elsewhere when the other raven goes to investigate the false cache.",
+        "Corvids are also capable of fooling humans. Marzloff tells the story of a pair of crows that built a fake nest that they always flew to when researchers were in their area. The crows’ actual nest with their young was nearby, but the humans never saw the crows actually fly to it.",
+        "In an experiment to test social cooperation in rooks, University of Cambridge researchers found that pairs of rooks quickly figured out how to pull on ropes at the same time to bring food that could not be gained through the individual effort of one rook.",
+        "Otto Koehler tested the ability of captive jackdaws to count, a skill apparently related to their communication of often being based on the number of calls. First, Koehler trained jackdaws to expect five food rewards. Then the jackdaws were given a number of boxes, some of which contained food. They proceeded to open the boxes until they had found five pieces of food, at which point they stopped opening boxes because they knew they had reached five. In another experiment Koehler also trained jackdaws to choose a box with the same number of dots on the lid as the number of dots on a cue card.",
+        "Tool makers, tricksters, cooperators, mathematicians—the corvids are far from “bird brains.” In fact, their intelligence, in many cases, appears to equal or even surpass that of many of our primate “cousins.”",
+        "¹ British: behaviour\n² British: recognising"
+      ],
+      "start": 28,
+      "end": 40,
+      "groups": [
+        {
+          "title": "Questions 28–33",
+          "type": "fill",
+          "instructions": [
+            "Complete the summary using the list of words and phrases, A–N, below. Not all letters are used.",
+            "Write the correct letter, A–N, on lines 28–33 on your answer sheet."
+          ],
+          "paragraphs": [
+            "Jane Goodall’s work in 1960 showed that {{28}} were not the only ones to make tools. Since then, scientists have observed different kinds of animals making tools. New Caledonian crows, for example, make tools in order to retrieve the {{29}} that they eat in the wild. Scientists believe that generally these birds {{30}} how to make tools. In 2002, a captive New Caledonian crow named Betty invented a new tool. Scientists observed Betty use pieces of wire to make {{31}}, which she used to retrieve food. The interesting thing is that other crows did not {{32}} the tools. Once the scientists saw Betty make a tool, they tried to get her to {{33}} the behavior, which she did successfully."
+          ],
+          "options": [
+            {
+              "label": "A",
+              "text": "learn from other birds"
+            },
+            {
+              "label": "B",
+              "text": "twigs"
+            },
+            {
+              "label": "C",
+              "text": "humans"
+            },
+            {
+              "label": "D",
+              "text": "repeat"
+            },
+            {
+              "label": "E",
+              "text": "spears"
+            },
+            {
+              "label": "F",
+              "text": "are born knowing"
+            },
+            {
+              "label": "G",
+              "text": "leaves"
+            },
+            {
+              "label": "H",
+              "text": "hooks"
+            },
+            {
+              "label": "I",
+              "text": "try to take away"
+            },
+            {
+              "label": "J",
+              "text": "modify"
+            },
+            {
+              "label": "K",
+              "text": "chimpanzees"
+            },
+            {
+              "label": "L",
+              "text": "grubs"
+            },
+            {
+              "label": "M",
+              "text": "teach her how to make"
+            },
+            {
+              "label": "N",
+              "text": "corvids"
+            }
+          ]
+        },
+        {
+          "title": "Questions 34–36",
+          "type": "choice",
+          "instructions": [
+            "Write the correct letter, A, B, or C, on lines 34–36 on your answer sheet."
+          ],
+          "questions": [
+            {
+              "number": 34,
+              "prompt": "Researchers wore a mask when working with crows in order to",
+              "options": [
+                "A conceal their true identity from the crows.",
+                "B find out whether crows would recognize the mask in another situation.",
+                "C protect their faces from aggressive crows."
+              ]
+            },
+            {
+              "number": 35,
+              "prompt": "Crows harassed researchers wearing the mask because the researchers",
+              "options": [
+                "A had worn the mask when handling the crows.",
+                "B were of a size and skin color that crows feared.",
+                "C took turns wearing the mask while walking around campus."
+              ]
+            },
+            {
+              "number": 36,
+              "prompt": "When researchers removed the mask,",
+              "options": [
+                "A the crows did not harass them.",
+                "B they were attacked by the entire flock of crows.",
+                "C they could more easily tag the crows."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Questions 37–40",
+          "type": "match",
+          "optionTitle": "INFORMATION ABOUT CORVID INTELLIGENCE",
+          "instructions": [
+            "Match each corvid action described by researchers below with the information it shows us about corvid intelligence.",
+            "Write the correct letter, A–F, on lines 37–40 on your answer sheet. There are more types of information listed than actions, so you will not use them all."
+          ],
+          "options": [
+            {
+              "label": "A",
+              "text": "Corvids can count."
+            },
+            {
+              "label": "B",
+              "text": "Corvids recognize individual birds."
+            },
+            {
+              "label": "C",
+              "text": "Corvids are good at discovering food sources."
+            },
+            {
+              "label": "D",
+              "text": "Corvids can work together to achieve a goal."
+            },
+            {
+              "label": "E",
+              "text": "Corvids protect themselves by tricking their enemies."
+            },
+            {
+              "label": "F",
+              "text": "Corvids are skilled at remembering where they hid things."
+            }
+          ],
+          "questions": [
+            {
+              "number": 37,
+              "prompt": "Birds opened boxes to obtain food."
+            },
+            {
+              "number": 38,
+              "prompt": "Birds pulled ropes to get food."
+            },
+            {
+              "number": 39,
+              "prompt": "Birds hid food from other birds."
+            },
+            {
+              "number": 40,
+              "prompt": "Birds built a nest that was not real."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

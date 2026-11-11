@@ -28,7 +28,7 @@ Current local source defaults: pool limit **5 per schema**, queue **64 per schem
 With a prepared local MySQL service running and a reviewed private `.env.local` in this project:
 
 ```powershell
-cd "C:\Users\Asus\Documents\Codex\website-lang-excel-mysql"
+cd "C:\Users\Asus\Desktop\IELTS-MYSQL"
 npm ci
 npm run build
 npm run start -- --hostname 127.0.0.1 --port 3307

@@ -1,13 +1,23 @@
 import { Fragment } from "react";
+import Image from "next/image";
 import test12 from "./listening-test-12.json";
 import test16 from "./listening-test-16.json";
+import test21 from "./listening-test-21.json";
+import test22 from "./listening-test-22.json";
+import test23 from "./listening-test-23.json";
+import test24 from "./listening-test-24.json";
+import test27 from "./listening-test-27.json";
+import test30 from "./listening-test-30.json";
+import test33 from "./listening-test-33.json";
+import test36 from "./listening-test-36.json";
+import test39 from "./listening-test-39.json";
 
 type Props = { testNumber: number; part: number; answers: Record<number, string>; updateAnswer: (number: number, value: string) => void };
 type Question = { number: number; prompt: string; options?: string[] };
 type Option = { label: string; text: string };
 type Group = { title: string; type: string; instruction?: string; limit?: string; heading?: string | null; box?: boolean; paragraphs?: string[]; columns?: string[]; rows?: string[][]; questions?: Question[]; options?: Option[] | string[]; numbers?: number[]; prompt?: string; image?: string; viewBox?: string; imageWidth?: number; imageHeight?: number; alt?: string };
 type Test = { number: number; parts: Group[][] };
-const tests: Record<number, Test> = { 12: test12 as Test, 16: test16 as Test };
+const tests: Record<number, Test> = { 12: test12 as Test, 16: test16 as Test, 21: test21 as Test, 22: test22 as Test, 23: test23 as Test, 24: test24 as Test, 27: test27 as Test, 30: test30 as Test, 33: test33 as Test, 36: test36 as Test, 39: test39 as Test };
 const answerStyle = "h-9 w-44 max-w-full border border-[#2185d0] bg-white px-2 text-[16px] outline-none focus:border-[#2185d0] focus:ring-1 focus:ring-[#2185d0]";
 const cellStyle = "border border-[#777] px-3 py-3 align-top";
 
@@ -21,6 +31,9 @@ export default function ListeningTestsTwelveSixteen({testNumber,part,answers,upd
   const rich = (text: string, options?: Option[] | string[]) => text.split(/(\{\{\d+(?::[01])?\}\}|\*\*[^*]+\*\*|\n)/g).map((item,index)=>{const match=item.match(/^\{\{(\d+)(?::([01]))?\}\}$/);return <Fragment key={index}>{match?(match[2]!==undefined?pairedBlank(Number(match[1]),Number(match[2])):blank(Number(match[1]),options)):item==="\n"?<br />:item.startsWith("**")&&item.endsWith("**")?<b>{item.slice(2,-2)}</b>:item}</Fragment>;});
   const optionList = (options: Option[]) => <div className="mx-auto w-fit max-w-full space-y-2 border border-[#999] bg-white p-5">{options.map(option=><p key={option.label} className="flex gap-3"><b>{option.label}</b><span>{option.text}</span></p>)}</div>;
   const render = (group: Group) => {
+    if ((testNumber === 21 || testNumber === 22) && group.type === "table" && group.options?.length) {
+      return <>{optionList(group.options as Option[])}<div className="overflow-x-auto"><table className="w-full min-w-[900px] border-collapse border border-[#777] bg-white text-left"><thead><tr>{group.columns?.map((column,index)=><th key={index} scope="col" className={cellStyle}>{column}</th>)}</tr></thead><tbody>{group.rows?.map((row,index)=><tr key={index}>{row.map((cell,col)=><td key={col} className={`${cellStyle} leading-10`}>{rich(cell,group.options)}</td>)}</tr>)}</tbody></table></div></>;
+    }
     if (testNumber === 16 && part === 3 && group.type === "fill" && group.heading === "Business Centre") {
       return <div className="space-y-5 border border-[#999] bg-white p-5 sm:p-7 [&_input]:w-32"><h4 className="text-center text-xl font-bold">{group.heading}</h4>{group.paragraphs?.flatMap(text=>text.split(/(?<=\.) (?=It is possible|There are materials)/)).map((text,index)=><p key={index} className="leading-[3.25rem]">{rich(text)}</p>)}</div>;
     }
@@ -40,6 +53,8 @@ export default function ListeningTestsTwelveSixteen({testNumber,part,answers,upd
       return <ul className="ml-4 list-none space-y-4 sm:ml-6">{group.paragraphs.flatMap(text => text.split("\n")).map((text, index) => <li key={index} className="flex items-start gap-4"><span aria-hidden="true" className="mt-4 h-2 w-2 shrink-0 rounded-full bg-current" /><p className="leading-10">{rich(text.replace(/^•\s*/, ""))}</p></li>)}</ul>;
     }
     switch(group.type) {
+      case "flow": return <><h4 className="text-center text-xl font-bold">{group.heading}</h4><div className="space-y-3">{group.paragraphs?.map((text,index)=><Fragment key={index}><div className="border border-[#999] bg-white px-4 py-3 text-center leading-10">{rich(text)}</div>{index<(group.paragraphs?.length || 0)-1&&<p className="text-center text-xl" aria-hidden="true">↓</p>}</Fragment>)}</div></>;
+      case "diagram": return <><Image src={group.image!} alt={group.alt || ""} width={group.imageWidth!} height={group.imageHeight!} className="mx-auto h-auto max-w-full" sizes="(min-width: 1024px) 900px, 95vw" />{group.paragraphs?.map((text,index)=><p key={index} className="leading-10">{rich(text)}</p>)}</>;
       case "notice": return <>{group.paragraphs?.map((text,index)=><p key={index}>{text}</p>)}</>;
       case "fill": return <div className={group.box?"space-y-4 border border-[#999] bg-white p-5 sm:p-7":"space-y-4"}>{group.heading&&<h4 className="text-center text-xl font-bold">{group.heading}</h4>}{testNumber===12&&part===1&&group.paragraphs?.some(text=>text.includes("{{7}}"))?<ul className="ml-4 list-none space-y-4 sm:ml-6">{group.paragraphs.map((text,index)=><li key={index} className="flex items-start gap-4"><span aria-hidden="true" className="mt-4 h-2 w-2 shrink-0 rounded-full bg-current"/><p className="leading-10">{rich(text)}</p></li>)}</ul>:group.paragraphs?.map((text,index)=><p key={index} className="leading-10">{rich(text)}</p>)}</div>;
       case "table": return <div className="overflow-x-auto"><table className="w-full min-w-[900px] border-collapse border border-[#777] bg-white text-left">{group.heading&&<caption className="border border-b-0 border-[#777] px-3 py-3 text-center text-xl font-bold">{group.heading}</caption>}<thead><tr>{group.columns?.map(column=><th key={column} scope="col" className={cellStyle}>{column}</th>)}</tr></thead><tbody>{group.rows?.map((row,index)=><tr key={index}>{row.map((cell,col)=><td key={col} className={`${cellStyle} leading-10`}>{rich(cell)}</td>)}</tr>)}</tbody></table></div>;

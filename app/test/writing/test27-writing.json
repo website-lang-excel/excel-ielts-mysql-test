@@ -1,0 +1,18 @@
+{
+  "task1": {
+    "title": "",
+    "prompt": "The percentage of 3 types of crimes: car theft, house burglary & street robbery in England & Wales\nfrom 1970 to 2000",
+    "instruction": "Write at least 150 words.",
+    "image": {
+      "src": "/images/writing-test-27-task-1.jpeg",
+      "alt": "Percentages of car theft, house burglary and street robbery in England and Wales from 1970 to 2000.",
+      "width": 1390,
+      "height": 693
+    }
+  },
+  "task2": {
+    "title": "",
+    "prompt": "Student learn far more with their teachers than other sources (the Internet or television). To what extent do you agree or disagree?",
+    "instruction": "Give reasons for your answer and include any relevant examples from your own knowledge or experience.\nWrite at least 250 words."
+  }
+}

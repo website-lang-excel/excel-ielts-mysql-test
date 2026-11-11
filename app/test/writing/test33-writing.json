@@ -1,0 +1,18 @@
+{
+  "task1": {
+    "title": "",
+    "prompt": "The graph below shows the average number of movies seen in a theater per year, by age group.",
+    "instruction": "Summarize¹ the information by selecting and reporting the main features, and make comparisons where relevant.",
+    "image": {
+      "src": "/images/writing-test-33-task-1.png",
+      "alt": "Average movies seen in theaters by ages 18–24, 25–44 and 45–65 from 2000 to 2015.",
+      "width": 300,
+      "height": 175
+    }
+  },
+  "task2": {
+    "title": "",
+    "prompt": "The large number of private cars on the roads in many parts of the world has led to serious problems of pollution and may contribute to global warming. Some people think that governments should spend money for the development of public transportation systems in order to help solve this problem. Others think it is better to spend money for the development of electric and other types of cars that may cause less pollution.\n\nDiscuss both these views and give your own opinion.",
+    "instruction": "Give reasons for your answer and include any relevant examples from your own knowledge or experience."
+  }
+}
